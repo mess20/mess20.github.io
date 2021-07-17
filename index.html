@@ -15,6 +15,16 @@ position: absolute;
 margin: 1rem;
 padding: 1rem;
 }
+
+
+a#clickSide {
+    position: fixed;
+    top: 20px;
+    right: 300px;
+}
+
+
+
 ul {
 list-style-type: none;
 width: 18%;
@@ -37,8 +47,8 @@ li a {
   text-decoration: none;
 }
 li a.active {
-  background-color: #4CAF50;
-  color: white;
+background-image:url("https://z3.ax1x.com/2021/07/14/WZf4PJ.jpg");
+color: white;
 }
 
 li a:hover:not(.active) {
@@ -56,11 +66,40 @@ background-position: center;
 bottom:0
 }
 
+
+
+
+
+
+<script type="text/javascript">
+
+function narrow() {
+
+    var isTrue=parseInt($('#clickSide').attr('value'));
+
+        if(isTrue==0){
+                $('ul').css({'width':'250px'});
+                $('#clickSide').attr('value',1);       
+        }else{
+                $('ul').css({'width':'0'});
+                $('#clickSide').attr('value',0);   
+        }
+
+        return false;
+}
+
+</script>
+
+
+
+
 </style>
 </head>
 
-邪恶吧邪恶被行不行鄂汇办邪恶吧邪恶吧我想不想我不想
 
+
+
+<a id="clickSide" href="javascript:void(0)" onclick="narrow()" value="0">按钮</a>
 
 
 <div id="" >
