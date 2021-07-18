@@ -3,145 +3,18 @@
 
 <head>
 <style type="text/css">
-    
+
 body{
 background-image: url("https://z3.ax1x.com/2021/07/14/WVWAKK.jpg");
 background-repeat: no-repeat;
 background-size: cover;
-width: 80%;
 height:100%;
 top:0px;
 right:0px;
 position: absolute;
 margin: 1rem;
-padding: 2rem;
+padding: 1rem;
 }
-
-.header{
-;}
-.main{
-padding-bottom:100px;
-}
-        
-/* main的padding-bottom值要等于或大于footer的height值 */
-footer{
-font-family:arial;
-padding-top: 410px;
-background: url('https://z3.ax1x.com/2021/07/17/W1tUyT.jpg') no-repeat center;
-background-size: 100%;
-position:fixed;
-background-position: center;
-width:100%;
-bottom:0px;
-}
-
-
-
-
-
-ul {
-list-style-type: none;
-width: 19%;
-height:100%;
-background-color: #f1f1f1;
-top:0px;
-left: 0px;
-margin: 0;
-padding: 0;
-position:fixed;
-overflow: auto; 
-}
-.menu {
-display: none
-}
-
-a.menuLink {
-}
-
-li span {
-  }
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-li a.active {
-background-image:url("https://z3.ax1x.com/2021/07/14/WZf4PJ.jpg");
-color: white;
-}
-
-li a:hover:not(.active) {
-  background-image:url("https://z3.ax1x.com/2021/07/14/WZf4PJ.jpg");
-  color: black;
-
-
-
 
 
 </style>
-
-
-
-<script type="text/javascript">
-	window.onload = initAll;
-	function initAll() {
-		var allLinks = document.getElementsByTagName("a");
-		for (var i=0; i<allLinks.length; i++) {
-			if (allLinks[i].className.indexOf("menuLink") > -1) {
-				allLinks[i].onclick = toggleMenu;
-			}
-		}
-	}
-	function toggleMenu() {
-		var startMenu = this.href.lastIndexOf("/")+1;
-		var stopMenu = this.href.lastIndexOf(".");
-		var thisMenuName = this.href.substring(startMenu,stopMenu);
-		var thisMenu = document.getElementById(thisMenuName).style;
-		if (thisMenu.display == "block") {
-			thisMenu.display = "none";
-		}
-		else {
-			thisMenu.display = "block";
-		}
-		return false;
-	}
-
-</script>
-
-
-
-
-</head>
-
-<body>
-    	  
-
-     
-<div id="" >
-<a href="menu1.html" class="menuLink">Comdeis</a>
-
-<ul class="menu" id="menu1">
-  <li><a href="#home" >Home</a></li>
-  <li><a href="#news" >News</a></li>
-  <li><a href="#contact" >Contact</a></li>
-  <li><a href="" >
-<img src="" width="20px" height="20px">
-<span class="">（*不可用）</span></a></li>
-</ul>
-</div>
-
-
-
-
-<footer>Copyright &copy;版权归原作者所有
-</footer>
-
-
-
-
-
-
-
-</body>
-</html>
