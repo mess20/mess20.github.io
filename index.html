@@ -17,11 +17,7 @@ padding: 2rem;
 }
 
 
-a#clickSide {
-    position: fixed;
-    top: 20px;
-    right: 300px;
-}
+
 
 
 
@@ -36,9 +32,16 @@ margin: 0;
 padding: 0;
 position:fixed;
 overflow: auto; 
+}
+.menu {
+display: none;
+list-style-type: none;
+margin-top: 5px;
+}
 
-transition: width 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
-
+a.menuLink {
+font-size: 16px;
+font-weight: bold;
 }
 
 li span {
@@ -70,43 +73,49 @@ bottom:0
 }
 
 
-
+</style>
 
 
 
 <script type="text/javascript">
-
-function narrow() {
-
-    var isTrue=parseInt($('#clickSide').attr('value'));
-
-        if(isTrue==0){
-                $('ul').css({'width':'250px'});
-                $('#clickSide').attr('value',1);       
-        }else{
-                $('ul').css({'width':'0'});
-                $('#clickSide').attr('value',0);   
-        }
-
-        return false;
-}
+	window.onload = initAll;
+	function initAll() {
+		var allLinks = document.getElementsByTagName("a");
+		for (var i=0; i<allLinks.length; i++) {
+			if (allLinks[i].className.indexOf("menuLink") > -1) {
+				allLinks[i].onclick = toggleMenu;
+			}
+		}
+	}
+	function toggleMenu() {
+		var startMenu = this.href.lastIndexOf("/")+1;
+		var stopMenu = this.href.lastIndexOf(".");
+		var thisMenuName = this.href.substring(startMenu,stopMenu);
+		var thisMenu = document.getElementById(thisMenuName).style;
+		if (thisMenu.display == "block") {
+			thisMenu.display = "none";
+		}
+		else {
+			thisMenu.display = "block";
+		}
+		return false;
+	}
 
 </script>
 
 
 
 
-</style>
 </head>
 
 
+    	  
 
 
-<a id="clickSide" href="javascript:void(0)" onclick="narrow()" value="0">按钮</a>
-
-
+<a href="menu1.html" class="menuLink">Comdeis</a>
+     
 <div id="" >
-<ul>
+<up class="menu" id="menu1">
   <li><a href="#home" >Home</a></li>
   <li><a href="#news" >News</a></li>
   <li><a href="#contact" >Contact</a></li>
