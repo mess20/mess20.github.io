@@ -1,50 +1,383 @@
-iframe{
-float: right;
-right: 0px;
+<!DOCTYPE html>
+<title>an annoying subject & DOORS & fantasy</title>
+
+<head>
+<meta name="author" content="Utopia Publishing House">
+<meta name="description" content="">
+<meta name="keywords" content="艺术,阅读,游戏,学习,电影,写作,神秘,传闻,其他">
+<Link href="https://z3.ax1x.com/2021/07/17/W1Nd3t.png" rel="Shortcut Icon">
+
+<style type="text/css">
+body{
+font-family:arial;
+margin: 1rem 1.5rem 1rem 1.5rem;
 }
-ul {
+.header{
+width:100%;
+background-color:#FFFACD;
+height:100px;
+position: absolute;
+top: 0px;
+left: 0px;
+}
+.be-all{
+width:100%;
+background-image: url("https://z3.ax1x.com/2021/07/19/WYp3eU.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+top:100px;
+left: 0px;
+border-style:hidden;
+border-top:2788px;
+padding-bottom:2000px;
+position:absolute;
+float:top
+}
+.main{
+margin: 0;
+padding: 0;
+position:absolute;
+}
+.end-all{
+}
+/* main的padding-bottom值要等于或大于footer的height值 */
+.footer{
+width:100%;
+background:url("https://z3.ax1x.com/2021/07/14/WVWAKK.jpg");
+background-repeat: no-repeat;
+left: 0px;
+position:absolute;
+bottom:0px;
+}
+
+a.menuLink {
+width: 100px; 
+height: 100px; 
+border-radius: 50%;
+border:#be002f 4px solid;
+background-color: #fff;
+position: fixed;
+right:2rem;
+bottom:6rem;
+color: #be002f;
+font-size: 4em;
+text-align:center;
+line-height:100px;
+text-decoration:none;
+z-index:1;
+}
+
+
+ul{
 list-style-type: none;
-width: 20%;
-height:100%;
+overflow: auto; 
 background-color: #f1f1f1;
 left: 0px;
-
-position:fixed;
+margin: 0;
+padding: 0;
 }
-
-li span {
-  }
+#menu{
+display: none;
+top:0px;
+height:100%;
+width: 20%;
+position: fixed;
+z-index: 1;
+}
+li img{
+width:20px ;
+height:20px;
+}
+li span{
+color:black;
+}
 li a {
   display: block;
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
 }
-li a:hover {
+li a.active {
 background-image:url("https://z3.ax1x.com/2021/07/14/WZf4PJ.jpg");
-  color: black;
+color: white;
 }
 
+li a:hover:not(.active) {
+  background-image:url("https://z3.ax1x.com/2021/07/14/WZf4PJ.jpg");
+  color: black;
+
+
+
+<script language="javascript">
+//<!--
+//accesscode = prompt("hello, please input accesscode:","");
+//if (accesscode != "DC143C"){
+//alert("You are not allowed to access this page.");
+//window.location.href='跳转目标页面';
+//}else{
+//alert("welcome to wonderland!");
+//}
+//-->
+</script>
+
+
+</style>
+
+
+
+<script type="text/javascript">
+	window.onload = initAll;
+	function initAll() {
+		var allLinks = document.getElementsByTagName("a");
+		for (var i=0; i<allLinks.length; i++) {
+			if (allLinks[i].className.indexOf("menuLink") > -1) {
+				allLinks[i].onclick = toggleMenu;
+			}
+		}
+	}
+	function toggleMenu() {
+		var startMenu = this.href.lastIndexOf("/")+1;
+		var stopMenu = this.href.lastIndexOf(".");
+		var thisMenuName = this.href.substring(startMenu,stopMenu);
+		var thisMenu = document.getElementById(thisMenuName).style;
+		if (thisMenu.display == "block") {
+			thisMenu.display = "none";
+		}
+		else {
+			thisMenu.display = "block";
+		}
+		return false;
+	}
+
+</script>
 
 
 
 
+</head>
+
+<body>
+    	  
+
+     <a href="menu.html" class="menuLink">+</a>
 
 
-
-<div id="" >
-<div class="nav">
-<em class="NMTip"></em>
-<ul>
-  <li><a href="#home" target="right">Home</a></li>
-  <li><a href="#news" target="right">News</a></li>
-  <li><a href="#contact" target="right">Contact</a></li>
-  <li><a id="foot_index_link"  href="" target="right">
-<em><img src="" width="20px" height="20px"></em>
-<span class="">（*不可用）</span></a></li>
+<ul id="menu" >
+<ul> <li><a href="#DOORS" >DOORS</a></li>
 </ul>
+<ul>  <li><a href="#Skylight" >skylight</a></li>
+  <li><a href="#Déjà Vu" >English</a></li>
+  <li><a href="https://restrechinamynd.github.io/" >math</a></li>
+  <li><a href="https://mess20.github.io/" >science</a></li>
+  <li><a href="https://utopiapublishinghouse.github.io/" >mother-tongue</a></li>
+
+</ul>
+
+
+<ul>
+  <li><a href="#Feedback" >Feedback</a></li>
+</ul>
+
+
+<ul>
+  <li><a href="#About" >About</a></li>
+</ul>
+  
+
+<ul>
+  <li><a href="#Fantasy" ><img src="">
+<span>Fantasy</span></a></li>
+</ul>
+
+
+</ul>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="header">header
+
 </div>
-<iframe src="blank.html" name="right" width="80%" height="1000" ></iframe>
 
 
 
+
+
+
+
+
+
+
+<div class="be-all">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<div class="main">
+
+
+
+<div id="DOORS">
+<h1>DOORS／黑森林</h1>
+
+
+<h1>Dream Fly／梦开始的地方</h1>
+<p>（起风了）</p>
+
+<h2>彩绘井盖／rabbit hole</h2>
+<p>Please choose one. 请选择其中一项。</p>
+
+<p>A art 艺术 <br>
+B book 阅读<br>
+G game 游戏 <br>
+L learn 学习 <br>
+M movie 电影 <br>
+W write 写作 <br>
+X Magic 神秘 <br>
+Y hearsay 西风信息 <br>
+N others 其他</p>
+
+<h2>城下水道／underground</h2>
+<p>Let's go！ <br>
+Come on！ <br>
+Follow me.</p>
+
+</div>
+
+
+
+
+
+
+<h2>完美世界／wonderland</h2>
+<p>（漂浮壁纸）</p>
+
+
+
+<div id="Skylight">
+<h1>skylight／星空</h1>
+降落／wonder（学习，春）
+
+孤豚／mother-tongue（现世，夏）
+
+<div id="Déjà Vu">
+溯游／Déjà Vu（爱好）
+seek
+</div>
+
+流逝／Timelapse（理想，冬）
+flow
+</div>
+
+
+<div id="Feedback">
+<h1>Feedback／反馈</h1>
+</div>
+
+
+
+<div id="About">
+<h1>About／于我，于你，于世界，于未来</h1>
+<p>本站内容由乌托邦出版社及热心网友合作编写，供学习参考之用，版权归原作者所有。若有不妥之处（任何侵权行为，或对本社编辑内容存有疑问），请发送邮件，本社会予以处理。<br>
+All content on our webpage is edited collaboratively by Utopia Publishing House and kind netizens, only for learning and referrence. All rights are reserved by the original authors.If there is something improper, please contact with us, we'll handle it as soon as possible.</p>
+</div>
+
+
+
+
+<div id="Fantasy">
+<h1>Fantasy／记录生活</h1>
+<p>blog</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="end-all">
+
+<p>Beyond the stars ends our tale.</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer">
+<br>
+<br>
+Copyright &copy;版权归原作者所有<br>
+Posted by: Utopia Publishing House<br>
+Contact information: UtopiaPublishingHouse@outlook.com<br>
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
