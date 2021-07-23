@@ -268,29 +268,7 @@ zoom:2.4;
              transition: all 1s;
          }
          
-<script type="text/javascript">  
-        var anniu =document.getElementById('anniu');
-        var kaiguan = document.querySelector('.kaiguan');
-        var body = document.getElementById('body');
-       var temp = 1;
-        anniu.addEventListener('click',function(){
-            if(temp==1){
-                this.className = 'hei';
-                temp=0;
-                kaiguan.style. border= '2px solid  rgb(11, 243, 81)';
-                body.style. backgroundColor= 'rgb(7, 7, 29)';
-                body.style.color = 'white';
-            }else{
-                this.className = 'bai';
-                temp=1;
-                kaiguan.style. border= '2px solid black';
-                body.style. backgroundColor= 'white';
-                body.style.color = 'black';
-            }
 
-        })
-     
-    </script>
 
 
 </style>
@@ -398,7 +376,7 @@ t I was<br>
 
 <div class="main">
 <h2>万物选购指南：层次分析法治好了我的选择困难</h2>
-
+<p>
 <div class="intro">
 <author>
 <img src="https://z3.ax1x.com/2021/07/22/WDced1.jpg" class="avatar"  alt="">
@@ -408,8 +386,8 @@ t I was<br>
 <time>
 Created 2020-08-10 | Updated 2020-11-12
 </time>
-
 </div>
+</p>
 
 <p>
 <b>Matrix 首页推荐</b><br>
@@ -445,6 +423,28 @@ Contact information: UtopiaPublishingHouse@outlook.com<br>
 </div>
 
 
+<script type="text/javascript">  
+        var anniu =document.getElementById('anniu');
+        var kaiguan = document.querySelector('.kaiguan');
+        var body = document.getElementById('body');
+       var temp = 1;
+        anniu.addEventListener('click',function(){
+            if(temp==1){
+                this.className = 'hei';
+                temp=0;
+                kaiguan.style. border= '2px solid  rgb(11, 243, 81)';
+                body.style. backgroundColor= 'rgb(7, 7, 29)';
+                body.style.color = 'white';
+            }else{
+                this.className = 'bai';
+                temp=1;
+                kaiguan.style. border= '2px solid black';
+                body.style. backgroundColor= 'white';
+                body.style.color = 'black';
+            }
 
+        })
+     
+    </script>
 </body>
 </html>
