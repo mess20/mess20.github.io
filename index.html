@@ -216,8 +216,8 @@ li a:hover:not(.active) {
 }
 
 /*夜间模式*/
-        .kaiguan{
-             position: fixed;
+      .kaiguan{
+             position: absolute;
              top: 20px;
              right: 50px;
              width: 40px;
@@ -228,7 +228,7 @@ li a:hover:not(.active) {
              transition: all 3s;
          }
          .bai{ 
-             position:fixed;
+             position: absolute;
              top: 1.5px;
              left: 2px;
              height: 13px;
@@ -239,7 +239,7 @@ li a:hover:not(.active) {
          }
         .hei{
            
-             position: fixed;
+             position: absolute;
              top: 1.5px;
              right: 2px;
              height: 13px;
@@ -324,9 +324,8 @@ document.getElementById("nowtime").innerHTML = "t";
 <div id="nowtime">。</div>
 
 
-    <div class="kaiguan" >
-        <div class="bai" id="anniu"></div>
-    </div>
+
+
 <a href="#header" class="menuLink_1">↑</a>
      
 <a href="menu.html" class="menuLink">+</a>
@@ -335,7 +334,9 @@ document.getElementById("nowtime").innerHTML = "t";
 <div class="id">《ID》????</div>
 <img src="https://z3.ax1x.com/2021/07/17/W1Nd3t.png" class="shortcut_icon"  alt="">
 <img src="https://z3.ax1x.com/2021/07/22/WDced1.jpg" class="avatar"  alt="">
-
+    <div class="kaiguan" >
+        <div class="bai" id="anniu"></div>
+    </div>
 </div>
 
 <ul id="menu" >
