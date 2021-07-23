@@ -260,40 +260,7 @@ zoom:2.4;
              transition: all 1s;
          }
          
-
-
-</style>
-
 <script type="text/javascript">  
-        var t=new Date();  
-document.getElementById("nowtime").innerHTML = "t";
-
-
-
-	window.onload = initAll;
-	function initAll() {
-		var allLinks = document.getElementsByTagName("a");
-		for (var i=0; i<allLinks.length; i++) {
-			if (allLinks[i].className.indexOf("menuLink") > -1) {
-				allLinks[i].onclick = toggleMenu;
-			}
-		}
-	}
-	function toggleMenu() {
-		var startMenu = this.href.lastIndexOf("/")+1;
-		var stopMenu = this.href.lastIndexOf(".");
-		var thisMenuName = this.href.substring(startMenu,stopMenu);
-		var thisMenu = document.getElementById(thisMenuName).style;
-		if (thisMenu.display == "block") {
-			thisMenu.display = "none";
-		}
-		else {
-			thisMenu.display = "block";
-		}
-		return false;
-	}
-
-
         var anniu =document.getElementById('anniu');
         var kaiguan = document.querySelector('.kaiguan');
         var body = document.getElementById('body');
@@ -317,6 +284,36 @@ document.getElementById("nowtime").innerHTML = "t";
      
     </script>
 
+
+</style>
+
+
+<script type="text/javascript">  
+	window.onload = initAll;
+	function initAll() {
+		var allLinks = document.getElementsByTagName("a");
+		for (var i=0; i<allLinks.length; i++) {
+			if (allLinks[i].className.indexOf("menuLink") > -1) {
+				allLinks[i].onclick = toggleMenu;
+			}
+		}
+	}
+	function toggleMenu() {
+		var startMenu = this.href.lastIndexOf("/")+1;
+		var stopMenu = this.href.lastIndexOf(".");
+		var thisMenuName = this.href.substring(startMenu,stopMenu);
+		var thisMenu = document.getElementById(thisMenuName).style;
+		if (thisMenu.display == "block") {
+			thisMenu.display = "none";
+		}
+		else {
+			thisMenu.display = "block";
+		}
+		return false;
+	}
+    </script>
+
+
 </head>
 
 
@@ -332,7 +329,10 @@ document.getElementById("nowtime").innerHTML = "t";
 <BGCOLOR="#f1f1f1">
 
 <div id="nowtime">。</div>
-
+<script type="text/javascript">  
+        var t=new Date();  
+document.getElementById("nowtime").innerHTML = "t";
+    </script>
 
 
 
