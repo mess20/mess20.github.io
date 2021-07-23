@@ -226,8 +226,14 @@ li a:hover:not(.active) {
              border-radius: 20px;
              cursor: pointer;
              transition: all 3s;
-transform：scale(5)
-         }
+transform：scale(5);
+    padding-bottom: auto;/*相当于盒子的高度*/    
+    width: auto;
+    height: 0;
+    border: 1px solid red;
+}
+
+        
          .bai{ 
              position: absolute;
              top: 1.5px;
@@ -327,6 +333,8 @@ document.getElementById("nowtime").innerHTML = "t";
 
 
 <a href="#header" class="menuLink_1">↑</a>
+   
+<a href="#header" class="menuLink_1">＾</a>
      
 <a href="menu.html" class="menuLink">+</a>
 
