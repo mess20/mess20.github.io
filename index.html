@@ -421,17 +421,22 @@ exhzh>br<br>
 
 <img src="https://z3.ax1x.com/2021/07/22/WDced1.jpg">
 <p>
-Copyright &copy;版权归原作者所有<br>
+Copyright &copy;<div id="nowyear"></div>版权归原作者所有<br>
 Posted by: Utopia Publishing House<br>
 Contact information: UtopiaPublishingHouse@outlook.com<br>
 </p>
 </div>
-
+<script type="text/javascript">  
+        var t=new Date();  
+        var y=today.getYears()
+document.getElementById("nowyear").innerHTML =y;
+</script>
 
 <script type="text/javascript">  
         var anniu =document.getElementById('anniu');
         var kaiguan = document.querySelector('.kaiguan');
         var body = document.getElementById('body');
+       var card = document.getElementById('.card');
        var temp = 1;
         anniu.addEventListener('click',function(){
             if(temp==1){
@@ -447,6 +452,7 @@ Contact information: UtopiaPublishingHouse@outlook.com<br>
                 kaiguan.style. border= '2px solid black';
                 body.style. backgroundColor= 'white';
                 body.style.color = 'black';
+                card.style. backgroundColor = 'background-color:rgba(255,255,255,100%);';
             }
 
         })
