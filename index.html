@@ -1,102 +1,414 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <style>
-        *{margin: 0;padding: 0;}
-        .div{width: 500px; min-height: 300px; border: 1px solid red; margin: auto; margin-top: 200px;}
-        .div .lyb{width: 90%; margin: auto; display: block; border-bottom: 1px solid red; padding: 5px 0px;}
-        .div .div1{width: 90%; border: 1px solid red; margin: 5px auto;}
-        .div .div1 p{width: 100%; padding: 5px 0px; height: 30px; line-height: 30px; }
-        .div .div1 ul{width: 100%;}
-        .div .div1 ul li{width: 100%; height: 30px; padding: 5px 0px; line-height: 30px; list-style: none;margin-bottom: 10px; background: blanchedalmond;}
-        #wbk{resize: none; width: 90%;margin: auto; height: 100px; display: block;}
-        #btn{width: 90%; height: 100px; margin: auto; display: block; margin-top: 5px;}
-        a{float: right}
-        span{float: right;}
-    </style>
-</head>
-<body>
-    <div class="div">
-        <p class="lyb">留言板</p>
-        <div class="div1">
-            <p class="p">请输入内容</p>
+<div class="inner_content">
+    <c:forEach items="${notices}" var="n">
+        <c:choose>
+            <c:when test="${n.suffix=='.avi' || n.suffix=='.mp4'}">
+                  <p class="inner_video">
+                    <video src="${n.imageUrl }" width="500" height="375" controls>
+                        Your browser dosen't support the video tag.
+                    </video>
+                    </p> 
+                 <p style="font-size:10px; line-height:24px;">
+                    ${n.text }
+                 </p>
+            </c:when>
+            <c:when test="${n.suffix!='.avi' && n.suffix!='.mp4'}">
+                 <p class="inner_image">
+                   <img src="${n.imageUrl }" width="100%">
+                 </p>
+                 <p style="font-size:14px; line-height:24px; text-indent:2em;">
+                    ${n.text }
+                 </p>
+            </c:when>
+        </c:choose>
+    </c:forEach>
+        </div>
+
+
+/*留言板*/
+
+ <div class="comment_title">
+        <h4>
+            评论（
+            <c:if test="${empty plNum}">0</c:if>
+            <c:if test="${!empty plNum}">${plNum}</c:if>
+            条）
+        </h4>
+    </div>
+  <div class="comment_main">
+        <div id="PLmain">
+        <c:forEach items="${msgList.list}" var="m">
+         
+            <dl id="pl_${m.id}">
+                <dt>
+                    <img src="/pages/foreground/images/user_image.jpg">
+                </dt>
+                <dd>
+                    <p>
+                        <span class="c_name">${m.uid.uname }</span>
+                        <span class="c_time">
+                          ${m.time } 
+                        </span>
+                       <!--  <span class="c_jb"><a href="#">举报</a></span> -->
+                    </p>
+                    <p class="comment_user">
+                        ${m.leave }
+                    </p>
+                    <p class="comment_share">
+                        <a   href="javascript:void(0);" title="${m.id }" onclick="a_huifu(this);">回复</a>
+                        <a   href="javascript:void(0);" title="${m.id }" onclick="a_zan(this);">赞（<label id="labzan_${m.id }">${m.zan }</label>）</a>
+                    </p>
+                    <div id="saydiv${m.id}" class="c_say" style="display:none;">
+                      <textarea id="text${m.id }" placeholder="请输入回复..."></textarea>
+                      <c:if test="${empty loginUser}">
+                        <p class="c_text">
+                            注册成为会员后方可回复
+                            <a class="c_rigister" href="/user/register/user_register!userRegister.ds">注册</a>
+                            <span class="c_line">|</span>
+                            <a class="c_login" href="#login">登录</a>
+                        </p>
+                        </c:if>
+                        
+                        <c:if test="${!empty loginUser}">
+                             <input id="btn_${m.id}" title="${m.websiteMessage.id}" type="button" value="回复" myId="${m.id }" onclick="huifu(this);" />
+                        </c:if>
+                    </div>
+                    //重点。。。留言的读取
+                <c:forEach items="${map}" var="h"> //map 集合
+                    <c:forEach items="${h.key}" var="va"> //判断键值
+                        <c:if test="${va eq m.id}"> //判断键值和id号是否相等
+                            <c:forEach items="${h.value}" var="hvalue"> //相等取值
+                            
+                            <div class="c_reply" id="re_${hvalue.id }">
+                            <dl>
+                                    <dt>
+                                        <img src="/pages/foreground/images/user_image.jpg">
+                                    </dt>
+                                    <dd>
+                                        <p>
+                                            <span class="c_name">${hvalue.uid.uname }</span>
+                                            <span class="c_time">
+                                              ${hvalue.time }
+                                            </span>
+                                           <!--  <span class="c_jb"><a href="#">举报</a></span> -->
+                                        </p>
+                                        <p class="comment_user">
+                                            ${hvalue.leave }
+                                        </p>
+                                    </dd> 
+                                    </dl>
+                                    </div>
+                            </c:forEach>
+                        </c:if>
+                    </c:forEach>
+                </c:forEach>
+                    
+                </dd>
+       
+            </dl>
+        </c:forEach>
+         
+            
+        </div>
+        <c:if test="${!empty msgList.list}">
+        <div class="page_num">
             <ul>
-                
+             
+            <c:if test="${msgList.pageCount > 1 && msgList.pageNumber != msgList.pageCount}">
+                             <a href="/user/site_message!cgIndex.ds?type=${type}&id=${id}&msgnum=1">首页</a>，
+                             <a href="/user/site_message!cgIndex.ds?type=${type}&id=${id}&msgnum=${msgList.pageNumber-1}">上一页</a>， 
+                             <a href="/user/site_message!cgIndex.ds?type=${type}&id=${id}&msgnum=${msgList.pageNumber+1}">下一页</a>， 
+                             <a href="/user/site_message!cgIndex.ds?type=${type}&id=${id}&msgnum=${msgList.pageCount}">末页</a>
+                           </c:if>
+                           <c:if test="${msgList.pageNumber eq msgList.pageCount}">
+                                 <a href="/user/site_message!cgIndex.ds?type=${type}&id=${id}&msgnum=1">首页</a>，
+                <a href="/user/site_message!cgIndex.ds?type=${type}&id=${id}&msgnum=${webMessages.pageNumber-1}">上一页</a>
+                </c:if>
+                 第${msgList.pageNumber }页，共${msgList.pageCount }页
+             
             </ul>
         </div>
-        <textarea id="wbk"></textarea>
-        <input id="btn" type="button" value="发布留言"  />
+        </c:if>
     </div>
-    <script>
-        var p = document.getElementsByClassName("p")[0];
-        var ul = document.getElementsByTagName("ul")[0];
-        var wbk = document.getElementById("wbk");
-        var btn = document.getElementById("btn");
-        var num = 0;
-        btn.onclick = function(){
-            if(wbk.value.length != 0){
-                p.style.display = "none";
-                var li = document.createElement("li");
-                var em = document.createElement('em');
-                var a = document.createElement("a");
-                var span = document.createElement("span");
-                
-                li.innerHTML = wbk.value;
-                li.insertBefore(em,li.firstChild);
-                
-                
-                a.innerHTML = "点击删除";
-                a.setAttribute("href","javascript:void(0)");
-                li.appendChild(a);
-                
-                span.innerHTML = "第" + num + "个";
-                li.appendChild(span);
-                
-                
-                wbk.value = "";
-                ul.appendChild(li);
-                
-                fn1();
-                fn2();
-            }else{
-                alert("请输入内容")
+    
+  <div class="reply_input">
+                        <textarea id="leaveText" placeholder="请控制提问字数在300字以内..."></textarea>
+                        <c:if test="${empty loginUser}">
+                        <p class="c_text">
+                            注册成为会员后方可回复
+                            <a class="c_rigister" href="#">注册</a>
+                            <span class="c_line">|</span>
+                            <a class="c_login" href="#">登录</a>
+                        </p>
+                       </c:if>    
+                        <c:if test="${!empty loginUser}">
+                             <input class="reply_confirm"  type="button" value="确定" onclick="pl();" style="overflow: hidden;  " />
+                        </c:if> 
+    
+    </div>
+</DIV>
+<script type="text/javascript"> 
+        //获取当地时间
+        var date=new Date();
+        var y=date.getFullYear();
+        var m=(date.getMonth()+1);
+        var d=date.getDate();
+        var h=date.getHours();
+        var mm=date.getMinutes();
+        var s=date.getSeconds();
+        var ss=date.getMilliseconds();
+        var da=y+'-'+m+'-'+d+' '+h+':'+mm+':'+s+'.'+ss;    
+     var arrContent={};//存类容，
+     var islogin="${loginUser}1";//是否登陆  1 是登陆，否则没有登陆
+     //回复按钮，显示输入框
+    function a_huifu(a){
+        if(arrContent["textId"]){
+            var cf=confirm('是否离开?');
+            if(cf==false){
+                return ;
             }
+            $(arrContent['textId']).val('');
+            $(arrContent['textId']).attr({style:"display:none;"});
         }
-        
-        function fn1(){
-            var ali = document.getElementsByTagName('li');
-            var ee = document.getElementsByTagName('em');
-            for(var i=0;i<ali.length;i++){
-                ee[i].innerHTML = i + 1 + ".";
-            }
-            
-            var ss = document.getElementsByTagName('span');
-            for(var i=0;i<ali.length;i++){
-                ss[i].innerHTML = "第" + (i + 1) + "个";
-            }
-            if(ali.length == 0){
-                p.style.display = "block";
-            }
-            
+         
+        var lybmsgId=$(a).attr('title');//留言板
+        var contentId='#saydiv'+lybmsgId;
+        var contentState=$(contentId).attr('style');
+        var text="#text"+lybmsgId;//输入的内容的ID
+         
+        if(contentState=='display:none;'){
+         $(contentId).attr({style:"display:block;"});
         }
-        function fn2(){
-            var aa = document.getElementsByTagName("a");
-            for(var i=0;i<aa.length;i++){
-                aa[i].onclick = function(){
-                    this.parentNode.parentNode.removeChild(this.parentNode);
-                    fn1();
+        else if(contentState=='display:block;'){
+            if(islogin!='1'&&$(text).html().length>0){
+                arrContent['textId']=text;
+                var cf=confirm('是否离开?');
+                if(cf==true){
+                    //表示，已经登陆了，离开
+                    $(text).val('');//清空留言
+                    $(contentId).attr({style:"display:none;"});
                 }
-                
+            }else{
+                $(text).val('');//清空留言
+                $(contentId).attr({style:"display:none;"});
             }
+        } 
+    }
+    //确定回复
+    function huifu(btn){ 
+        var btnId=$(btn).attr('id');
+        var parentId=btnId.substring(4,btnId.length);
+        var msgId=$(btn).attr('title');
+        var leave=$('#text'+parentId).val();
+        $.post('/user/site_message!saveReplay.ds',
+          {"parentId":parentId,"type":2,"msgId":msgId,"leave":leave}
+        ,function(data){
+            alert(data.message);
+            if(data.success){
+                var text="#text"+parentId;//输入的内容的ID
+                var contentId='#saydiv'+parentId;
+                $(text).val('');//清空留言
+                $(contentId).attr({style:"display:none;"});
+                addHtml(btn,leave);
+            }
+        });
+    }
+    //回复成功后添加html留言
+    function addHtml(a,leave){
+            var html="<div class='c_reply' id='re_${hvalue.id }'><dl><dt><img src='/pages/foreground/images/user_image.jpg'></dt>";
+                html+="<dd><p><span class='c_name'>${hvalue.uid.uname }${loginUser.uname}</span><span class='c_time'>${hvalue.time }"+da+"</span></p>";
+                html+=" <p class='comment_user'>${hvalue.leave }"+leave+"</p></dd></dl><div>";
+        $(a).parent().parent().append(html);                            
+    }
+     //赞
+    function a_zan(a){
+        var zanId=$(a).attr('title');
+        var zanBtnId='#labzan_'+zanId;
+        var  count =$(zanBtnId).html();
+        $.post('/user/site_message!zan.ds',{"id":zanId},function(data){
+            if(data.success){
+                $(zanBtnId).html(parseInt(count)+1);
+            }
+        });
+    }
+    //最下面的评论
+    function pl(){
+        var leave=$('#leaveText').val().trim();
+        if(leave.length==0){
+            alert('请输入文字');
+            return ;
+        } 
+        if(leave.length>300){
+            alert('不能大于300字');
+            return;
         }
-        
-        
-        
-        
-    </script>
-</body>
-</html>
+        var plId="${websiteMessage.id}";
+         
+        $.post('/user/site_message!savePL.ds',
+          {"msgId":plId,"leave":leave}
+        ,function(data){
+            alert(data.message);
+             if(data.success){
+                var id=data.savePlId;
+                var html="<dl  ><dt><img src='/pages/foreground/images/user_image.jpg'></dt><dd><p><span class='c_name'>${loginUser.uname}</span>";
+                html+="<span class='c_time'> "+da+"</span></p>";
+                html+="<p class='comment_user'>"+leave+"  </p>";
+                html+="<p class='comment_share'><a onclick='a_huifu(this);' title='"+id+"' href='javascript:void(0);'>回复</a>";
+                html+="<a onclick='a_zan(this);' title='"+id+"' href='javascript:void(0);'>赞（<label id='labzan_"+id+"'>0</label>）";
+                html+="</a></p><div id='saydiv"+id+"' class='c_say' style='display:none;'><textarea id='text"+id+"' placeholder='请输入回复...'></textarea>";
+                html+="<input id='btn_"+id+"' type='button' onclick='huifu(this);' myid='"+id+"' value='回复' title='"+plId+"'></div></dd></dl>";
+                $('#PLmain').append(html);
+                $('#leaveText').val('');
+            }
+        });
+    }
+</script>
+
+@Resource
+    private MessageBordService messageBordService;
+    @Resource
+    private WebsiteMessageService websiteMessageService;
+    private int pagenum=1;//页数
+    private int msgnum=1;//留言页数
+    private Long msgId;//公告的Id
+    private Long parentId;//回复留言的Id
+    private Integer type;//1: 留言 （评论）2:回复
+    private String leave;//留言(评论)//回复
+    
+    
+    
+    private MessageBord msg=null;
+    @UnLogin
+    public String index(){
+        List<WebsiteMessage> webMessages = websiteMessageService.listLateWebMessage(CommonVar.WEBSITEMESSAGE,type);
+        setAttribute("webMessages", webMessages);
+        WebsiteMessage websiteMessage = websiteMessageService.get(id);
+        setAttribute("websiteMessage", websiteMessage);
+        setAttribute("type", type);
+        return "index";
+    }
+        /*if(value==1)
+        return '媒体报道';
+        if(value==2)
+        return '网站公告';
+        if(value==3)
+        return '成功案例';
+        if(value==4)
+        return '站内信息';*/
+    @UnLogin
+    public String cgIndex(){
+        Pager pager=new Pager();
+        pager.setPageNumber(pagenum);
+        pager.setPageSize(8);
+        DetachedCriteria de=DetachedCriteria.forClass(WebsiteMessage.class);
+        de.add(Restrictions.eq("isDelete", 0));
+        de.add(Restrictions.eq("mtype", type));
+        Pager list = websiteMessageService.findByPager(pager, de);
+        setAttribute("webMessages", list);
+        if(null!=id){
+            WebsiteMessage websiteMessage = websiteMessageService.get(id);
+            setAttribute("websiteMessage", websiteMessage);
+            Set<SystemNoticeWeb> systemNoticeWebs = websiteMessage.getSystemNoticeWebs();
+            setAttribute("notices", systemNoticeWebs);
+        }
+        setAttribute("type", type);
+        setAttribute("pagenum", pagenum);
+        //获取5留言(评论)
+        if(null!=id){
+            Pager msgPager=new Pager();
+            msgPager.setPageNumber(msgnum);
+            msgPager.setPageSize(4);//每页四条数据
+            DetachedCriteria msgde=DetachedCriteria.forClass(MessageBord.class);
+            msgde.add(Restrictions.eq("websiteMessage",websiteMessageService.get(id)));
+            msgde.add(Restrictions.eq("type", 1));
+            msgde.add(Restrictions.isNull("parentId"));
+            Pager msgList = messageBordService.findByPager(msgPager, msgde);
+            List<MessageBord> mbs = msgList.getList();
+            if(mbs!=null&&mbs.size()>=1){
+                setAttribute("id", id);
+                setAttribute("msgList", msgList);//用于取页数
+                setAttribute("plNum", mbs.size());//评论条数
+                getReplay(mbs,id);
+            }
+            Long totalNumber = websiteMessageService.getTotalNumber(Long.valueOf(id));
+            setAttribute("plNum", totalNumber);
+        }
+        return "index";
+    }
+    //所有的回复
+    private void getReplay(List<MessageBord> mbs,Long msgId){
+        //取出每条评论的回复存入集合
+        Map<String,List<MessageBord>>map=new HashMap<String,List<MessageBord>>();
+        for (MessageBord messageBord : mbs) {
+            //获取每条评论
+            DetachedCriteria hude=DetachedCriteria.forClass(MessageBord.class);
+            hude.add(Restrictions.eq("websiteMessage", websiteMessageService.get(id)));
+            hude.add(Restrictions.eq("type", 2));
+            hude.add(Restrictions.eq("parentId", messageBord.getId()));
+            List<MessageBord> pls = messageBordService.getL(hude, -1);
+            String key=messageBord.getId().toString();
+            map.put(key, pls);
+            setAttribute("map", map);
+        }
+    }
+     //保存回复
+    public void saveReplay(){
+        try{
+            msg=new MessageBord();
+            LoanUser user=(LoanUser) getSession("loginUser");
+             msg.setLeave(this.leave);
+             msg.setParentId(this.parentId);
+             msg.setType(this.type);
+             msg.setUid(user);
+             msg.setTime(new Date());
+             msg.setZan(0);
+             msg.setWebsiteMessage(new WebsiteMessage(msgId));
+             messageBordService.save(msg);
+             super.ajaxJson(DbRecord.jsonShowInfo(true, "留言成功"));
+        }catch (Exception e) {
+            super.ajaxJson(DbRecord.jsonShowInfo(false, "留言失败"));
+        }
+    }
+    //保存评论
+    public void savePL(){
+        if(this.leave.length()>300){
+            super.ajaxJson(DbRecord.jsonShowInfo(false, "不能大于300字"));
+            return;
+        }
+        JSONObject json=new JSONObject();
+        try{
+            LoanUser user=(LoanUser) getSession("loginUser");
+            msg=new MessageBord();
+            msg.setLeave(this.leave);
+            msg.setTime(new Date());
+            msg.setType(1);
+            msg.setUid(user);
+            msg.setWebsiteMessage(new WebsiteMessage(msgId));
+            msg.setZan(0);
+            Long save = messageBordService.save(msg);
+            json.put("success", true);
+            json.put("message", "评论成功");
+            json.put("savePlId", save);
+             super.ajaxJson(json.toString());
+        }catch (Exception e) {
+            super.ajaxJson(DbRecord.jsonShowInfo(false, "评论失败"));
+        } 
+    }
+    //赞
+    public void zan(){
+        try{
+            if(null!=id){
+                MessageBord messageBord = messageBordService.get(id);
+                messageBord.setZan((messageBord.getZan()+1));
+                messageBordService.update(messageBord);
+                super.ajaxJson(DbRecord.jsonShowInfo(true, "赞成功"));
+            }
+        }catch (Exception e) {
+            super.ajaxJson(DbRecord.jsonShowInfo(false, "赞失败"));
+        }
+    }
+
+
+
+
+
+
