@@ -1,12 +1,42 @@
+<style>
+.commentList li:first-child {
+    border-top: 1px solid #eee;
+}
+.commentList .item {
+    font-size: 1rem;
+}
+.commentList li {
+    position: relative;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+.item {
+    text-align: left;
+    cursor: pointer;
+}
+ 
+li {
+    display: list-item;
+}
+
+.item .pic {
+    float: left;
+    margin-right: 10px;
+}
+div, a, p, ul, li, img, span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+</style>
+
+
 <textarea id="dome" class="commentArea"></textarea>
 <div class="addMessageBtn">发布</div>
 <div style="clear: both;"></div>
 <ul class="commentList"></ul>
 
 <script type="text/javascript"> 
-getOnePageMessage(id ,messagePage);
-
-
 function getOnePageMessage(id, page){
         var onePageMessageTmp;
     var messagePageCount;
