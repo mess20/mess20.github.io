@@ -5,25 +5,7 @@
 
 <html>   
 
-<script type="text/javascript">
-var div=document.getElementById('home');
-var afterurl=div.id;
-var firsturl="https://mess20.github.io/"; 
-var url=firsturl + "#" + afterurl;
-var title=afterurl;
-function bookmark()
-{
-if (document.all)
-{
-window.external.addFavorite(url,title);
-}
-else if (window.sidebar)
-{
-window.sidebar.addPanel(title, url, "?");
-}
-}
 
-</script>
 
 <body>   
 <p>helloworld</p>   
@@ -266,8 +248,27 @@ me
 
 </div>
 
-<a href="#" onclick="javascript:bookmark()">收藏</a>
+<a href="#" onclick="bookmark()">收藏</a>
+  
+<script type="text/javascript">
+var div=document.getElementById('home');
+var afterurl=div.id;
+var firsturl="https://mess20.github.io/"; 
+var url=firsturl + "#" + afterurl;
+var title=afterurl;
+function bookmark()
+{
+if (document.all)
+{
+window.external.addFavorite(url,title);
+}
+else if (window.sidebar)
+{
+window.sidebar.addPanel(title, url, "?");
+}
+}
 
+</script>
 
 
 <div id="home">
