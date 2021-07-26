@@ -31,14 +31,14 @@ z-index:1;
 .header_menu .id{
 color:rgba(84,89,93,100%);
 position:fixed;
-top:3%;
+top:2.9%;
 margin-left:12rem;
 }
 .intro{
 color:#404040;
 line-height:6rem;
 font-size:80%;
-margin-top:8rem;
+margin-top:5rem;
 margin-bottom:5rem;
 position:relative
 }
@@ -183,24 +183,27 @@ margin:;
 
 /*弹出式索引*/
 
-a.menuLink {
+.menuLink_2 {
 width: 100px; 
 height: 100px; 
 border-radius: 50%;
-border:#be002f 4px solid;
-background-color: #fff;
+-webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+background-color: white;
 position: fixed;
 right:5rem;
 bottom:30rem;
-color: #be002f;
-font-size: 4rem;
+align-items: center;
+  justify-content: center;
+  overflow: hidden;
 text-align:center;
 line-height:100px;
 text-decoration:none;
 z-index:2;
 }
 
-a.menuLink_1 {
+a.menuLink_1{
 width: 100px; 
 height: 100px; 
 border-radius: 50%;
@@ -366,7 +369,7 @@ document.getElementById("nowtime").innerHTML =t;
 
 
 <a href="#header" class="menuLink_1">∧</a>     
-<a href="menu.html" class="menuLink">+</a>
+<a href="menu.html" class="menuLink_2"><img src="https://z3.ax1x.com/2021/07/26/WhngfJ.jpg" class="menuLink_2"  alt=""></a>
 
 <div class="header_menu">
 <div class="id">FLOW</div>
