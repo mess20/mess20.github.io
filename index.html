@@ -268,19 +268,6 @@ width:25%;
 direction:left;
 }
 
-/*背景渐变*/
-<script type="text/javascript">
-        window.onload=function(){ 
-            changeColor();
-        }
-        function changeColor(){
-        var t=new Date();  
-        var h=t.getHours();
-        var m=t.getMinutes();
-        var r=255-255*(h*60+m)/(24*60);
-        var rgb=r.toString(16)+r.toString(16)+r.toString(16);
-document.body.bgColor="#"+rgb;}
-</script>
 
 
 
