@@ -11,25 +11,6 @@
 <meta name="keywords" content="理科">
 <Link href="https://z3.ax1x.com/2021/07/25/Wg3yW9.png" rel="Shortcut Icon">
 
-<script type="text/javascript">
-$thing.on('touchstart click', function(event){
-  if (event.type == "touchstart")
-    $(this).off('click');
-
-  //your code here
-});
-const Button = document.getElementById("targetButton")
-Button.addEventListener("touchstart", e => {
- e.preventDefault()
- console.log("touchstart event!")
-})
- 
-Button.addEventListener("click", e => {
- e.preventDefault()
- console.log("click event!")
-})
-</script>
-
 
 
 <style type="text/css">
@@ -345,12 +326,17 @@ display:block;
 left:0;
 margin-top:90%;
 width: 100%;
-z-index:4;
+z-index:1;
 opacity:0.3;
 }
   <script>
  
             window.onload = function(){
+    setTimeout(
+        function(){
+            $(".targetButton").click();
+		},10000);
+}
                 var canvas = document.getElementById("canvas");
                 var ctx = canvas.getContext("2d");
 ctx.width=;
@@ -477,7 +463,7 @@ t I was<br>
 <div class="main">
 
 
-<div id="targetButton">targetButton</div>
+<div id="targetButton" class="targetButton">targetButton</div>
 
 <canvas id="canvas">  
 </canvas>
