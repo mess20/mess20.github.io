@@ -15,13 +15,8 @@
 
 <style type="text/css">
 
-#targetButton{
-color:red
-}
-		
 
 body{
-touch-action: none;
 font-family:arial;
 font-size:270%;
 position: relative;
@@ -332,11 +327,7 @@ opacity:0.3;
 }
   <script>
  
-            window.onload = function(){
-    setTimeout(
-        function(){
-            $(".targetButton").click();
-		},2000);
+            function note(){
                 var canvas = document.getElementById("canvas");
                 var ctx = canvas.getContext("2d");
 ctx.width=;
@@ -464,9 +455,9 @@ t I was<br>
 <div class="main">
 
 
-<div id="targetButton" class="targetButton">targetButton</div>
+<div id="targetButton" class="targetButton" onclick="note()">targetButton</div>
 
-<canvas id="canvas">  
+<canvas id="canvas"  >  
 </canvas>
 <h2>万物选购指南：层次分析法治好了我的选择困难</h2>
 <br>
