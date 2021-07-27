@@ -12,6 +12,12 @@
 <Link href="https://z3.ax1x.com/2021/07/25/Wg3yW9.png" rel="Shortcut Icon">
 
 <script type="text/javascript">
+$thing.on('touchstart click', function(event){
+  if (event.type == "touchstart")
+    $(this).off('click');
+
+  //your code here
+});
 const Button = document.getElementById("targetButton")
 Button.addEventListener("touchstart", e => {
  e.preventDefault()
