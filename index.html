@@ -11,8 +11,28 @@
 <meta name="keywords" content="理科">
 <Link href="https://z3.ax1x.com/2021/07/25/Wg3yW9.png" rel="Shortcut Icon">
 
+<script type="text/javascript">
+const Button = document.getElementById("targetButton")
+Button.addEventListener("touchstart", e => {
+ e.preventDefault()
+ console.log("touchstart event!")
+})
+ 
+Button.addEventListener("click", e => {
+ e.preventDefault()
+ console.log("click event!")
+})
+</script>
+
+
 
 <style type="text/css">
+
+#targetButton{
+collor:red
+}
+		
+
 body{
 touch-action: none;
 font-family:arial;
@@ -451,6 +471,8 @@ t I was<br>
 
 <div class="main">
 
+
+<div id="targetButton">targetButton</div>
 
 <canvas id="canvas">  
 </canvas>
