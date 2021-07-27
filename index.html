@@ -325,40 +325,7 @@ width: 100%;
 z-index:1;
 opacity:0.3;
 }
-  <script>
-function stop(){
-        var mo=function(e){e.preventDefault();};
-        document.body.style.overflow='hidden';
-        document.addEventListener("touchmove",mo,false);//禁止页面滑动
-      }
-            function note(){
-                var canvas = document.getElementById("canvas");
-                var ctx = canvas.getContext("2d");
-ctx.width=;
-ctx.height=;
-                ctx.lineWidth = 16;
-                ctx.strokeStyle = '#FFC300';
-canvas.addEventListener('touchstart',function(event){
-event.preventDefault();//触摸点按下事件
-                    if (event.targetTouches.length == 1) {
-                        var touch = event.targetTouches[0];
-                        ctx.beginPath();
-                        ctx.moveTo(touch.clientX-canvas.offsetLeft,touch.clientY-canvas.offsetTop);
-                        canvas.addEventListener('touchmove',function (event) {//手机拖动触摸点事件
-                            var touche = event.targetTouches[0];
-                            ctx.lineTo(touch.clientX - canvas.offsetLeft, touche.clientY - canvas.offsetTop);
-                            ctx.stroke();
-                        },false)
-                        canvas.addEventListener('touchend',function (event) {//手机离开屏幕的事件
-                            ctx.closePath();
- 
-                        },false)
- 
-                    }
-                },false)
- 
-            }
-        </script>
+  
 </style>
 
 
@@ -459,10 +426,46 @@ t I was<br>
 <div class="main">
 
 
-<<button id="targetButton" class="targetButton" onclick="note()" onclick="stop()">targetButton</button>
+<button id="targetButton" class="targetButton" onclick="note()" onclick="stop()">targetButton</button>
 
 <canvas id="canvas"  >  
 </canvas>
+<script>
+var mo=function(e){e.preventDefault();};
+function stop(){
+        document.body.style.overflow='hidden';       
+        document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
+}
+            function note(){
+                var canvas = document.getElementById("canvas");
+                var ctx = canvas.getContext("2d");
+ctx.width=;
+ctx.height=;
+                ctx.lineWidth = 16;
+                ctx.strokeStyle = '#FFC300';
+canvas.addEventListener('touchstart',function(event){
+event.preventDefault();//触摸点按下事件
+                    if (event.targetTouches.length == 1) {
+                        var touch = event.targetTouches[0];
+                        ctx.beginPath();
+                        ctx.moveTo(touch.clientX-canvas.offsetLeft,touch.clientY-canvas.offsetTop);
+                        canvas.addEventListener('touchmove',function (event) {//手机拖动触摸点事件
+                            var touche = event.targetTouches[0];
+                            ctx.lineTo(touch.clientX - canvas.offsetLeft, touche.clientY - canvas.offsetTop);
+                            ctx.stroke();
+                        },false)
+                        canvas.addEventListener('touchend',function (event) {//手机离开屏幕的事件
+                            ctx.closePath();
+ 
+                        },false)
+ 
+                    }
+                },false)
+ 
+            }
+        </script>
+
+
 <h2>万物选购指南：层次分析法治好了我的选择困难</h2>
 <br>
 <div class="intro">
