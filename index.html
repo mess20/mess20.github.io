@@ -335,15 +335,15 @@ opacity:0.3;
     setTimeout(
         function(){
             $(".targetButton").click();
-		},10000);
-}
+		},2000);
                 var canvas = document.getElementById("canvas");
                 var ctx = canvas.getContext("2d");
 ctx.width=;
 ctx.height=;
                 ctx.lineWidth = 16;
                 ctx.strokeStyle = '#FFC300';
-canvas.addEventListener('touchstart',function(event){//触摸点按下事件
+canvas.addEventListener('touchstart',function(event){
+event.preventDefault();//触摸点按下事件
                     if (event.targetTouches.length == 1) {
                         var touch = event.targetTouches[0];
                         ctx.beginPath();
