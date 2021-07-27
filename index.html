@@ -37,7 +37,7 @@ margin-left:12rem;
 }
 .intro{
 color:#404040;
-line-height:6rem;
+line-height:5rem;
 font-size:80%;
 margin-top:5rem;
 margin-bottom:5rem;
@@ -314,9 +314,11 @@ zoom:2.3;
 
 canvas{
 position:absolute;
-border: 20px solid gold;
+border: 20px solid purple;
 display:block;
 margin: auto ;
+margin-top:90%;
+width: 100%;
 z-index:1;
 opacity:0.3;
 }
@@ -325,8 +327,8 @@ opacity:0.3;
             window.onload = function(){
                 var canvas = document.getElementById("canvas");
                 var ctx = canvas.getContext("2d");
-ctx.width=100%;
-ctx.height=200%;
+ctx.width=;
+ctx.height=;
                 ctx.lineWidth = 16;
                 ctx.strokeStyle = '#FFC300';
 canvas.addEventListener('touchstart',function(event){//触摸点按下事件
@@ -447,6 +449,10 @@ t I was<br>
 
 
 <div class="main">
+
+
+<canvas id="canvas">  
+</canvas>
 <h2>万物选购指南：层次分析法治好了我的选择困难</h2>
 <br>
 <div class="intro">
@@ -523,7 +529,6 @@ document.getElementById("nowyear").innerHTML = y;
 </div>
 
 
-<canvas id="canvas">  
-</canvas>
+
 </body>
 </html>
