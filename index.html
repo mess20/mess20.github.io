@@ -324,17 +324,171 @@ zoom:2.3;
 
 canvas{
 position:absolute;
-border: 20px solid purple;
+border: 2px solid gold;
 display:block;
-left:0;
-right:0;
-top:100px;
-height:100%;
-width: 100%;
+margin:0 auto;
+right:50px;
+left:0px;
+top:200px;
+bottom:;
 z-index:1;
 opacity:0.3;
 }
-  
+
+</style>
+
+<canvas  id="canvas">  
+</canvas>
+    
+      <div>
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+<br>
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+<br>
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+<br>
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+<br>
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+<br>
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+<br>
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+<br>
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+<br>
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+ggvvvn
+根本不能
+嘿嘿乖乖乖<br>
+发布会根本
+<br>
+</div>
+  <script>
+ 
+            window.onload = function(){
+                var canvas = document.getElementById("canvas");
+                var ctx = canvas.getContext("2d");
+ctx.width=1080;
+   ctx.height=2040;
+                ctx.lineWidth = 16;
+                ctx.strokeStyle = '#FFC300';
+canvas.addEventListener('touchstart',function(event){//触摸点按下事件
+                    if (event.targetTouches.length == 1) {
+                        var touch = event.targetTouches[0];
+                        ctx.beginPath();
+                        ctx.moveTo(touch.clientX-canvas.offsetLeft,touch.clientY-canvas.offsetTop);
+                        canvas.addEventListener('touchmove',function (event) {//手机拖动触摸点事件
+                            var touche = event.targetTouches[0];
+                            ctx.lineTo(touch.clientX - canvas.offsetLeft, touche.clientY - canvas.offsetTop);
+                            ctx.stroke();
+                        },false)
+                        canvas.addEventListener('touchend',function (event) {//手机离开屏幕的事件
+                            ctx.closePath();
+ 
+                        },false)
+ 
+                    }
+                },false)
+ 
+            }
+        </script>
+
 </style>
 
 
@@ -374,8 +528,7 @@ opacity:0.3;
 
 
 
-<canvas id="canvas" >  
-</canvas>
+
 <body id="body">
 <div oncopy="return false">
 
@@ -438,35 +591,7 @@ t I was<br>
 
 
 
-<script type="text/javascript">
-            window.onload = function(){
-                var canvas = document.getElementById("canvas");
-                var ctx = canvas.getContext("2d");
-ctx.width=;
-ctx.height=;
-                ctx.lineWidth = 16;
-                ctx.strokeStyle = '#FFC300';
-canvas.addEventListener('touchstart',function(event){
-event.preventDefault();//触摸点按下事件
-                    if (event.targetTouches.length == 1) {
-                        var touch = event.targetTouches[0];
-                        ctx.beginPath();
-                        ctx.moveTo(touch.clientX-canvas.offsetLeft,touch.clientY-canvas.offsetTop);
-                        canvas.addEventListener('touchmove',function (event) {//手机拖动触摸点事件
-                            var touche = event.targetTouches[0];
-                            ctx.lineTo(touch.clientX - canvas.offsetLeft, touche.clientY - canvas.offsetTop);
-                            ctx.stroke();
-                        },false)
-                        canvas.addEventListener('touchend',function (event) {//手机离开屏幕的事件
-                            ctx.closePath();
- 
-                        },false)
- 
-                    }
-                },false)
- 
-            }
-        </script>
+
 
 
 <h2>万物选购指南：层次分析法治好了我的选择困难</h2>
