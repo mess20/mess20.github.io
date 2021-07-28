@@ -373,17 +373,7 @@ background:rgb(231,240,255,20%);
 }
 
 
-/* 蓝色下划线*/
-<script type="text/javascript">
-function mark(obj){
-if(obj.className != "over"){
-obj.oldClass = obj.className; 
-obj.className = "over";
-}else if(obj.oldClass){
-obj.className = obj.oldClass; 
-}
-}
-</script>
+
 /*夜间模式*/
       .kaiguan{
              position: absolute;
@@ -432,7 +422,17 @@ zoom:2.3;
 
 
 </style>
-
+/* 蓝色下划线*/
+<script type="text/javascript">
+function mark(obj){
+if(obj.className != "over"){
+obj.oldClass = obj.className; 
+obj.className = "over";
+}else if(obj.oldClass){
+obj.className = obj.oldClass; 
+}
+}
+</script>
 <script type="text/javascript">  
 	window.onload = function() {
 		var allLinks = document.getElementsByTagName("a");
