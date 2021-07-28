@@ -183,7 +183,21 @@ top:0;
 bottom:0;
 margin:;
 }
-
+/*预览or呼出式解释补充*/
+text{
+border-bottom: 2px solid black;
+padding-bottom: px;
+}
+note{display:none;}
+text:hover note{
+position:absolute;
+display:block;
+background:white;
+-webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+padding:2rem;
+}
 /*弹出式索引*/
 
 .menuLink_2 {
@@ -202,7 +216,7 @@ overflow: hidden;
 z-index:3;
 }
 
-a.menuLink_1{
+.menuLink_1{
 width: 120px; 
 height: 120px; 
 border-radius: 50%;
@@ -467,7 +481,7 @@ t I was<br>
 <b>Matrix 首页推荐</b><br>
 Matrix 是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选 Matrix 最优质的文章，展示来自用户的最真实的体验和观点。</p>
 <p>
-文章代表作者个人观点，少数派仅对标题和排版略作修改。
+文章代表作者个人观点，少数派仅对标题和排版略作修改。xxx<text>原文<note>注释</note></text>xxx
 </p>
 <h3>一、 选择困难及其由来</h3>
 <p>严格来说，选择恐惧症并不适合用来形容上文中的场景，或许 「选择困难」 更为合适。但归根结蒂，两者都具有共同的特征，即「无法在一定时间内做出决策，并且因为这种情况的存在，自己或多或少陷入了焦虑状态」，而选择恐惧只是在程度上比选择困难更强。如果想解决选择困难，首先要明白选择困难的本质及其成因。因此，在第一部分，我将对 「选择恐惧」 的具体表现和成因进行分析。</p>
