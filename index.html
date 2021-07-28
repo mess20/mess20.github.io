@@ -186,16 +186,16 @@ margin:;
 /*预览or呼出式解释补充*/
 text{
 border-bottom: 2px solid black;
-padding-bottom: px;
+padding-bottom: 1px;
 }
 note{display:none;}
 text:hover note{
 position:absolute;
 display:block;
 background:white;
--webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
--moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+-webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 padding:2rem;
 }
 /*弹出式索引*/
@@ -345,7 +345,7 @@ right:0;
 left:0;
 top:10rem;
 bottom:0;
-z-index:4;
+z-index:1;
 opacity:0.3;
 }
 
@@ -399,7 +399,7 @@ canvas.addEventListener('touchstart',function(event){//触摸点按下事件
 
 
 <body id="body">
-<canvas height="4040" width="1080" id="canvas">  
+<canvas height="4040" width="900" id="canvas">  
 </canvas>
 <div oncopy="return false">
 
