@@ -29,7 +29,9 @@ align-items: center;
 justify-content: center;
 overflow: visible;
 }
-
+em{
+color:hsla(347,60%,62%,80%)
+}
 
 blockquote{
 width: 100%;
@@ -38,9 +40,24 @@ padding: 1rem;
 border-left:1rem solid rgb(235,236,240);
 background:rgb(246,246,246);
 }
-
-
-
+info{width: 90%;
+margin: 0.25em 0;
+padding: 1rem;
+border-left:1rem solid rgb(235,236,240);
+}
+info1{
+width: 100%;
+margin: 0.25em 0;
+padding: 1rem;
+border-left:1rem solid rgb(235,236,240);
+background:rgb(231,240,255);
+}
+info2{
+}
+info3{
+}
+info4{
+}
 .header_menu{
 background-color:rgba(235,236,240,0%);
 top:0;
@@ -219,6 +236,24 @@ padding:1rem;
 
 /*mark*/
 /**/
+
+/*蓝色下划线*/
+.over {
+color:#000000; 
+border-bottom: 2px solid cornflowerblue;
+padding-bottom:2px;
+}
+
+<script type="text/javascript">
+function mark(obj){
+if(obj.className != "over"){
+obj.oldClass = obj.className; 
+obj.className = "over";
+}else if(obj.oldClass){
+obj.className = obj.oldClass; 
+}
+}
+</script>
 
 
 
@@ -404,8 +439,12 @@ zoom:2.3;
 <body id="body">
 
 <div oncopy="return false">
-
-成为贡献者。contributor
+当前总贡献者总数：xx
+<blockquote>
+DOLLARS是由像您一样的人构筑的。<br>
+登录以贡献。</blockquote>
+创造（申请）<br>
+成为贡献者（申请） contributor
 <div id="nowtime"></div>
 <script type="text/javascript">  
         var t=new Date();  
@@ -469,7 +508,8 @@ t I was<br>
 <details>
 <summary>万物选购指南：层次分析法治好了我的选择困难</summary>
 <h2>万物选购指南：层次分析法治好了我的选择困难</h2>
-
+<info1>版权声明：本文采用 <abbr title> CC BY <note>Attribution 署名
+只要保留原作者姓名，就可以基于商业目的传播、改编或者二次创作。</note> <abbr> 许可协议授权。</info1>
 <div class="intro">
 <author>
 <img src="https://z3.ax1x.com/2021/07/22/WDced1.jpg" class="avatar"  alt="">
@@ -488,6 +528,20 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 文章代表作者个人观点，少数派仅对标题和排版略作修改。xxx<text>原文<note>注释</note></text>xxx
 </p>
 <h3>一、 选择困难及其由来</h3>
+
+
+<div class="markarea" >
+<o  onclick="mark(this)"> 句子1</o>
+
+<o onclick="mark(this)"> 句子2</o>
+</div>
+
+
+
+
+
+
+
 <p>严格来说，选择恐惧症并不适合用来形容上文中的场景，或许 「选择困难」 更为合适。但归根结蒂，两者都具有共同的特征，即「无法在一定时间内做出决策，并且因为这种情况的存在，自己或多或少陷入了焦虑状态」，而选择恐惧只是在程度上比选择困难更强。如果想解决选择困难，首先要明白选择困难的本质及其成因。因此，在第一部分，我将对 「选择恐惧」 的具体表现和成因进行分析。</p>
 
 <h4>（一） 选择恐惧 / 困难是什么？</h4>
