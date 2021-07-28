@@ -50,7 +50,7 @@ info1{
 display:block;
 width: 100%;
 left:0;
-margin: 0.25em 0;
+margin: 0;
 padding: 0.5rem;
 background:rgb(231,240,255);
 }
@@ -279,6 +279,7 @@ z-index:3;
 
 /*蓝色下划线*/
 .over {
+border-style:none none solid none;
 border-bottom: 2px solid cornflowerblue;
 padding-bottom:2px;
 background: #fcc546
@@ -574,8 +575,8 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 <h3>一、 选择困难及其由来</h3>
 
 
-<div class="markarea" >
-<o  onclick="mark(this)"> 句子1</o>
+<div class="markarea">
+<o class="markarea" onclick="mark(this)"> 句子1</o>
 
 <o onclick="mark(this)"> 句子2</o>
 </div>
