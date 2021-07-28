@@ -195,18 +195,15 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 padding:1rem;
 }
 
-
-
+/*mark*/
+/*荧光标记区*/
 
 text{
-border-bottom: 2px solid red;
+border-bottom: 2px solid black;
 padding-bottom: 1px;
 }
 .canvas{display:none;}
-text:hover .canvas{}
-/*mark*/
-
-.canvas{
+text:hover .canvas{
 position:absolute;
 border: 1rem solid purple;
 display:block;
@@ -407,7 +404,7 @@ canvas.addEventListener('touchstart',function(event){//触摸点按下事件
 
 
 <body id="body">
-<text>原文
+<text style="border-bottom: 2px solid red;">原文
 <canvas height="900" width="900" id="canvas1" class="canvas"></canvas>
 </text>
 
