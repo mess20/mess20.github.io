@@ -344,7 +344,6 @@ margin:0 auto;
 right:0;
 left:0;
 top:10rem;
-bottom:0;
 z-index:1;
 opacity:0.3;
 }
@@ -359,7 +358,7 @@ opacity:0.3;
             window.onload = function(){
                 var canvas = document.getElementById("canvas");
                 var ctx = canvas.getContext("2d");
-                ctx.lineWidth = 16;
+                ctx.lineWidth = 22;
                 ctx.strokeStyle = '#FFC300';
 canvas.addEventListener('touchstart',function(event){//触摸点按下事件
                     if (event.targetTouches.length == 1) {
