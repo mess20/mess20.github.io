@@ -198,15 +198,14 @@ padding:1rem;
 /*mark*/
 /*荧光标记区*/
 
-text{
+te{
 position:absolute;
-border-bottom: 2px solid black;
-padding-bottom: 1px;
+border-bottom: 2px solid red;
 }
 canvas{display:none;}
-text:hover canvas{
+te:hover canvas{
 position:absolute;
-border: 1rem solid purple;
+border:1rem solid purple;
 display:block;
 padding:0;
 margin:0 auto;
@@ -214,7 +213,7 @@ right:0;
 left:0;
 top:10rem;
 z-index:1;
-opacity:0.3;
+opacity:0.5;
 }
 
 /*弹出式索引*/
@@ -405,9 +404,9 @@ canvas.addEventListener('touchstart',function(event){//触摸点按下事件
 
 
 <body id="body">
-<text style="left:6rem;top:50rem;border-bottom: 2px solid red;">原文
+<te style="left:6rem;top:50rem;">原文
 <canvas height="900" width="900" id="canvas1" class="canvas"></canvas>
-</text>
+</te>
 
 <div oncopy="return false">
 
