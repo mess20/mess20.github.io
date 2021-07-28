@@ -226,7 +226,7 @@ margin:;
 abbr{
 }
 note{display:none;}
-abbr,dfn:hover note{
+abbr:hover note{
 position:absolute;
 display:block;
 background:white;
@@ -239,6 +239,17 @@ z-index:3;
 dfn{
 color:rgba(52,160,238,100%) 
 }
+dfn:hover note{
+position:absolute;
+display:block;
+background:white;
+-webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+padding:1rem;
+z-index:3;
+}
+
 
 /*mark*/
 /**/
@@ -266,7 +277,7 @@ obj.className = obj.oldClass;
 
 /*弹出式索引*/
 
-.menuLink_2 {
+a.menuLink_2 {
 width: 120px; 
 height: 120px; 
 border-radius: 50%;
