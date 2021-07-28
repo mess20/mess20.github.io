@@ -368,7 +368,7 @@ canvas.addEventListener('touchstart',function(event){//触摸点按下事件
                         ctx.moveTo(touch.clientX-canvas.offsetLeft,touch.clientY-canvas.offsetTop);
                         canvas.addEventListener('touchmove',function (event) {//手机拖动触摸点事件
                             var touche = event.targetTouches[0];
-                            ctx.lineTo(touch.clientX - canvas.offsetLeft, touche.clientY - canvas.offsetTop);
+                            ctx.lineTo(touche.clientX - canvas.offsetLeft, touche.clientY - canvas.offsetTop);
                             ctx.stroke();
                         },false)
                         canvas.addEventListener('touchend',function (event) {//手机离开屏幕的事件
