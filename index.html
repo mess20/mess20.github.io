@@ -17,6 +17,7 @@
 <li>旨在传播科学知识；</li>
 <li>属于非盈利组织；</li>
 <li>无任何广告。</li>
+</ul>
 </p>
 <p>
 本网站也会犯错误>-<，烦请各位指出。
@@ -37,24 +38,30 @@ Idea worth spreading
 
 <p>
 <h4>本网站目前支持的功能</h4>
-基础功能 Basic Function
-阅读 read
-收藏 feather（点亮羽毛效果）
-标记 mark（目前只支持下划线）
-简记 note
-复制申请 fork request
+<h5>基础功能 Basic Function</h5>
+阅读 read<br>
+收藏 feather（点亮羽毛效果）<br>
+标记 mark（目前只支持下划线）<br>
+简记 note<br>
+<h5>复制申请 fork request</h5>
+</p>
+
+<h3>Copyright Statement／版权声明</h3>
+<p>
+本站部分内容由乌托邦出版社及热心网友合作编写，供学习参考之用，版权归原作者所有。
+<br>
+All content on our webpage is edited collaboratively by Utopia Publishing House and kind netizens, only for learning and referrence. All rights are reserved by the original authors.
+</p>
+
+<h3>Feedback／反馈</h3>
+<p>If there is something improper, please contact with us, we'll handle it as soon as possible.
+<br>
+若有不妥之处（任何侵权行为，或对本社编辑内容存有疑问），请发送邮件，本社会予以处理。
 </p>
 
 
-<h3>Feedback／反馈</h3>
 
 
-
-
-
-<h3>Copyright Statement／版权声明</h3>
-本站部分内容由乌托邦出版社及热心网友合作编写，供学习参考之用，版权归原作者所有。若有不妥之处（任何侵权行为，或对本社编辑内容存有疑问），请发送邮件，本社会予以处理。
-All content on our webpage is edited collaboratively by Utopia Publishing House and kind netizens, only for learning and referrence. All rights are reserved by the original authors.If there is something improper, please contact with us, we'll handle it as soon as possible.
 <p>
 <b>see you again! <b>
 </p>
@@ -428,7 +435,21 @@ background:rgba(1,102,255,30%);
 li a:active {
 }
 
-
+/*按钮样式*/
+.button1{
+ -webkit-transition-duration:0.4s;
+ transition-duration:0.4s;
+ padding: 16px 32px;
+ text-align:center;
+ background-color: white;
+ color:black;
+ border:2px solid #4CAF50;
+ border-radius: 5px;
+}
+.button1:hover{
+ background-color:#4CAF50;
+ color: white;
+}
 
 /*夜间模式*/
       .kaiguan{
@@ -540,8 +561,11 @@ obj.className = obj.oldClass;
 DOLLARS是由像您一样的人构筑的。<br>
 </div>
 登录以贡献。</blockquote>
-创造（申请）<br>
-成为贡献者（申请） contributor
+
+
+<button class="button1">创造（申请）</button>
+<br>
+<button class="button2">成为贡献者（申请）</button> contributor
 <div id="nowtime"></div>
 <script type="text/javascript">  
         var t=new Date();  
