@@ -10,6 +10,79 @@
 
 
 
+<!DOCTYPE html>
+<html class="no-js">
+ 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+ 
+<body>
+    <canvas id="mycanvas" width="200" height="200"></canvas>
+    <img src="" id="myImage">
+    <script type="text/javascript">
+        var cvs = document.getElementById('mycanvas'),
+            ctx = cvs.getContext('2d'),
+            img = document.getElementById('myImage');
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(0, 0, 300, 400);
+        var imgDataSrc = cvs.toDataURL('image/png');
+        img.src = imgDataSrc;
+    </script>
+</body>
+ 
+</html>
+
+
+
+（修改）
+<!DOCTYPE>
+<style>
+body{
+font-size:100%
+}
+.bai{
+
+} 
+.hei{
+
+}
+
+
+#anniu-after{}
+
+</style>
+
+
+<body>
+
+
+
+<img id="anniu" class="bai" src="https://z3.ax1x.com/2021/08/06/fuQjgK.jpg">
+<img src="https://z3.ax1x.com/2021/08/06/fu3vvV.jpg">
+
+<div id="anniu-after"></div>
+
+<script type="text/javascript">  
+var anniu =document.getElementById('anniu');
+var temp = 1;
+anniu.addEventListener('click',function(){
+if(temp==1){
+this.className = 'hei';
+temp=0;
+document.getElementById("anniu-after").innerHTML="<img src=url></img>";
+}else{
+this.className = 'bai';
+temp=1;
+document.getElementById("anniu-after").innerHTML=" <img src=url></img>";
+}})
+</script>
+</body>
 
 
 
@@ -19,6 +92,40 @@
 
 
 
+<!DOCTYPE html>
+<html class="no-js">
+ 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+ 
+<body>
+    <canvas id="mycanvas" width="200" height="200"></canvas>
+    <img src="" id="myImage">
+    <script type="text/javascript">
+        var cvs = document.getElementById('mycanvas'),
+            ctx = cvs.getContext('2d'),
+            img = document.getElementById('myImage');
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(0, 0, 300, 400);
+    ctx.font= '38pt Arial'; //字体样式
+    ctx.fillStyle = 'red'; //填充线样式
+    ctx.strokeStyle='blue'; //轮廓线样式
+    ctx.fillText("hellocav",100,100); //填充线
+    ctx.strokeText("hellocav",100,100); //轮廓线
+
+
+        var imgDataSrc = cvs.toDataURL('image/png');
+        img.src = imgDataSrc;
+    </script>
+</body>
+ 
+</html>
 
 
 <style type="text/css">
