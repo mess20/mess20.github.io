@@ -100,7 +100,7 @@ color:rgba(31, 202, 122, 0.781);
 <button id="start">start</button>
 
 
-<audio id="audio" src="http://m10.music.126.net/20210809081113/5e9a111006006a7da0e2bbad962bb1c4/ymusic/61c7/a3e4/6672/cf32f68191190addad6543f7b758517d.mp3"  controls loop="loop">
+<audio id="audio" src="http://m10.music.126.net/20210809081113/5e9a111006006a7da0e2bbad962bb1c4/ymusic/61c7/a3e4/6672/cf32f68191190addad6543f7b758517d.mp3" style="display:none" controls loop="loop">
 </audio>
 
 
@@ -149,7 +149,7 @@ document.querySelector("#start").innerHTML = "<span onclick=\"reloadPage()\">ref
         ).innerHTML = `${d}:${h}:${m}:${s}`;
         if (lefttime <= 0) {
 audio.play();
-audio.style.display="none"; 
+
           document.querySelector(".count").innerHTML = "TIME OVER";
           var isShow = false;
           setInterval(() => {
