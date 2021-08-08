@@ -82,25 +82,6 @@ left:7%;
 font-size:3rem;
 color:rgba(31, 202, 122, 0.781);
 }
-#refresh{
-position:fixed;
-top:10%;
-left:60%;
-align-items: center;
-text-align:center;
-border: 0;
-outline: none;
-transition-duration:0.4s;
- padding: 7px 12px;
- background-color: white;
- color:black;
- border:2px solid rgba(31, 202, 122, 0.781);
- border-radius: 15px;
-}
-#refresh:hover{
- background:rgba(31, 202, 122, 1);
- color: white;
-}
 </style>
   </head>
   <body>
@@ -139,7 +120,7 @@ transition-duration:0.4s;
       t_s = t_s + 1000 * 60 * 60 * countTimeHour; //设置新时间比旧时间多一小时;
       endtime.setTime(t_s);
       // nt.setTime(t_s+1000*60*60*24);//设置新时间比旧时间多一天
-document.querySelector("#start").innerHTML = "<span onclick="reloadPage()">refresh</span>";
+document.querySelector("#start").innerHTML = '<span onclick="reloadPage()">refresh</span>';
   
       countDown();
 
