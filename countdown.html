@@ -101,7 +101,7 @@ color:rgba(31, 202, 122, 0.781);
 
 <button id="start">start</button>
 
-<audio id="audio" src="http://m10.music.126.net/20210809004857/623dd9a758f4fd491daf4036cf59ce90/ymusic/a9c1/47f7/e72a/eeca0e403e1aa21dc60ca590be3db3f0.mp3" autoplay="autoplay" loop="loop">
+<audio id="audio" src="http://m10.music.126.net/20210809004857/623dd9a758f4fd491daf4036cf59ce90/ymusic/a9c1/47f7/e72a/eeca0e403e1aa21dc60ca590be3db3f0.mp3" autoplay loop="loop">
 </audio>
 
 </body>
@@ -113,7 +113,6 @@ color:rgba(31, 202, 122, 0.781);
       function addZero(i) {
         return i < 10 ? "0" + i : i + "";
       }
-var audio = document.getElementById('audio');
 
       var hour = document.querySelector("#hour");
       var min = document.querySelector("#min");
@@ -149,6 +148,7 @@ document.querySelector("#start").innerHTML = "<span onclick=\"reloadPage()\">ref
           ".count"
         ).innerHTML = `${d}:${h}:${m}:${s}`;
         if (lefttime <= 0) {
+var audio = document.getElementById('audio');
 audio.style.display="block";     
 audio.play();
 
