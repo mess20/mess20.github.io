@@ -153,10 +153,10 @@ document.querySelector("#start").innerHTML = "<span onclick=\"reloadPage()\">ref
           setInterval(() => {
             isShow = !isShow;
             if (isShow) {
-              
+    document.getElementById('audio').style.display="block";     
+          
             } else {
-         document.getElementById('audio').style.display="block";     
-            }
+                     }
           }, 1000);
           return;
         }
