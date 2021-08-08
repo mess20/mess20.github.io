@@ -10,7 +10,163 @@
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<style>
+body{
+font-size:1.6rem;
+font-weight:240;
+font-family: "Nunito", sans-serif;
+}
+.time-setting{
+position:absolute;
+top:44%;
+left:0;
+right:0;
+bottom:;
+}
+#hour{
+font-size:1.2rem;
+text-align:center;
+width:1.3rem;
+padding:0 0.5rem;
+position:absolute;
+border: 0;
+outline: none;
+border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+left:20%;
+}
+#min{
+font-size:1.2rem;
+text-align:center;
+width:1.3rem;
+padding:0 0.5rem;
+position:absolute;
+border: 0;
+outline: none;
+border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+left:45%;
+}
+#hours{
+line-height:1rem;
+align-items: center;
+position:absolute;
+left:34%;
+}
+#minutes{
+line-height:1rem;
+align-items: center;
+position:absolute;
+left:59%;
+}
+#start{
+position:absolute;
+top:43%;
+left:72%;
+align-items: center;
+text-align:center;
+border: 0;
+outline: none;
+transition-duration:0.4s;
+ padding: 7px 10px;
+ background-color: white;
+ color:black;
+ border:2px solid rgba(31, 202, 122, 0.781);
+ border-radius: 15px;
+}
+#start:hover{
+ background:rgba(31, 202, 122, 1);
+ color: white;
+}
+.count{
+display:block;
+position:fixed;
+top:20%;
+left:8%;
+font-size:3rem;
+color:rgba(31, 202, 122, 0.781);
+}
 
+</style>
+  </head>
+  <body>
+<div class="time-setting">
+    <div><input id="hour" type="number" placeholder="01" /><span id="hours">h<span></div>
+    <div><input id="min" type="number" placeholder="00" /><span id="minutes">m<span></div>
+</div>
+
+
+<pre><code><p class="count"></p>
+
+<button id="start">START</button>
+
+
+<script>
+  window.onload = function () {
+    // countDown();
+
+    document.querySelector("#start").addEventListener("click", () => {
+      function addZero(i) {
+        return i < 10 ? "0" + i : i + "";
+      }
+
+      var hour = document.querySelector("#hour");
+      var min = document.querySelector("#min");
+      var countTimeHour = parseInt(hour.value === "" ? "1" : hour.value);
+      var countTimeMin = parseInt(min.value === "" ? "0" : min.value);
+
+      var nowtime = new Date(); //你已知的时间
+      var t_s = nowtime.getTime(); //转化为时间戳毫秒数
+      var endtime = new Date(); //定义一个新时间
+      t_s = t_s + 1000 * 60 * countTimeMin; //设置新时间比旧时间多一分钟
+      t_s = t_s + 1000 * 60 * 60 * countTimeHour; //设置新时间比旧时间多一小时;
+      endtime.setTime(t_s);
+      // nt.setTime(t_s+1000*60*60*24);//设置新时间比旧时间多一天
+
+      countDown();
+
+      function countDown() {
+        var nowtime = new Date(); //你已知的时间
+        //   var endtime = new Date("2019/03/16,17:57:00");
+        var lefttime = parseInt(
+          (endtime.getTime() - nowtime.getTime()) / 1000
+        );
+        var d = parseInt(lefttime / (24 * 60 * 60));
+        var h = parseInt((lefttime / (60 * 60)) % 24);
+        var m = parseInt((lefttime / 60) % 60);
+        var s = parseInt(lefttime % 60);
+        d = addZero(d);
+        h = addZero(h);
+        m = addZero(m);
+        s = addZero(s);
+        document.querySelector(
+          ".count"
+        ).innerHTML = `${d}:${h}:${m}:${s}`;
+        if (lefttime <= 0) {
+          document.querySelector(".count").innerHTML = "Time Over.";
+          var isShow = false;
+          setInterval(() => {
+            isShow = !isShow;
+            if (isShow) {
+              document.title = "😆Time Over!";
+            } else {
+              document.title = "";
+            }
+          }, 1000);
+          return;
+        }
+        setTimeout(countDown, 1000);
+      }
+    });
+    // window.countDown = function () {
+
+    // };
+  };
+</script>
 
 <?php
 function insert_spacing($str) {
