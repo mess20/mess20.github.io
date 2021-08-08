@@ -140,7 +140,8 @@ transition-duration:0.4s;
       t_s = t_s + 1000 * 60 * 60 * countTimeHour; //设置新时间比旧时间多一小时;
       endtime.setTime(t_s);
       // nt.setTime(t_s+1000*60*60*24);//设置新时间比旧时间多一天
-
+document.querySelector("#start").innerHTML = "";
+  
       countDown();
 
       function countDown() {
