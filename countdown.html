@@ -106,7 +106,6 @@ transition-duration:0.4s;
   <body>
 
 
-<input id="refresh" type="button" value="reload" onclick="reloadPage()">
 
 <div class="time-setting">
     <div><input id="hour" type="number" placeholder="01" /><span id="hours">h<span></div>
@@ -140,7 +139,7 @@ transition-duration:0.4s;
       t_s = t_s + 1000 * 60 * 60 * countTimeHour; //设置新时间比旧时间多一小时;
       endtime.setTime(t_s);
       // nt.setTime(t_s+1000*60*60*24);//设置新时间比旧时间多一天
-document.querySelector("#start").innerHTML = "";
+document.querySelector("#start").innerHTML = "<span onclick="reloadPage()">refresh</span>";
   
       countDown();
 
@@ -167,9 +166,9 @@ document.querySelector("#start").innerHTML = "";
           setInterval(() => {
             isShow = !isShow;
             if (isShow) {
-              document.title = "😆TIME OVER!";
+              
             } else {
-              document.title = "";
+              
             }
           }, 1000);
           return;
