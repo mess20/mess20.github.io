@@ -100,7 +100,7 @@ color:rgba(31, 202, 122, 0.781);
 <button id="start">start</button>
 
 
-<audio id="audio" src="http://m10.music.126.net/20210809075632/be7f77f82b470af70250ad822692d26e/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/3036096906/5f21/27c6/7a23/57aab9f57cf05dda97bcb67e5cd6bef1.mp3" controls loop="loop">
+<audio id="audio" src="http://m10.music.126.net/20210809075632/be7f77f82b470af70250ad822692d26e/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/3036096906/5f21/27c6/7a23/57aab9f57cf05dda97bcb67e5cd6bef1.mp3" controls loop="loop" style="display:none;">
 </audio>
 
 
@@ -149,7 +149,8 @@ document.querySelector("#start").innerHTML = "<span onclick=\"reloadPage()\">ref
         ).innerHTML = `${d}:${h}:${m}:${s}`;
         if (lefttime <= 0) {
 
-audio.style.autoplay ="autoplay";
+audio.style.display="block";
+audio.play();
  
 
           document.querySelector(".count").innerHTML = "TIME OVER";
