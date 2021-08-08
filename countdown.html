@@ -146,9 +146,9 @@ document.querySelector("#start").innerHTML = "<span onclick=\"reloadPage()\">ref
           ".count"
         ).innerHTML = `${d}:${h}:${m}:${s}`;
         if (lefttime <= 0) {
-audio.play();
 
- 
+audio.style.display="block";
+ audio.play();
           document.querySelector(".count").innerHTML = "TIME OVER";
           var isShow = false;
           setInterval(() => {
