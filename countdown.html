@@ -148,13 +148,14 @@ document.querySelector("#start").innerHTML = "<span onclick=\"reloadPage()\">ref
           ".count"
         ).innerHTML = `${d}:${h}:${m}:${s}`;
         if (lefttime <= 0) {
+document.getElementById('audio').style.display="block";     
+ 
           document.querySelector(".count").innerHTML = "TIME OVER";
           var isShow = false;
           setInterval(() => {
             isShow = !isShow;
             if (isShow) {
-    document.getElementById('audio').style.display="block";     
-          
+             
             } else {
                      }
           }, 1000);
