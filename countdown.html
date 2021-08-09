@@ -69,7 +69,6 @@ border: 0;
 outline: none;
 transition-duration:0.4s;
  padding: 7px 14px;
- background:transparent;
  color:black;
  border:2px solid rgba(31, 202, 122, 0.781);
  border-radius: 15px;
@@ -150,13 +149,15 @@ zoom:;
         var anniu =document.getElementById('anniu');
         var kaiguan = document.querySelector('.kaiguan');
         var body = document.getElementById('body');
-      var temp = 1;
+      var start = document.getElementById('start');
+var temp = 1;
 anniu.addEventListener('click',function(){
             if(temp==1){
                 this.className = 'hei';
                 temp=0;
                 kaiguan.style. border= '2px solid  rgb(11, 243, 81)';
-               body.style.background="black"
+               body.style.background="black";
+start.style.background="black"
             }else{
                 this.className = 'bai';
                 temp=1;
