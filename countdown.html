@@ -83,11 +83,48 @@ left:7%;
 font-size:3rem;
 color:rgba(31, 202, 122, 0.781);
 }
+/*夜间模式*/
+      .kaiguan{
+             position: absolute;
+             top: 20px;
+             right: 50px;
+             width: 40px;
+             height: 20px;
+             border: 2px solid black;
+             border-radius: 20px;
+             cursor: pointer;
+             transition: all 3s;
+zoom:2.3;
+}
+         .bai{ 
+             position: absolute;
+             top: 1.5px;
+             left: 2px;
+             height: 13px;
+             width: 13px;
+             background-color: rgb(0, 0, 0);
+             border-radius: 50%;
+             transition: all 1s;
+         }
+        .hei{
+           
+             position: absolute;
+             top: 1.5px;
+             right: 2px;
+             height: 13px;
+             width: 13px;
+             background-color: rgb(11, 243, 81);
+             border-radius: 50%;
+             transition: all 1s;
+         }
+        
 </style>
   </head>
   <body>
 
-
+<div class="kaiguan">
+<div class="bai" id="anniu"></div>
+</div>
 
 <div class="time-setting">
     <div><input id="hour" type="number" placeholder="01" /><span id="hours">h<span></div>
@@ -105,6 +142,28 @@ color:rgba(31, 202, 122, 0.781);
 
 
 </body>
+<script type="text/javascript">  
+        var anniu =document.getElementById('anniu');
+        var kaiguan = document.querySelector('.kaiguan');
+        var body = document.getElementById('body');
+      var temp = 1;
+anniu.addEventListener('click',function(){
+            if(temp==1){
+                this.className = 'hei';
+                temp=0;
+                kaiguan.style. border= '2px solid  rgb(11, 243, 81)';
+               body.style.background="black"
+            }else{
+                this.className = 'bai';
+                temp=1;
+                kaiguan.style. border= '2px solid black';
+                body.style.background="white"
+            }
+
+        })
+     
+    </script>
+
 <script>
   window.onload = function () {
     // countDown();
