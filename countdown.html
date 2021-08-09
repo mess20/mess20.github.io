@@ -60,7 +60,7 @@ align-items: center;
 position:absolute;
 left:59%;
 }
-#start{
+.start{
 position:absolute;
 top:43%;
 left:72%;
@@ -75,10 +75,32 @@ background:white;
  border:2px solid rgba(31, 202, 122, 0.781);
  border-radius: 15px;
 }
-#start:hover{
+.start:hover{
  background:rgba(31, 202, 122, 1);
  color: white;
 }
+
+.start-black{
+position:absolute;
+top:43%;
+left:72%;
+align-items: center;
+text-align:center;
+border: 0;
+outline: none;
+transition-duration:0.4s;
+ padding: 7px 14px;
+background:black;
+color:rgba(31, 202, 122, 0.781);
+ border:2px solid rgba(31, 202, 122, 0.781);
+ border-radius: 15px;
+}
+.start-black:hover{
+ background:rgba(31, 202, 122, 1);
+ color: white;
+}
+
+
 .count{
 font-family:sans-serif;
 display:block;
@@ -159,21 +181,14 @@ anniu.addEventListener('click',function(){
                 temp=0;
                 kaiguan.style. border= '2px solid  rgb(11, 243, 81)';
                body.style.background="black";
-start.style.background="black";
-start.style.color="rgba(31, 202, 122, 0.781)";
+start.className = 'start-black';
             }else{
                 this.className = 'bai';
                 temp=1;
                 kaiguan.style. border= '2px solid black';
                 body.style.background="white";
-$(document).ready(function(){
-$("#start").hover(
-function(){$("#start").css("color", "white";"background-color","#1FCA7A");},
-function(){$("#start").css("background-color","white";"color","black");}
-)
-})
+start.className = 'start';
             }
-
         })
      
     </script>
