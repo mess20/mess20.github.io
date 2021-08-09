@@ -31,7 +31,6 @@ border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 left:20%;
 }
 #min{
-background-color:rgba(0,0,0,0);
 background:transparent;
 font-weight:395;
 font-size:1.2rem;
@@ -45,7 +44,6 @@ border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 left:45%;
 }
 #hours{
-background-color:rgba(0,0,0,0);
 font-weight:290;
 line-height:1rem;
 align-items: center;
@@ -159,14 +157,18 @@ anniu.addEventListener('click',function(){
                 kaiguan.style. border= '2px solid  rgb(11, 243, 81)';
                body.style.background="black";
 start.style.background="black";
-start.style.color="white";
+start.style.color="rgba(31, 202, 122, 0.781)";
             }else{
                 this.className = 'bai';
                 temp=1;
                 kaiguan.style. border= '2px solid black';
                 body.style.background="white";
-start.style.background="white";
-start.style.color="black";
+$("#start").hover(function(){
+    $("#start").css("background-color","rgba(31, 202, 122, 1);"color": "white";);
+},function(){
+    $("#start").css("background-color","white");
+    $("#start").css("color","black")
+});
             }
 
         })
