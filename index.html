@@ -10,40 +10,6 @@
 
 
 
-<style>
-#copy-finish{
-display:none;
-position:fixed;
-right:0;
-left:0;
-top:10%;
-width:10rem;
-margin:0 auto;
-padding: 16px 32px;
-text-align:center;
-font-size:200%;
- -webkit-transition-duration:0.4s;
- transition-duration:0.4s;
- background-color:#4CAF50;
- color: white;
- border-radius: 50px;
-}
-
-</style>
-
-<script>
-function fuzhi(){
-document.getElementById('copy-finish').style.display="block";
-setTimeout("document.getElementById('copy-finish').style.display=\"none\" ", 700);}
-
-
-</script>
-<div class="button" onclick="fuzhi()">复制</div>
-
-
-<div id="copy-finish">已复制</div>
-
-
 
 
 
@@ -426,6 +392,25 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 padding:1.4rem;
 z-index:3;
 }
+#copy-finish{
+display:none;
+position:fixed;
+right:0;
+left:0;
+top:10%;
+width:10rem;
+margin:0 auto;
+padding: 16px 32px;
+text-align:center;
+font-size:200%;
+ -webkit-transition-duration:0.4s;
+ transition-duration:0.4s;
+ background-color:#4CAF50;
+ color: white;
+ border-radius: 50px;
+}
+
+
 
 /*弹出式索引*/
 .menuLink_2 {
@@ -558,6 +543,66 @@ width:36rem;
 /* */
 
 
+
+.locater_container_right{
+position: fixed;
+             top: 0px;
+             right: 0px;
+             width: 40%;
+             height: 70%;
+border-style:solid;
+border-width:2px;
+}
+
+
+.locater{
+position: absolute;
+border-style:solid;
+border-color:red;
+border-width:1px;
+left:0;
+height:auto;
+             width: 100%;
+             margin:1rem 0;
+             padding:1rem 0 ;
+}
+
+/*语言切换*/
+#locater1{
+top:100px;
+}
+
+
+/*字号调整*/
+
+
+
+#locater2{
+top:300px;
+}
+/*深色模式*/
+
+
+
+#locater3{
+top:500px;
+}
+#locater4{
+top:700px;
+}
+      .kaiguan{
+             position: absolute;
+             top: 20px;
+             right: 50px;
+             width: 40px;
+             height: 20px;
+             border: 2px solid black;
+             border-radius: 20px;
+             cursor: pointer;
+             transition: all 3s;
+zoom:2.3;
+}
+
         
          .bai{ 
              position: absolute;
@@ -581,25 +626,6 @@ width:36rem;
              transition: all 1s;
          }
         
-
-/*语言切换*/
-/*字号调整*/
-
-/*夜间模式*/
-      .kaiguan{
-             position: absolute;
-             top: 20px;
-             right: 50px;
-             width: 40px;
-             height: 20px;
-             border: 2px solid black;
-             border-radius: 20px;
-             cursor: pointer;
-             transition: all 3s;
-zoom:2.3;
-}
-
-
 
 
 </style>
@@ -682,24 +708,6 @@ document.getElementById("nowtime").innerHTML =t;
 <div class="id">FLOW</div>
 <img src="https://z3.ax1x.com/2021/07/25/Wg1aUe.jpg" class="shortcut_icon"  alt="">
 <img src="" class="me"  alt="">
-
-
-
-
-<div class="kaiguan" id="kaiguan1">EN
-<div class="bai" id="anniu1"></div>
-</div>
-
-
-<div class="kaiguan" id="kaiguan2">
-<div class="bai" id="anniu2"></div>SIZE
-</div>
-
-<div class="kaiguan" id="kaiguan3">EVE
-<div class="bai" id="anniu3"></div>
-</div>
-
-
 </div>
 
 <ul id="menu" >
@@ -711,6 +719,8 @@ hder3</marquee></a></li>
 </ul>
 
 </ul>
+
+
 
 
 <div class="header" id="header">    
@@ -813,10 +823,20 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 <dfn>作者：</dfn><br>
 <dfn>来源：</dfn><br>
 <dfn>版权声明：</dfn>本文采用 CC BY 许可协议授权。<br>
+<div class="button" onclick="fuzhi()">复制</div>
 
 </fork-require>
 </fork-request>
 
+<div id="copy-finish">已复制</div>
+
+<script>
+function fuzhi(){
+document.getElementById('copy-finish').style.display="block";
+setTimeout("document.getElementById('copy-finish').style.display=\"none\" ", 700);}
+
+
+</script>
 
 
 
@@ -856,6 +876,10 @@ document.getElementById("nowyear").innerHTML = y;
 
 
 
+/*语言切换*/
+
+
+/*字号调整*/
 <script type="text/javascript">  
         var anniu =document.getElementById('anniu1');
         var kaiguan = document.getElementById('kaiguan1');
@@ -879,6 +903,9 @@ document.getElementById("nowyear").innerHTML = y;
      
     </script>
 
+
+
+/*深色模式*/
 
 
 
