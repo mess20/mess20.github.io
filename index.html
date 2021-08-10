@@ -9,9 +9,7 @@
 <Link href="https://z3.ax1x.com/2021/07/25/Wg3yW9.png" rel="Shortcut Icon">
 
 <style type="text/css">
-#fuzhi{
-display:none
-}
+
 body{
 font-family:arial;
 font-size:100%;
@@ -380,6 +378,9 @@ background:white;
 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 padding:1.4rem;
 z-index:3;
+}
+#copy{
+display:none
 }
 #copy-finish{
 display:none;
@@ -813,24 +814,22 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 <dfn>来源：</dfn><br>
 <dfn>版权声明：</dfn>本文采用 CC BY 许可协议授权。<br>
 
-<div id="fuzhi-allow" class="button" onclick="fuzhi-allow()">我已了解</div>
-<div id="fuzhi" class="button" onclick="copy()">复制</div>
+<div id="fuzhi-allow" class="button" onclick="copy-allow()">我已了解</div>
+<input id="copy" type="button" class="button" onclick="copy()" value="点击复制"></input>
 
 </fork-require>
 
 </fork-request>
 
-    <textarea id="copy">https://blog.csdn.net/yuzsmc</textarea>
-    <input type="button" onclick="copy();" value="点击复制"></input>
-
+<textarea id="copyarea">https://blog.csdn.net/yuzsmc</textarea>
 
 <div id="copy-finish">已复制</div>
 
 <script>
-function fuzhi-allow(){
-document.getElementById('fuzhi').style.display="block";};
+function copy-allow(){
+document.getElementById('copy').style.display="block";};
 function copy() {
-            var e = document.getElementById("copy");
+            var e = document.getElementById("copyarea");
             e.select(); // 选择对象
             document.execCommand("Copy"); // 执行浏览器复制命令
             document.getElementById('copy-finish').style.display="block";
