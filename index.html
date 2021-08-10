@@ -38,7 +38,7 @@ setTimeout("document.getElementById('copy-finish').style.display=\"none\" ", 700
 
 
 </script>
-<div class="button" onclick="fuzhi()">已复制</div>
+<div class="button" onclick="fuzhi()">复制</div>
 
 
 <div id="copy-finish">已复制</div>
@@ -59,7 +59,7 @@ setTimeout("document.getElementById('copy-finish').style.display=\"none\" ", 700
 
 body{
 font-family:arial;
-font-size:270%;
+font-size:100%;
 position: relative;
 transition: all 1s;
 background-color:rgba(235,236,240,10%);
@@ -555,27 +555,8 @@ width:36rem;
  color: white;
 }
 
-/*夜间模式*/
-      .kaiguan{
-             position: absolute;
-             top: 20px;
-             right: 50px;
-             width: 40px;
-             height: 20px;
-             border: 2px solid black;
-             border-radius: 20px;
-             cursor: pointer;
-             transition: all 3s;
-transform：scale(1.2);
-transform-origin:0% 0%;
--moz-transform:scale(1.2);
--moz-transform-origin:0% 0%;
--webkit-transform:scale(1.2);
--webkit-transform-origin:0% 0%;
--o-transform:scale(1.2);
--o-transform-origin:0% 0%;
-zoom:2.3;
-}
+/* */
+
 
         
          .bai{ 
@@ -600,6 +581,25 @@ zoom:2.3;
              transition: all 1s;
          }
         
+
+/*语言切换*/
+/*字号调整*/
+
+/*夜间模式*/
+      .kaiguan{
+             position: absolute;
+             top: 20px;
+             right: 50px;
+             width: 40px;
+             height: 20px;
+             border: 2px solid black;
+             border-radius: 20px;
+             cursor: pointer;
+             transition: all 3s;
+zoom:2.3;
+}
+
+
 
 
 </style>
@@ -682,9 +682,23 @@ document.getElementById("nowtime").innerHTML =t;
 <div class="id">FLOW</div>
 <img src="https://z3.ax1x.com/2021/07/25/Wg1aUe.jpg" class="shortcut_icon"  alt="">
 <img src="" class="me"  alt="">
-<div class="kaiguan">
-<div class="bai" id="anniu"></div>
+
+
+
+
+<div class="kaiguan" id="kaiguan1">EN
+<div class="bai" id="anniu1"></div>
 </div>
+
+
+<div class="kaiguan" id="kaiguan2">
+<div class="bai" id="anniu2"></div>SIZE
+</div>
+
+<div class="kaiguan" id="kaiguan3">EVE
+<div class="bai" id="anniu3"></div>
+</div>
+
 
 </div>
 
@@ -839,9 +853,38 @@ DOLLARS是由像您一样的人构筑的。<br>
 document.getElementById("nowyear").innerHTML = y;
 </script>
 
+
+
+
 <script type="text/javascript">  
-        var anniu =document.getElementById('anniu');
-        var kaiguan = document.querySelector('.kaiguan');
+        var anniu =document.getElementById('anniu1');
+        var kaiguan = document.getElementById('kaiguan1');
+        var body = document.getElementById('body');
+        
+        var temp = 1;
+        anniu.addEventListener('click',function(){
+            if(temp==1){
+                this.className = 'hei';
+                temp=0;
+                kaiguan.style. border= '2px solid  rgb(11, 243, 81)';
+               body.style.fontSize="100%"
+            }else{
+                this.className = 'bai';
+                temp=1;
+                kaiguan.style. border= '2px solid black';
+                body.style.fontSize="270%"
+            }
+
+        })
+     
+    </script>
+
+
+
+
+<script type="text/javascript">  
+        var anniu =document.getElementById('anniu3');
+        var kaiguan = document.getElementById('.kaiguan3');
         var body = document.getElementById('body');
         var card = document.getElementById('.card');
         var temp = 1;
