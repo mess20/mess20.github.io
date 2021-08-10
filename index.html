@@ -917,12 +917,33 @@ document.getElementById("nowyear").innerHTML = y;
 
 
 /*语言切换*/
-
-
-/*字号调整*/
 <script type="text/javascript">  
         var anniu =document.getElementById('anniu1');
         var kaiguan = document.getElementById('kaiguan1');
+        var body = document.getElementById('body');
+        
+        var temp = 1;
+        anniu.addEventListener('click',function(){
+            if(temp==1){
+                this.className = 'hei';
+                temp=0;
+                kaiguan.style. border= '2px solid  rgb(11, 243, 81)';
+               
+            }else{
+                this.className = 'bai';
+                temp=1;
+                kaiguan.style. border= '2px solid black';
+                
+            }
+
+        })
+     
+    </script>
+
+/*字号调整*/
+<script type="text/javascript">  
+        var anniu =document.getElementById('anniu2');
+        var kaiguan = document.getElementById('kaiguan2');
         var body = document.getElementById('body');
         
         var temp = 1;
@@ -951,7 +972,7 @@ document.getElementById("nowyear").innerHTML = y;
 
 <script type="text/javascript">  
         var anniu =document.getElementById('anniu3');
-        var kaiguan = document.getElementById('.kaiguan3');
+        var kaiguan = document.getElementById('kaiguan3');
         var body = document.getElementById('body');
         var card = document.getElementById('.card');
         var temp = 1;
