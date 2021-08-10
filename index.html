@@ -813,24 +813,30 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 <dfn>版权声明：</dfn>本文采用 CC BY 许可协议授权。<br>
 
 <div class="button" onclick="fuzhi-allow()">我已了解</div>
-<div id="fuzhi" class="button" onclick="fuzhi()" style="display:none;">复制</div>
+<div id="fuzhi" class="button" onclick="copy()" style="display:none;">复制</div>
 
 </fork-require>
+
 </fork-request>
+
+    <textarea id="copy">https://blog.csdn.net/yuzsmc</textarea>
+    <input type="button" onclick="copy();" value="点击复制"></input>
+
 
 <div id="copy-finish">已复制</div>
 
 <script>
 function fuzhi-allow(){
 document.getElementById('fuzhi').style.display="block";};
-
-
-function fuzhi(){
-document.getElementById('copy-finish').style.display="block";
+function copy() {
+            var e = document.getElementById("copy");
+            e.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            document.getElementById('copy-finish').style.display="block";
 setTimeout("document.getElementById('copy-finish').style.display=\"none\" ", 700);}
-
-
+        }
 </script>
+
 
 
 
