@@ -388,6 +388,9 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 padding:1.4rem;
 z-index:3;
 }
+#copy-area{
+display:none;
+}
 #copy-button{
 font-size:100%;
 display:none;
@@ -408,6 +411,7 @@ font-size:100%;
  background-color:#4CAF50;
  color: white;
  border-radius: 50px;
+z-index:5
 }
 
 
@@ -878,7 +882,10 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 
 <script>
 function copy_allow(){
-document.getElementById('copy-button').style.display="block";};
+document.getElementById('copy-button').style.display="block";
+document.getElementById('copy-area').style.display="block";
+document.getElementById("copy-area").oncopy ="";
+};
 
 function copy() {
             var e = document.getElementById("copy-area");
