@@ -263,7 +263,7 @@ margin-top:auto;
 margin-bottom:auto;
 }
 
-.me{
+.me1{
   width: 7rem;
   height: 7rem;
   display：inline-block;
@@ -305,7 +305,7 @@ display:none;
 .profile-button:hover .profile{
 background:rgb(247,248,250);
 position: fixed;
-             top: 0px;
+             top: 7%;
              left: 0px;
              width: 60%;
              height: 50%;
@@ -479,12 +479,26 @@ line-height:3rem;
 .bottom-nav{
 width:100%;
 position:fixed;
-bottom:0;
+bottom:7%;
 left:0;
-height:3%;
+height:2%;
 background:black;
 }
 .bottom-nav:hover{
+animation-duration:0.5s;
+animation-iteration-count: 1;
+}	
+
+@keyframes up {
+from{
+width:100%;
+position:fixed;
+bottom:7%;
+left:0;
+height:2%;
+background:black;
+}
+to{
 height:7%;
 background:rgba(235,236,240,50%);
 }
@@ -500,7 +514,7 @@ display:none;
 .aid-button:hover .aid{
 background:rgb(247,248,250);
 position: fixed;
-             top: 0px;
+             top: 7%;
              right: 0px;
              width: 60%;
              height: 50%;
