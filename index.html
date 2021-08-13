@@ -11,6 +11,9 @@
 <style type="text/css">
 input,textarea{
 font-family:"arial";
+padding:1.5rem;
+font-size:100%;
+
 }
 body{
 font-family:arial;
@@ -385,7 +388,7 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 padding:1.4rem;
 z-index:3;
 }
-#copy{
+#copy-button{
 display:none;
  -webkit-transition-duration:0.4s;
  transition-duration:0.4s;
@@ -441,7 +444,7 @@ bottom:20rem;
 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 color: #1066FF;
 font-size: 3rem;
-font-weight:750;
+font-weight:800;
 text-align:center;
 line-height:120px;
 text-decoration:none;
@@ -862,7 +865,7 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 <dfn>版权声明：</dfn>本文采用 CC BY 许可协议授权。<br>
 
 <div id="copy-allow" class="button" onclick="copy_allow()">我已了解</div>
-<input id="copy" type="button" class="button" onclick="copy()" value="复制"></input>
+<input id="copy-button" type="button" class="button" onclick="copy()" value="复制"></input>
 
 </fork-require>
 
@@ -874,17 +877,15 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 
 <script>
 function copy_allow(){
-document.getElementById('copy').style.display="block";};
-</script>
+document.getElementById('copy-button').style.display="block";};
 
-<script>
 function copy() {
             var e = document.getElementById("copyarea");
             e.select(); // 选择对象
             document.execCommand("Copy"); // 执行浏览器复制命令
             document.getElementById('copy-finish').style.display="block";
 setTimeout("document.getElementById('copy-finish').style.display=\"none\" ", 700);}
-        }
+        
 </script>
 
 
