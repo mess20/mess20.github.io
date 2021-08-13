@@ -1,12 +1,50 @@
 <style>
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 400px;
+    height: 250px;
+    background-color: lightgrey;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 75px;
+    height: 75px;
+    margin: auto;
+}
+
 audio{
+
 }
 </style>
-<audio id="audio" loop="loop" controls="controls" src="http://m10.music.126.net/20210809081113/5e9a111006006a7da0e2bbad962bb1c4/ymusic/61c7/a3e4/6672/cf32f68191190addad6543f7b758517d.mp3" >
-</audio>
+
 <script>
 var audio = document.getElementById('audio');
 audio.play();
 audio.style.display="block";     
 
 </script>
+
+
+
+<div class="flex-container">
+
+
+
+
+<div class="flex-item">
+
+
+
+<audio id="audio" loop="loop" controls="controls" src="http://m10.music.126.net/20210809081113/5e9a111006006a7da0e2bbad962bb1c4/ymusic/61c7/a3e4/6672/cf32f68191190addad6543f7b758517d.mp3" >
+</audio>
+Perfect centering!
+</div>
+
+
+
+</div>
+
+
+
