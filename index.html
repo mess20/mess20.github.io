@@ -185,6 +185,21 @@ author img{
 position:absolute;
 margin-left:2.9rem;
 }
+.avatar{
+  width: 7rem;
+  height: 7rem;
+  display: inline-block;
+
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+position:absolute;
+right:rem;
+top:0;
+bottom:0;
+margin:;
+}
 author name{
 margin-left:12.5rem;
 }
@@ -296,21 +311,7 @@ margin-bottom:auto;
 }
 
 
-.avatar{
-  width: 7rem;
-  height: 7rem;
-  display: inline-block;
 
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-position:absolute;
-right:rem;
-top:0;
-bottom:0;
-margin:;
-}
 /*预览or呼出式解释补充*/
 abbr{
 }
@@ -552,9 +553,10 @@ width:36rem;
 
 
 .bottom-nav{
+position:fixed;
 bottom:0;
 height:3%;
-background:black
+background:black;
 }
 .bottom-nav:hover{
 height:7%;
@@ -577,7 +579,6 @@ display: -webkit-flex;
     display: flex;  
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
-
 -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -588,8 +589,7 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 
 	
 .name{
-order: 1; 
-		
+order: 1; 		
 text-align:center;
 width:100%;
 }
@@ -632,7 +632,7 @@ z-index:4;
 -webkit-box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
 -moz-box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
 box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
-
+display:block;
 }
 
 
@@ -770,38 +770,35 @@ obj.className = obj.oldClass;
 <body onload=clear()  id="body">
 
 <div oncopy="return false">
-<div id="nowtime"></div>
-<script type="text/javascript">  
-        var t=new Date();  
-document.getElementById("nowtime").innerHTML =t;
-    </script>
+
 
 
 
 <a href="#header" class="menuLink_1">∧</a>     
-<a href="menu.html" class="menuLink">+ </a>
+<a href="menu.html" class="menuLink">+</a>
 
 <div class="header_menu">
+
+
+
 <div class="id">FLOW</div>
 <img src="https://z3.ax1x.com/2021/07/25/Wg1aUe.jpg" class="shortcut_icon"  alt="">
 
-
-
 <div class="locater_container_left_button">
 <img src="" class="me"  alt="">
-
-
 <div class="profile" class="locater_container_left">
 <div class="name">name<div>
 <img id="my-avatar" src="https://z3.ax1x.com/2021/07/22/WDced1.jpg">
 <div id="setting">设置<div>
 </div>
-
+</div>
 
 
 
 </div>
-</div>
+
+
+
 
 <div class="bottom-nav">
 
@@ -839,14 +836,15 @@ document.getElementById("nowtime").innerHTML =t;
 <div class="bai" id="anniu4"></div>
 </div>
 </div>
-
-
 </div>
 
 
 </div>
 
 </div>
+
+
+
 
 <ul id="menu" >
 <ul> 
