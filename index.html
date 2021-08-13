@@ -550,17 +550,19 @@ width:36rem;
 
 /*reader nav */
 
+.locater_container_right_button{
 
-
+}
 .locater_container_right{
+display:none;
+}
+.locater_container_right_button:hover .locater_container_right{
 background:rgb(247,248,250);
 position: fixed;
              top: 0px;
              right: 0px;
              width: 60%;
              height: 50%;
-border-style:solid;
-border-width:2px;
 z-index:4;
 -webkit-box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
 -moz-box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
@@ -573,7 +575,6 @@ box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
 line-height:150px;
 align-items: center;
 position: absolute;
-border-style:solid;
 left:2rem;
 height:150px;
              width: 100%;
@@ -722,7 +723,7 @@ document.getElementById("nowtime").innerHTML =t;
 </div>
 
 
-
+<div class="locater_container_right_button">插件<div>
 
 <div class="locater_container_right">
 
