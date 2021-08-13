@@ -744,32 +744,7 @@ obj.className = obj.oldClass;
 </script>
 
 
-<!--菜单-->
-<script type="text/javascript">  
-	window.onload = function() {
-		var allLinks = document.getElementsByTagName("a");
-		for (var i=0; i<allLinks.length; i++) {
-			if (allLinks[i].className.indexOf("menuLink") > -1) {
-				allLinks[i].onclick = toggleMenu;
-			}
-		}
-	}
-	function toggleMenu() {
-		var startMenu = this.href.lastIndexOf("/")+1;
-		var stopMenu = this.href.lastIndexOf(".");
-		var thisMenuName = this.href.substring(startMenu,stopMenu);
-		var thisMenu = document.getElementById(thisMenuName).style;
-		if (thisMenu.display == "block") {
-			thisMenu.display = "none";
-		}
-		else {
-			thisMenu.display = "block";
-		}
-		return false;
-	}
-    </script>
 
-    
       
   
 
@@ -878,10 +853,37 @@ obj.className = obj.oldClass;
 <li><a href="#jaja" ><marquee hspace=0 behavior=slide scrollamount=8 scrolldelay=0>
 hder3</marquee></a></li>
 </ul>
+
 <ul> </ul> 
+
 </ul>
 
+<!--菜单-->
+<script type="text/javascript">  
+	window.onload = function() {
+		var allLinks = document.getElementsByTagName("a");
+		for (var i=0; i<allLinks.length; i++) {
+			if (allLinks[i].className.indexOf("menuLink") > -1) {
+				allLinks[i].onclick = toggleMenu;
+			}
+		}
+	}
+	function toggleMenu() {
+		var startMenu = this.href.lastIndexOf("/")+1;
+		var stopMenu = this.href.lastIndexOf(".");
+		var thisMenuName = this.href.substring(startMenu,stopMenu);
+		var thisMenu = document.getElementById(thisMenuName).style;
+		if (thisMenu.display == "block") {
+			thisMenu.display = "none";
+		}
+		else {
+			thisMenu.display = "block";
+		}
+		return false;
+	}
+    </script>
 
+    
 
 
 <div class="header" id="header">    
