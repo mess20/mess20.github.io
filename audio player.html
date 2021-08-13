@@ -28,6 +28,7 @@ audio{
 
 canvas{
 border:3px solid #d3d3d3;
+z-index: 1;
 }
 </style>
 </head>
@@ -68,7 +69,7 @@ var c=document.getElementById("myCanvas");
 var ctx=c.getContext("2d");
 
      ctx.beginPath();
-			ctx.arc(5040,700,100,0,Math.PI*2,false);
+			ctx.arc(540,700,100,0,Math.PI*2,false);
 			ctx.fillStyle="rgba(252,252,252,0.7)";
 			ctx.fill();
 			ctx.strokeStyle="rgba(192,80,77,1)";
