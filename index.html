@@ -548,6 +548,71 @@ width:36rem;
  color: white;
 }
 
+
+
+
+.bottom-nav{
+bottom:0;
+height:3%;
+background:black
+}
+.bottom-nav:hover{
+height:7%;
+background:rgba(235,236,240,50%);
+}
+
+/*用户页*/
+.profile{
+display:none;
+}
+.locater_container_left_button:hover .profile{
+background:rgb(247,248,250);
+position: fixed;
+             top: 0px;
+             left: 0px;
+             width: 60%;
+             height: 50%;
+z-index:4;
+display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+-webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+	
+.name{
+order: 1; 
+		
+text-align:center;
+width:100%;
+}
+
+#my-avatar{
+order: 2; 
+  width: 80px;
+  height: 80px;
+  display: block;
+margin:1rem auto 1.5rem auto;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.setting{
+margin:2rem 0;
+order: 3; 
+}
+
+
+
+
 /*reader nav */
 
 .locater_container_right_button{
@@ -719,15 +784,32 @@ document.getElementById("nowtime").innerHTML =t;
 <div class="header_menu">
 <div class="id">FLOW</div>
 <img src="https://z3.ax1x.com/2021/07/25/Wg1aUe.jpg" class="shortcut_icon"  alt="">
+
+
+
+<div class="locater_container_left_button">
 <img src="" class="me"  alt="">
+
+
+<div class="profile" class="locater_container_left">
+<div class="name">name<div>
+<img id="my-avatar" src="https://z3.ax1x.com/2021/07/22/WDced1.jpg">
+<div id="setting">设置<div>
 </div>
 
 
-<div class="locater_container_right_button">插件<div>
+
+
+</div>
+</div>
+
+<div class="bottom-nav">
+
+<div class="locater_container_right_button">插件
+
+
 
 <div class="locater_container_right">
-
-
 <div class="locater" id="locater1">语言切换／EN
 <div class="kaiguan" id="kaiguan1">
 <div class="bai" id="anniu1"></div>
@@ -761,6 +843,10 @@ document.getElementById("nowtime").innerHTML =t;
 
 </div>
 
+
+</div>
+
+</div>
 
 <ul id="menu" >
 <ul> 
