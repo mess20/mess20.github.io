@@ -389,6 +389,7 @@ padding:1.4rem;
 z-index:3;
 }
 #copy-button{
+font-size:100%;
 display:none;
  -webkit-transition-duration:0.4s;
  transition-duration:0.4s;
@@ -403,7 +404,7 @@ width:10rem;
 margin:0 auto;
 padding: 16px 32px;
 text-align:center;
-font-size:200%;
+font-size:100%;
  background-color:#4CAF50;
  color: white;
  border-radius: 50px;
@@ -866,12 +867,12 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 
 <div id="copy-allow" class="button" onclick="copy_allow()">我已了解</div>
 <input id="copy-button" type="button" class="button" onclick="copy()" value="复制"></input>
+<textarea id="copy-area">https://blog.csdn.net/yuzsmc</textarea>
 
 </fork-require>
 
 </fork-request>
 
-<textarea id="copyarea">https://blog.csdn.net/yuzsmc</textarea>
 
 <div id="copy-finish">已复制</div>
 
@@ -880,7 +881,7 @@ function copy_allow(){
 document.getElementById('copy-button').style.display="block";};
 
 function copy() {
-            var e = document.getElementById("copyarea");
+            var e = document.getElementById("copy-area");
             e.select(); // 选择对象
             document.execCommand("Copy"); // 执行浏览器复制命令
             document.getElementById('copy-finish').style.display="block";
