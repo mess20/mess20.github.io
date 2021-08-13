@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>music player</title> 
+
+
 <style>
 .flex-container {
     display: -webkit-flex;
@@ -18,14 +25,12 @@ audio{
 
 }
 </style>
+</head>
+<body>
 
-<script>
-var audio = document.getElementById('audio');
-function (){}
-function (){audio.style.display="block";}   
-function (){audio.loop="loop";}
-</script>
-
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+您的浏览器不支持 HTML5 canvas 标签。
+</canvas>
 
 
 <div class="flex-container">
@@ -47,4 +52,37 @@ Perfect centering!
 </div>
 
 
+
+
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+     ctx.beginPath();
+			ctx.arc(150,45,35,0,Math.PI*2,false);
+			ctx.fillStyle="rgba(192,80,77,0.7)";
+			ctx.fill();
+			ctx.strokeStyle="rgba(192,80,77,1)";
+			ctx.stroke();
+
+
+</script> 
+
+
+
+
+
+<script>
+var audio = document.getElementById('audio');
+function (){}
+function (){audio.style.display="block";}   
+function musicLoop(){audio.loop="loop";}
+</script>
+
+
+
+</body>
+</html>
 
