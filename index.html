@@ -1095,6 +1095,7 @@ document.getElementById("nowyear").innerHTML = y;
         var anniu =document.getElementById('anniu2');
         var kaiguan = document.getElementById('kaiguan2');
         var body = document.getElementById('body');
+        var main = document.getElementById('main');
         
         var temp = 1;
         anniu.addEventListener('click',function(){
@@ -1102,12 +1103,12 @@ document.getElementById("nowyear").innerHTML = y;
                 this.className = 'hei';
                 temp=0;
                 kaiguan.style. border= '2px solid  rgb(11, 243, 81)';
-               body.style.fontSize="100%"
+                main.style.fontSize="100%"
             }else{
                 this.className = 'bai';
                 temp=1;
                 kaiguan.style. border= '2px solid black';
-                body.style.fontSize="270%"
+                main.style.fontSize="270%"
             }
 
         })
