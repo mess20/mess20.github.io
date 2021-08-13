@@ -386,7 +386,9 @@ padding:1.4rem;
 z-index:3;
 }
 #copy{
-display:none
+display:none;
+ -webkit-transition-duration:0.4s;
+ transition-duration:0.4s;
 }
 #copy-finish{
 display:none;
@@ -399,8 +401,6 @@ margin:0 auto;
 padding: 16px 32px;
 text-align:center;
 font-size:200%;
- -webkit-transition-duration:0.4s;
- transition-duration:0.4s;
  background-color:#4CAF50;
  color: white;
  border-radius: 50px;
@@ -861,7 +861,7 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 <dfn>来源：</dfn><br>
 <dfn>版权声明：</dfn>本文采用 CC BY 许可协议授权。<br>
 
-<div id="copy-allow" class="button" onclick="copy-allow()">我已了解</div>
+<div id="copy-allow" class="button" onclick="copy_allow()">我已了解</div>
 <input id="copy" type="button" class="button" onclick="copy()" value="复制"></input>
 
 </fork-require>
@@ -873,7 +873,7 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 <div id="copy-finish">已复制</div>
 
 <script>
-function copy-allow(){
+function copy_allow(){
 document.getElementById('copy').style.display="block";};
 </script>
 
