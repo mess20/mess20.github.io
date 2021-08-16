@@ -192,17 +192,7 @@ ctx.beginPath();
 			ctx.fill();
 
 
-var img = document.createElement("img");
-img.src = "https://z3.ax1x.com/2021/07/22/WDced1.jpg";
 
-
-
-ctx.drawImage(img,390,390,300,300);
-ctx.beginPath();
-ctx.arc(540,540,182,0,Math.PI*2,false);
-ctx.strokeStyle = 'rgba(0,0,0,0.9)';
-ctx.lineWidth= 60;
-ctx.stroke();
 
 
 ctx.beginPath();
@@ -242,6 +232,18 @@ ctx.beginPath();
                         ctx.arc(540,540,160,0,Math.PI*2,false);
 			ctx.strokeStyle="rgba(0,0,0,0.9)";
 			ctx.stroke();
+
+
+var img = document.createElement("img");
+img.src = "https://z3.ax1x.com/2021/07/22/WDced1.jpg";
+img.onload = function() { 
+ctx.drawImage(img,390,390,300,300);
+ctx.beginPath();
+ctx.arc(540,540,182,0,Math.PI*2,false);
+ctx.strokeStyle = 'rgba(0,0,0,0.9)';
+ctx.lineWidth= 60;
+ctx.stroke();
+
 
 ctx.beginPath();
 ctx.lineWidth=6;
@@ -290,7 +292,7 @@ ctx.lineTo(180,340);
 ctx.strokeStyle = 'rgba(200,200,200,0.07)';
 ctx.stroke();
 
-
+}
 
 </script> 
 
