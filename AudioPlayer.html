@@ -194,14 +194,16 @@ ctx.beginPath();
 
 var img = document.createElement("img");
 img.src = "https://z3.ax1x.com/2021/07/22/WDced1.jpg";
-img.onload = function() { 
+
+
+
 ctx.drawImage(img,390,390,300,300);
 ctx.beginPath();
 ctx.arc(540,540,182,0,Math.PI*2,false);
 ctx.strokeStyle = 'rgba(0,0,0,0.9)';
 ctx.lineWidth= 60;
 ctx.stroke();
-}
+
 
 ctx.beginPath();
                         ctx.arc(540,540,380,0,Math.PI*2,false);
