@@ -7,29 +7,83 @@
 
 <style>
 body{
-width:1080px;
-height:2040px;
-left:0;
-top:0;
+background-color: rgba(100,149,237,70%);
 }
-
+*{
+font-size:100%;
+}
 
 audio{
-position:absolute;
-background-color: cornflowerblue;
-left:200px;
-right:200px;
-top:600px;
-height: 300px;
+position:fixed;
+margin:0 auto;
+background:transparent;
+left:0;
+right:0;
+top:60%;
+width:70%;
+height:100px;
+zoom:2;
 }
 
+button{
+display:inline-block;
+background:#efefef;
+border:none;
+outline:none;
+font-size:70%;
+position:fixed;
+left:68%;
+right:0;
+top:67%;
+height:4.5rem;
+width:4.5rem;
+zoom:0.9;
+}
+button:hover{
+background:lightpink;
+border-radius:5px;
+}
 canvas{
-top:0;
-left:0;
+top:5%;
+left:-5%;
+right:0;
 margin:0 auto;
-border:3px solid #d3d3d3;
+}
+     /*animation-name:myfirst;
+	animation-duration:5s;
+	animation-timing-function:linear;
+	animation-delay:2s;
+	animation-iteration-count:infinite;*/
+
+
+#myCanvas1{
+position:fixed;
 z-index:-2;
 }
+.ex1{
+animation:rotate 5s linear 0s infinite;
+}
+@keyframes rotate{
+from {transform: rotate(0deg);transform-origin:center center;}
+to {transform: rotate(360deg);transform-origin:center center;}
+}
+.ex2{
+}
+
+
+#myCanvas2{
+position:fixed;
+z-index:-1;
+}
+
+.ex3{
+}
+.ex4{
+transform: rotate(-20deg);transform-origin:53% 3%;
+}
+
+
+
 </style>
 </head>
 
@@ -37,58 +91,220 @@ z-index:-2;
 
 
 <body>
-<canvas id="myCanvas" width="1080" height="2040">
-您的浏览器不支持 HTML5 canvas 标签。
+<canvas id="myCanvas1" class="ex2" width="1080" height="1080">
+</canvas>
+<canvas id="myCanvas2" class="ex3" width="1080" height="1080">
+Your browser does not support the canvas tag.
 </canvas>
 
 
-
-
-<audio id="audio" controls="controls" src="http://m10.music.126.net/20210809081113/5e9a111006006a7da0e2bbad962bb1c4/ymusic/61c7/a3e4/6672/cf32f68191190addad6543f7b758517d.mp3">
+<audio id="audio" controls="controls" src="http://m10.music.126.net/20210816111613/786d11d11c4f366e2d86a9bcce6ceb19/ymusic/66e8/fa17/e831/34cc24434adbbb6e8dbbb9849db65ceb.mp3" onplay="yes()" onpause="no()" >
 </audio>
 
-
-
-<div class="">Perfect centering!</div>
-
+<button id="button"><svg t="1629085738191" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1179" width="64" height="64"><path d="M176.128 777.0112a310.6816 310.6816 0 0 1-49.152-40.96 305.5616 305.5616 0 0 1 219.9552-518.144h259.4816L559.9232 163.84l62.0544-53.5552 163.84 189.3376H346.9312a224.1536 224.1536 0 0 0-124.928 409.6z" fill="#2c2c2c" p-id="1180"></path><path d="M402.1248 907.6736l-163.84-189.3376h438.8864A223.744 223.744 0 0 0 838.144 338.944a227.0208 227.0208 0 0 0-36.0448-30.72l45.9776-67.8912a316.1088 316.1088 0 0 1 49.0496 40.96 305.5616 305.5616 0 0 1-219.9552 518.144H417.6896l46.4896 53.76z" fill="#2c2c2c" p-id="1181"></path></svg></button>
 
 
 
+<script>
+var audio = document.getElementById('audio');
+var C1 = document.getElementById('myCanvas1');
+var C2 = document.getElementById('myCanvas2');
+var btn = document.getElementById('button');
 
+
+var temp2 = btn.addEventListener('click',function musicLoop(){
+            if(temp2==1){
+                audio.removeAttribute("loop")
+                temp2=0;
+            }else{
+                audio.loop="loop";
+                temp2=1;
+            }
+        });
+
+
+function no(){
+                C1.className = 'ex2';
+                C2.className = 'ex4';
+                };
+function yes(){
+                C1.className = 'ex1';
+                C2.className = 'ex3';
+                };
+
+var temp = C2.addEventListener('click',function(){
+            if(temp==1){
+                C1.className = 'ex2';
+                C2.className = 'ex4';
+                temp=0;
+                audio.pause()
+            }else{
+                C1.className = 'ex1';
+                C2.className = 'ex3';
+                temp=1;
+                audio.play()
+            }
+        });
+</script>
 
 
 
 
 <script>
 
-var c=document.getElementById("myCanvas");
+
+var c=document.getElementById("myCanvas1");
 var ctx=c.getContext("2d");
 
-     ctx.beginPath();
-			ctx.arc(540,700,400,0,Math.PI*2,false);
-			ctx.fillStyle="rgba(2,2,2,0.9)";
-			ctx.fill();
+
+
+<!-- 
+ctx.beginPath();
+
+                        ctx.arc(540,540,140,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,1)";
+			ctx.stroke();
+                        ctx.arc(540,540,120,0,Math.PI*2,false);
 			ctx.strokeStyle="rgba(0,0,0,0.9)";
 			ctx.stroke();
-ctx.lineWidth=10;
-ctx.moveTo(540,700);
-ctx.lineTo(1080,700);
-ctx.strokeStyle = '#fff';
+                        ctx.arc(540,540,100,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,1)";
+			ctx.stroke();
+                        ctx.arc(540,540,80,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,0.9)";
+			ctx.stroke();
+                        ctx.arc(540,540,60,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,1)";
+			ctx.stroke();
+                        ctx.arc(540,540,40,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,0.9)";
+			ctx.stroke();
+                        ctx.arc(540,540,20,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,1)";
+			ctx.stroke();
+-->
+
+ctx.beginPath();
+ctx.lineWidth=6;
+ctx.moveTo(540,540);
+ctx.lineTo(940,540);
+ctx.strokeStyle = 'rgba(200,200,200,0.01)';
 ctx.stroke();
+
+
+ctx.beginPath();
+ctx.lineWidth=6;
+ctx.moveTo(540,540);
+ctx.lineTo(900,740);
+ctx.strokeStyle = 'rgba(200,200,200,0.02)';
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.lineWidth=6;
+ctx.moveTo(540,540);
+ctx.lineTo(800,840);
+ctx.strokeStyle = 'rgba(200,200,200,0.03)';
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.lineWidth=4;
+ctx.moveTo(540,540);
+ctx.lineTo(140,540);
+ctx.strokeStyle = 'rgba(200,200,200,0.1)';
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.lineWidth=4;
+ctx.moveTo(540,540);
+ctx.lineTo(280,240);
+ctx.strokeStyle = 'rgba(200,200,200,0.04)';
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.lineWidth=4;
+ctx.moveTo(540,540);
+ctx.lineTo(180,340);
+ctx.strokeStyle = 'rgba(200,200,200,0.07)';
+ctx.stroke();
+
+
+     
+
+     ctx.beginPath();
+			ctx.arc(540,540,400,0,Math.PI*2,false);
+			ctx.fillStyle="rgba(0,0,0,0.9)";
+			ctx.fill();
+
+
+var img = document.createElement("img");
+img.src = "https://z3.ax1x.com/2021/07/22/WDced1.jpg";
+img.onload = function() { 
+ctx.drawImage(img,390,390,300,300);
+ctx.beginPath();
+ctx.arc(540,540,182,0,Math.PI*2,false);
+ctx.strokeStyle = 'rgba(0,0,0,0.9)';
+ctx.lineWidth= 60;
+ctx.stroke();
+}
+
+ctx.beginPath();
+                        ctx.arc(540,540,380,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,1)";
+			ctx.stroke();
+                        ctx.arc(540,540,360,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,0.9)";
+			ctx.stroke();
+                        ctx.arc(540,540,340,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,1)";
+			ctx.stroke();
+                        ctx.arc(540,540,320,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,0.9)";
+			ctx.stroke();
+                        ctx.arc(540,540,300,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,1)";
+			ctx.stroke();
+                        ctx.arc(540,540,280,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,0.9)";
+			ctx.stroke();
+                        ctx.arc(540,540,260,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,1)";
+			ctx.stroke();
+                        ctx.arc(540,540,240,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,0.9)";
+			ctx.stroke();
+                        ctx.arc(540,540,220,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,1)";
+			ctx.stroke();
+                        ctx.arc(540,540,200,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,0.9)";
+			ctx.stroke();
+                        ctx.arc(540,540,180,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,1)";
+			ctx.stroke();
+                        ctx.arc(540,540,160,0,Math.PI*2,false);
+			ctx.strokeStyle="rgba(0,0,0,0.9)";
+			ctx.stroke();
+
+
 </script> 
 
 
 
-
-
 <script>
-<!-- 
-var audio = document.getElementById('audio');
-function (){}
-function (){audio.style.display="block";}   
-function musicLoop(){audio.loop="loop";}
--->
-</script>
+var c2=document.getElementById("myCanvas2");
+var ctx2=c2.getContext("2d");
+var btn = document.createElement("img");
+btn.src = "https://s3.bmp.ovh/imgs/2021/08/3356110081e5ccae.png";
+btn.onload = function() { 
+ctx2.drawImage(btn,540,0);
+}
+</script> 
+
+
 
 
 
