@@ -1,0 +1,93 @@
+<style>
+table.tftable {
+text-align:center;
+font-size:100%;
+color:#333333;
+width:100%;
+border-width: 0.5px;
+border-color: rgba(84,100,93,60%);
+border-collapse: collapse;
+}
+table.tftable th {
+font-weight:400;
+font-size:100%;
+background-color:rgb(210,236,228);
+border-width: 1px;
+padding: 15px;
+border-style: solid;
+border-color: white;
+}
+table.tftable tr {
+background-color:#ffffff;
+}
+table.tftable td {
+font-size:100%;
+border-width: 0.5px;
+padding: 15px;
+border-style: solid;
+border-color: rgba(84,100,93,60%);
+}
+
+</style>
+
+
+<table id="tfhover" class="tftable">
+<tr><th>cell1</th><th>cell2</th></tr>
+<tr><td>cell1</td><td>cell2</td></tr>
+
+
+</table>
+
+
+
+
+<input type="button" value="创建表格" onclick="creatTab()">
+<div id="bigbox">
+</div>
+
+<script>
+
+
+var div = document.getElementById("bigbox");
+var anniu = document.createElement("button")
+function creatTab(){
+var rows = prompt("rows"," ");
+var cols = prompt("cols"," ");
+
+
+var th = document.createElement('th');
+
+    var tab = '<table id="tfhover" class="tftable" border="1">'
+
+            tab=tab+"<tr>";
+        for(var j=0;j<cols;j++){
+            tab+="<th>"+1+j+"</th>";
+        }
+        tab+="<tr/>";
+    
+
+
+    for(var i=0;i<rows;i++){
+        tab=tab+"<tr>";
+        for(var j=0;j<cols;j++){
+            tab+="<td>"+i+j+"</td>";
+        }
+        tab+="<tr/>";
+    }
+    tab+='</table>';
+    div.innerHTML=tab;
+}
+
+
+
+</script>
+
+
+
+    
+
+
+
+
+
+
