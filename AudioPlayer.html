@@ -52,7 +52,7 @@ width:4.5rem;
 zoom:0.9;
 }
 button:hover{
-rgba(100,149,237,70%)
+rgba(100,149,237,70%);
 border-radius:50px;
 }
 canvas{
@@ -171,35 +171,6 @@ var c=document.getElementById("myCanvas1");
 var ctx=c.getContext("2d");
 
 
-
-<!-- 
-ctx.beginPath();
-
-                        ctx.arc(540,540,140,0,Math.PI*2,false);
-			ctx.strokeStyle="rgba(0,0,0,1)";
-			ctx.stroke();
-                        ctx.arc(540,540,120,0,Math.PI*2,false);
-			ctx.strokeStyle="rgba(0,0,0,0.9)";
-			ctx.stroke();
-                        ctx.arc(540,540,100,0,Math.PI*2,false);
-			ctx.strokeStyle="rgba(0,0,0,1)";
-			ctx.stroke();
-                        ctx.arc(540,540,80,0,Math.PI*2,false);
-			ctx.strokeStyle="rgba(0,0,0,0.9)";
-			ctx.stroke();
-                        ctx.arc(540,540,60,0,Math.PI*2,false);
-			ctx.strokeStyle="rgba(0,0,0,1)";
-			ctx.stroke();
-                        ctx.arc(540,540,40,0,Math.PI*2,false);
-			ctx.strokeStyle="rgba(0,0,0,0.9)";
-			ctx.stroke();
-                        ctx.arc(540,540,20,0,Math.PI*2,false);
-			ctx.strokeStyle="rgba(0,0,0,1)";
-			ctx.stroke();
--->
-
-     
-
      ctx.beginPath();
 			ctx.arc(540,540,400,0,Math.PI*2,false);
 			ctx.fillStyle="rgba(0,0,0,0.9)";
@@ -213,7 +184,9 @@ ctx.beginPath();
 var img = document.createElement("img");
 img.src = "https://z3.ax1x.com/2021/07/22/WDced1.jpg";
 img.onload = function() { 
+ctx.beginPath();
 ctx.drawImage(img,390,390,300,300);
+
 ctx.beginPath();
 ctx.arc(540,540,182,0,Math.PI*2,false);
 ctx.strokeStyle = 'rgba(0,0,0,0.9)';
