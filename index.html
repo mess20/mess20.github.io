@@ -8,8 +8,8 @@
 <meta name="keywords" content="理科">
 <Link href="https://z3.ax1x.com/2021/07/25/Wg3yW9.png" rel="Shortcut Icon">
 <script src="all.js"></script>
-<link rel="stylesheet" href="https://github.com/Restrechinamynd/Restrechinamynd.github.io/main/all.css" type="text/css"> 
-
+<link rel="stylesheet" href="https://Restrechinamynd.github.io/all.css" type="text/css"> 
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 <style type="text/css">
 input,textarea{
@@ -75,7 +75,18 @@ width:36rem;
 }
 
 
-
+info{
+display: -webkit-flex;
+display: flex;
+}
+/*蓝色*/
+info1{
+display:block;
+width: 1000px;
+margin: 0 auto;
+padding: 2rem;
+background:rgb(231,240,250)
+}
 
 svg{
 display:inline-block;
@@ -172,51 +183,6 @@ padding: 2rem;
 border-left:1rem solid rgb(235,236,240);
 background:rgb(246,246,246);
 }
-info{
-display: -webkit-flex;
-display: flex;
-}
-/*蓝色*/
-info1{
-display:block;
-width: 1000px;
-margin: 0 auto;
-padding: 2rem;
-background:rgb(231,240,250)
-}
-/* 白色*/
-info2{
-display:block;
-width: 90%;
-left:0;
-margin: 0.25em 0;
-padding:1rem;
-border-left:1rem solid rgb(235,236,240);
-}
-info2 a{
-color:#f8f8ff;
-border-bottom:4px solid f8f8ff;
-}
-/* */
-info3{
-display:block;
-width: 90%;
-left:0;
-margin: 0.25em 0;
-padding: 1rem;
-border-left:1rem solid rgb(235,236,240);
-background:rgb
-}
-/* */
-info4{
-display:block;
-width: 90%;
-left:0;
-margin: 0.25em 0;
-padding: 1rem;
-border-left:1rem solid rgb(235,236,240);
-background:rgb
-}
 
 
 
@@ -299,21 +265,21 @@ margin-bottom:auto;
 display:none;
 }
 .profile-button:hover .profile{
-background:rgb(247,248,250);
-position: fixed;
-             top: 7%;
-             left: 0px;
-             width: 60%;
-             height: 50%;
+line-height:5rem;
+background:white;
+position: fixed;           
+top: 7%;           
+left: 0px;          
+width: 60%;         
+height: 50%;
 z-index:4;
-display: -webkit-flex;
-    display: flex;  
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
+display: -webkit-flex;    
+display: flex;  
+flex-direction:column;
 -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-
+padding:3rem 0;
 }
 
 
@@ -330,14 +296,15 @@ order: 2;
   width: 200px;
   height: 200px;
   display: block;
-margin:0rem auto 0.5rem auto;
+margin:4rem auto 3rem auto;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 .setting{
-margin:0 0;
+margin:0rem 0;
+text-align:center;
 order: 3; 
 }
 
@@ -358,7 +325,7 @@ width:100%;
 opacity:0.7;
 object-fit:contain;
 
-margin-top:14%;
+margin-top:12.5%;
 z-index:-1;
 }  
 .card{
@@ -372,7 +339,7 @@ width:64%;
 height:400px !important;
 resize: none; 
 position:absolute;
-margin-top:-14%;
+margin-top:-12.5%;
 margin-left:auto;
 margin-right:auto;
 padding:3rem;
@@ -399,7 +366,7 @@ outline:none;
 }
 .intro{
 color:#404040;
-line-height:6rem;
+line-height:7rem;
 font-size:80%;
 margin-top:3rem;
 margin-bottom:4rem;
@@ -408,12 +375,12 @@ position:relative
 author{
 position:absolute;
 display:inline-block;
-line-height:6rem;
+line-height:7rem;
 align-items: center;
 }
 author img{
 position:absolute;
-margin-left:2.9rem;
+margin-left:0.5rem;
 }
 .avatar{
   width: 7rem;
@@ -431,7 +398,7 @@ bottom:0;
 margin:;
 }
 author name{
-margin-left:12.5rem;
+margin-left:10.5rem;
 }
 time{
 display: flex;
@@ -440,9 +407,7 @@ justify-content: space-around;
 }
 /* tool-nav*/
 .tool_nav{
-display: fixed;
-position:absolute;
-
+display: flex;
 justify-content: space-around;
 }
 
@@ -464,27 +429,69 @@ line-height:3rem;
 
 /*待*/
 .bottom-nav{
+color:black;
 width:100%;
 position:fixed;
 bottom:0%;
 left:0;
-height:07%;
+height:7%;
 background:black;
 z-index:3;
+display: -webkit-flex;
+display: flex;
+flex-direction:row;
+position: fixed;
+justify-content: space-around;   
+-webkit-align-items: center;  
+align-items: center;
+display: -webkit-flex;
+display: flex;
+flex-direction:row;
+position: fixed;
+justify-content: space-around;
+-webkit-align-items: center;
+align-items: center;
 }
 .bottom-nav:hover{
 height:22%;
-background:rgba(235,236,240,100%);
+background:#F7F8FA;
+box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+animation-name: up;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
 }
+.bottom-nav>*{
+display:none;
+}
+.bottom-nav:hover div{
+display:block;
+}
+.bottom-nav:hover i{
+display:block;
+}
+.bottom-nav:hover .aid{
+display:none;
+}
+
+@keyframes up {
+  0%   { 
+height:07%;
+background:black;}
+  100% { 
+height:22%;
+background:rgba(235,236,240,100%);}
+}
+
+
 /*reader-nav */
 
 .aid-button{
-
 }
 .aid{
 display:none;
 }
 .aid-button:hover .aid{
+font-size:2.7rem;
 background:rgb(247,248,250);
 position: fixed;
              top: 7%;
@@ -597,46 +604,6 @@ box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
 padding:1.5rem;
 }
 
-
-/* */
-fork-request{
-}
-fork-require{display:none;}
-fork-request:hover fork-require{
-position:absolute;
-display:block;
-background:white;
--webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
--moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-padding:1.4rem;
-z-index:3;
-}
-#copy-area{
-display:none;
-}
-#copy-button{
-font-size:100%;
-display:none;
- -webkit-transition-duration:0.4s;
- transition-duration:0.4s;
-}
-#copy-finish{
-display:none;
-position:fixed;
-right:0;
-left:0;
-top:10%;
-width:10rem;
-margin:0 auto;
-padding: 16px 32px;
-text-align:center;
-font-size:100%;
- background-color:#4CAF50;
- color: white;
- border-radius: 50px;
-z-index:5
-}
 
 
 
@@ -790,25 +757,26 @@ obj.className = obj.oldClass;
 <div class="profile-button">
 <img src="https://www.hualigs.cn/image/611625828d848.jpg" class="me"  alt="">
 <div class="profile">
-<div class="name">name</div>
+<div class="name">ID</div>
 <img id="my-avatar" src="https://z3.ax1x.com/2021/07/22/WDced1.jpg">
-<div id="setting">设置</div>
+<div class="setting" id="setting">Settings</div>
 </div>
 
 </div>
 </div>
 
-
-
-
+ 
 <div class="bottom-nav">
 
+<i id="listen-button" class="fa fa-headphones" aria-hidden="true" style="box-shadow:0px -30px 0px rgba(100,149,237,40%) inset" >  聆听</i>
 
 
-<button onclick="keyword()">关键词查询</button>
+<div id="keyword-button" onclick="keyword()" style="box-shadow:0px -30px 0px rgba(100,149,237,40%) inset"><dfn style="color:black;">⎋  索引<note>关键词查询</note></dfn></div>
+
+<i id="bookmark-button" class="fa fa-bookmark-o" aria-hidden="true" style="box-shadow:0px -30px 0px rgba(100,149,237,40%) inset">  书签</i> 
 
 
-<div class="aid-button">插件
+<div id="aid-button" class="aid-button" style="box-shadow:0px -30px 0px rgba(100,149,237,40%) inset">⊕  插件
 
 
 
@@ -953,7 +921,7 @@ t I was<br>
 <div class="intro">
 <author>
 <img src="https://z3.ax1x.com/2021/07/22/WDced1.jpg" class="avatar"  alt="">
-<name>author   |   梦悟 </name>
+<name>梦悟 </name>
 </author>
 <br>
 <time>
@@ -1015,38 +983,19 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 
 <h4>（一） 选择恐惧 / 困难是什么？</h4>
 <p>选择恐惧，</p>
-</details>
 
-<div>传播
 
+传播
 <svg t="1627218650438" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2618" width="30" height="30"><path d="M819.531888 614.442184a204.215255 204.215255 0 0 0-154.300522 70.392574L405.367582 554.902866a202.884196 202.884196 0 0 0 0-85.699759l259.863784-129.931892a204.471228 204.471228 0 1 0-46.075139-91.535943L359.292443 377.667164a204.778396 204.778396 0 1 0 0 268.771645l259.863784 129.931892A204.778396 204.778396 0 1 0 819.531888 614.442184z m0-511.945989a102.389198 102.389198 0 1 1-102.389198 102.389198 102.389198 102.389198 0 0 1 102.389198-102.389198zM205.1967 614.442184a102.389198 102.389198 0 1 1 102.389198-102.389198 102.389198 102.389198 0 0 1-102.389198 102.389198z m614.335188 307.167594a102.389198 102.389198 0 1 1 102.389197-102.389198 102.389198 102.389198 0 0 1-102.389197 102.389198z" p-id="2619" fill="#13227a"></path></svg>
 </div>
 
 
 
-<div>
-<fork-request>引用申请 
-<fork-require>
-<dfn>作者：</dfn><br>
-<dfn>来源：</dfn><br>
-<dfn>版权声明：</dfn>本文采用 CC BY 许可协议授权。<br>
-
-<div id="copy-allow" class="button" onclick="copy_allow()">我已了解</div>
-<input id="copy-button" type="button" class="button" onclick="copy()" value="复制"></input>
-<textarea id="copy-area">https://blog.csdn.net/yuzsmc</textarea>
-
-</fork-require>
-
-</fork-request>
-
-
-<div id="copy-finish">已复制</div>
-</div>
-
-
 </article>
 
+</details>
 
+<div>
 
 
 
