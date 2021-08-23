@@ -16,6 +16,9 @@ input,textarea{
 font-family:"arial";
 padding:1.5rem;
 font-size:100%;
+}
+html{
+font-size:16px;
 
 }
 body{
@@ -145,6 +148,7 @@ font-style:normal;
 color:rgba(52,160,238,100%) 
 }
 dfn:hover note{
+color:black;
 position:absolute;
 display:block;
 background:white;
@@ -359,13 +363,13 @@ z-index:-1;
 }  
 .card{
 z-index:1;
-background-color:rgba(255,255,255,70%);
+background-color:rgba(255,255,255,90%);
 color:#666;
-border-style: solid;
+border-style:none;
 left:0;
 right:0;
 width:64%;
-height:40%;
+height:400px !important;
 resize: none; 
 position:absolute;
 margin-top:-14%;
@@ -379,7 +383,7 @@ _overflow-y: visible;
 line-height:5rem;
 }
 .main{
-margin-top:0;
+margin-top:400px;
 background-color:rgba(255,255,255,30%);
 opacity:1.0;
 padding:5rem;
@@ -1109,10 +1113,8 @@ setTimeout("document.getElementById('copy-finish').style.display=\"none\" ", 700
 <script type="text/javascript">  
         var anniu =document.getElementById('anniu2');
         var kaiguan = document.getElementById('kaiguan2');
-        
         var title =document.getElementById('article-title');
         var main = document.getElementById('main');
-        
         var temp = 1;
         anniu.addEventListener('click',function(){
             if(temp==1){
@@ -1122,6 +1124,13 @@ setTimeout("document.getElementById('copy-finish').style.display=\"none\" ", 700
 title.style.fontSize="37%";
 main.style.fontSize="37%";
 main.style.padding="0 0rem";
+var x = document.querySelectorAll("note,.note");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.fontSize="2.7rem";}
+
+
+
             }else{
                 this.className = 'bai';
                 temp=1;
@@ -1130,9 +1139,14 @@ main.style.padding="0 0rem";
 title.style.fontSize="100%";
 main.style.fontSize="100%";
 main.style.padding="0 0rem";
-            }
+var x = document.querySelectorAll("note,.note");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.fontSize="2.7rem";}
 
-        })
+
+
+        }})
      
     </script>
 
