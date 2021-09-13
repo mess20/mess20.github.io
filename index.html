@@ -12,6 +12,15 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 <style type="text/css">
+*{
+-moz-user-select: none; 
+-webkit-user-select: none;  
+-ms-user-select: none;      
+-khtml-user-select: none;  
+user-select: none;   
+-webkit-tap-highlight-color:transparent;
+}
+}
 input,textarea{
 font-family:"arial";
 padding:1.5rem;
@@ -19,7 +28,6 @@ font-size:100%;
 }
 html{
 font-size:16px;
-
 }
 body{
 font-family:arial;
@@ -411,8 +419,6 @@ display: flex;
 justify-content: space-around;
 }
 
-
-
 /*待*/
 .copyright{
 font-size:80%;
@@ -451,7 +457,10 @@ position: fixed;
 justify-content: space-around;
 -webkit-align-items: center;
 align-items: center;
+flex-wrap:wrap;
+padding:0 0rem;
 }
+
 .bottom-nav:hover{
 height:22%;
 background:#F7F8FA;
@@ -468,6 +477,7 @@ display:block;
 }
 .bottom-nav:hover i{
 display:block;
+margin:0 5%; 
 }
 .bottom-nav:hover .aid{
 display:none;
@@ -571,6 +581,43 @@ zoom:2.3;
          }
         
 
+#editor-button{
+display:block
+}
+#editor-button a{
+display:none;
+}
+.editmenu{
+display:none;
+}
+#editor-button:hover a{
+user-select: none;
+display:block;
+margin:3rem 0rem;
+background:url('https://s3.bmp.ovh/imgs/2021/08/7e86af5c2d3af56e.jpg') no-repeat center center;
+-webkit-background-clip: text;
+background-clip: text;
+color:transparent;
+}
+#editor-button a:hover{
+color:black;
+}
+#editor-button:hover .editmenu{
+font-size:2.8rem;
+position: fixed;
+background:rgba(255,255,255,100%);
+padding:3.2rem 10rem;    
+left:15%;
+top:40%;       
+right:15%;
+height:auto;
+z-index:4;
+-webkit-box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
+box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.4);
+display:block;
+border-radius:10px;
+}
 /*待*/
 /*mark*/
 
@@ -768,15 +815,13 @@ obj.className = obj.oldClass;
  
 <div class="bottom-nav">
 
-<i id="listen-button" class="fa fa-headphones" aria-hidden="true" style="box-shadow:0px -30px 0px rgba(100,149,237,40%) inset" >  聆听</i>
+<i id="listen-button" class="fa fa-headphones" aria-hidden="true" style="" >  聆听</i>
 
+<i id="keyword-button" onclick="keyword()" class="fa fa-filter" aria-hidden="true"><dfn style="color:black">   索引<note>关键词查询</note></dfn></i>
 
-<div id="keyword-button" onclick="keyword()" style="box-shadow:0px -30px 0px rgba(100,149,237,40%) inset"><dfn style="color:black;">⎋  索引<note>关键词查询</note></dfn></div>
+<i id="bookmark-button" class="fa fa-bookmark-o" aria-hidden="true" style="">  书签</i> 
 
-<i id="bookmark-button" class="fa fa-bookmark-o" aria-hidden="true" style="box-shadow:0px -30px 0px rgba(100,149,237,40%) inset">  书签</i> 
-
-
-<div id="aid-button" class="aid-button" style="box-shadow:0px -30px 0px rgba(100,149,237,40%) inset">⊕  插件
+<i id="aid-button" class="aid-button fa fa-sliders" aria-hidden="true" >  插件
 
 
 
@@ -813,7 +858,17 @@ obj.className = obj.oldClass;
 </div>
 
 
+</i>
+
+<i id="editor-button" class="fa fa-magic" aria-hidden="true" style="">  编辑
+<div class="editmenu">
+<a href="https://restrechinamynd.github.io/VisualEditor">可视化编辑器  »</a>
+<a href="https://restrechinamynd.github.io/LMLEditor">timemark  »</a>
 </div>
+</i> 
+
+
+
 
 </div>
 
