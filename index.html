@@ -520,7 +520,7 @@ display:block;
 line-height:150px;
 align-items: center;
 position: absolute;
-left:2rem;
+left:6rem;
 height:150px;
              width: 100%;
              margin:auto 0;
@@ -534,20 +534,20 @@ top:200px;
 
 /*字号调整*/
 #locater2{
-top:350px;
+top:300px;
 }
 /*深色模式*/
 #locater3{
-top:500px;
+top:400px;
 }
 
 #locater4{
-top:650px;
+top:500px;
 }
       .kaiguan{
              position: absolute;
              top: 20px;
-             right: 50px;
+             right: 70px;
              width: 40px;
              height: 20px;
              border: 2px solid black;
@@ -716,8 +716,15 @@ z-index: 3;
 -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.3);
 -moz-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.3);
 box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.3);
-
+animation-name: right;
+animation-duration: 0.4s;
+animation-iteration-count: 1;
 }
+@keyframes right {
+  0%   { width:0;display:none}
+  100% { width:40%;display:block}
+}
+
 li img{
 width:20px;
 height:20px;
@@ -826,13 +833,13 @@ obj.className = obj.oldClass;
 
 
 <div class="aid">
-<div class="locater" id="locater1">语言切换／EN
+<div class="locater" id="locater1"><span id="locater1-span">EN</span>
 <div class="kaiguan" id="kaiguan1">
 <div class="bai" id="anniu1"></div>
 </div>
 </div>
 
-<div class="locater" id="locater2">字号调整／FONT
+<div class="locater" id="locater2"><span id="locater2-span">FONT</span>
 <div class="kaiguan" id="kaiguan2">
 <div class="bai" id="anniu2"></div>
 </div>
@@ -841,7 +848,7 @@ obj.className = obj.oldClass;
 
 
 
-<div class="locater" id="locater3">深色模式／EVE
+<div class="locater" id="locater3"><span id="locater3-span">EVE</span>
 <div class="kaiguan" id="kaiguan3">
 <div class="bai" id="anniu3"></div>
 </div>
@@ -850,7 +857,7 @@ obj.className = obj.oldClass;
 
 
 <div class="locater" id="locater4">
-开启朗读／LISTEN
+<span id="locater4-span">LISTEN</span>
 <div class="kaiguan" id="kaiguan4">
 <div class="bai" id="anniu4"></div>
 </div>
@@ -881,10 +888,12 @@ obj.className = obj.oldClass;
 
 <ul id="menu" >
 <ul> 
+<details>
+<summary>标题二san</summary>
 <li><a href="#DOORS" >DOORS3</a></li>
 <li><a href="#header" >header3</a></li>
-<li><a href="#jaja" ><marquee hspace=0 behavior=slide scrollamount=8 scrolldelay=0>
-hder3</marquee></a></li>
+<li><a href="#jaja" >jsxjsxjzjjzs</a></li>
+</details>
 </ul>
 
 <ul> 
@@ -1092,15 +1101,15 @@ setTimeout("document.getElementById('copy-finish').style.display=\"none\" ", 700
 <script type="text/javascript">  
         var anniu =document.getElementById('anniu1');
         var kaiguan = document.getElementById('kaiguan1');
-        var body = document.getElementById('body');
-           
-        var temp = 1;
-        anniu.addEventListener('click',function(){
+        var temp = 1;     anniu.addEventListener('click',function(){
             if(temp==1){
                 this.className = 'hei';
                 temp=0;
                 kaiguan.style. border= '2px solid  rgb(11, 243, 81)';
-               
+document.getElementById('locater1-span').innerHTML="语言切换";
+document.getElementById('locater2-span').innerHTML="字号调整";
+document.getElementById('locater3-span').innerHTML="深色模式";
+document.getElementById('locater4-span').innerHTML="开启朗读";
             }else{
                 this.className = 'bai';
                 temp=1;
