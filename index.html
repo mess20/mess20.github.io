@@ -12,20 +12,7 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 <style type="text/css">
-*{
--moz-user-select: none; 
--webkit-user-select: none;  
--ms-user-select: none;      
--khtml-user-select: none;  
-user-select: none;   
--webkit-tap-highlight-color:transparent;
-}
-}
-input,textarea{
-font-family:"arial";
-padding:1.5rem;
-font-size:100%;
-}
+
 html{
 font-size:16px;
 }
@@ -34,9 +21,24 @@ font-family:arial;
 font-size:270%;
 position: relative;
 transition: all 1s;
-background-color:rgba(235,236,240,10%);
+background-color:rgba(235,236,240,100%);
+padding:0;
+margin:0;
 }
-
+*{
+-moz-user-select: none; 
+-webkit-user-select: none;  
+-ms-user-select: none;      
+-khtml-user-select: none;  
+user-select: none;   
+-webkit-tap-highlight-color:transparent;
+outline:none;
+}
+input,textarea{
+font-family:"arial";
+padding:1.5rem;
+font-size:100%;
+}
 /*按钮样式*/
 .button1{
 position:absolute;
@@ -59,7 +61,6 @@ width:36rem;
  background-color:#4CAF50;
  color: white;
 }
-
 .button2{
 position:absolute;
 right:0;
@@ -82,7 +83,40 @@ width:36rem;
  color: white;
 }
 
+fbb{
+display:none;
+position:fixed;
+top:2%;
+right:5%;
+font-size:2rem;
+height:5rem;
+line-height:5rem;
+align-items:center;
+color:white;
+background:#6699ff;
+border:none;
+border-radius:6px;
+padding:0rem 2.5rem;
+margin:0;
+-webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+z-index:11;
+}
+fbb:hover{
+color:white;
+background:rgba(102, 153, 255,75%)
+}
 
+article-title,h2{
+color:rgba(118,120,102,100%);
+text-align:center
+}
+h3{
+color:rgba(118,120,102,100%);
+font-weight:640;
+border-bottom:solid 5px rgba(143,150,136,60%);
+}
 info{
 display: -webkit-flex;
 display: flex;
@@ -102,9 +136,9 @@ line-height:6rem;
 align-items: center;
 border:none;
 width: 3rem;
-height: 3rem;
+height: 4rem;
 border-radius: 50%;
-margin:auto 0 auto 0;
+margin:0 1rem -1rem 1rem !important;
 overflow: visible;
 }
 .ico{
@@ -117,7 +151,8 @@ justify-content: center;
 overflow: visible;
 }
 em{
-color:hsla(347,60%,62%,80%)
+color:rgba(199,77,70,100%);
+font-style:normal;
 }
 
 
@@ -150,32 +185,36 @@ border-color: rgba(84,100,93,18%);}
 
 /*预览or呼出式解释补充*/
 abbr{
+color:rgb(100,148,229);
 }
-note{display:none;}
-abbr:hover note{
+abbr[title]{
+color:black;
+}
+note{
+display:none;
 position:absolute;
-display:block;
+font-size:2.4rem !important;
+color:black;
 background:white;
 -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-padding:1.4rem;
+box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.3);
+padding:2.2rem 2.6rem;
+margin-right:2.7rem;
+line-height:4rem;
+border-radius:10px;
 z-index:3;
+}
+abbr:hover note{
+display:block;
 }
 dfn{
 font-style:normal;
-color:rgba(52,160,238,100%) 
+color:rgb(100,148,229);
+/*color:rgba(52,160,238,100%) */
 }
 dfn:hover note{
-color:black;
-position:absolute;
-display:block;
-background:white;
--webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
--moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-padding:1.4rem;
-z-index:3;
+display:block
 }
 
 
@@ -211,9 +250,11 @@ padding-bottom:2px;
 
 
 /*头部（待）*/
-
 .header-nav{
 background-color:rgba(235,236,240,100%);
+-webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+box-shadow: 0 0 10px 0 rgba(35,36,40,0.4);
 top:0;
 left:0;
 width:100%;
@@ -274,7 +315,7 @@ display:none;
 }
 .profile-button:hover .profile{
 line-height:5rem;
-background:white;
+background:rgb(254, 255, 253);
 position: fixed;           
 top: 7%;           
 left: 0px;          
@@ -311,7 +352,7 @@ margin:4rem auto 3rem auto;
   overflow: hidden;
 }
 .setting{
-margin:0rem 0;
+margin:0;
 text-align:center;
 order: 3; 
 }
@@ -322,52 +363,50 @@ order: 3;
 
 
 /*主体*/
-
-.header{
-top:0;
-}
 .header img{
 top:0;
 left:0;
 width:100%;
 opacity:0.7;
-object-fit:contain;
-
-margin-top:12.5%;
+object-fit:cover;
+margin-top:12%;
 z-index:-1;
 }  
 .card{
 z-index:1;
-background-color:rgba(255,255,255,90%);
 color:#666;
 border-style:none;
+background:white;
 left:0;
 right:0;
-width:64%;
-height:400px !important;
+width:75%;
+height:500px !important;
 resize: none; 
 position:absolute;
 margin-top:-12.5%;
 margin-left:auto;
 margin-right:auto;
-padding:3rem;
+padding:3rem 3.6rem;
 word-wrap: break-word;
 overflow-x: hidden;
-overflow-y: auto; //超过最大高度就出现滚动条
-_overflow-y: visible;
+overflow-y: auto; 
+line-height:5rem;
+box-shadow: 0 0 24px 0px rgba(0, 0, 0, 0.2);
+border-radius:10px;
+}
+.main{
+background-color:rgba(255,255,255,100%);
+opacity:1.0;
+padding-left:5rem;
+padding-right:5rem;
+padding-top:540px;
+margin-top:-10px;
+padding-bottom:100px;
 line-height:5rem;
 }
 .main{
-margin-top:400px;
-background-color:rgba(255,255,255,30%);
-opacity:1.0;
-padding:5rem;
-line-height:5rem;
-}
-.main p{
 color:#666;
 }
-
 .main summary{
 font-size:80%;
 outline:none;
@@ -394,7 +433,6 @@ margin-left:0.5rem;
   width: 7rem;
   height: 7rem;
   display: inline-block;
-
   border-radius: 50%;
   align-items: center;
   justify-content: center;
@@ -423,12 +461,17 @@ justify-content: space-around;
 .copyright{
 font-size:80%;
 color:rgb(210,210,210);
+background-color:rgba(255,255,255,100%);
 right:0;
 left:0;
 text-align:center;
 margin-bottom:20%;
 position:absolute;
 line-height:3rem;
+padding-bottom:200px;
+width:auto%;
+padding-left:5rem;
+padding-right:5rem;
 }
 
 
@@ -502,7 +545,7 @@ display:none;
 }
 .aid-button:hover .aid{
 font-size:2.7rem;
-background:rgb(247,248,250);
+background:rgb(254, 255, 253);
 position: fixed;
              top: 7%;
              right: 0px;
@@ -523,8 +566,7 @@ position: absolute;
 left:6rem;
 height:150px;
              width: 100%;
-             margin:auto 0;
-            
+             margin:auto 0;            
 }
 
 /*语言切换*/
@@ -560,26 +602,80 @@ zoom:2.3;
         
          .bai{ 
              position: absolute;
-             top: 1.5px;
-             left: 2px;
-             height: 13px;
-             width: 13px;
+             top: 2px;
+             left: 3px;
+             height: 15px;
+             width: 15px;
              background-color: rgb(0, 0, 0);
              border-radius: 50%;
              transition: all 1s;
          }
-        .hei{
-           
+        .hei{           
              position: absolute;
-             top: 1.5px;
-             right: 2px;
-             height: 13px;
-             width: 13px;
-             background-color: rgb(11, 243, 81);
+             top: 2px;
+             right: 3px;
+             height: 15px;
+             width: 15px;
+             background-color: rgba(56,90,138,100%);
              border-radius: 50%;
              transition: all 1s;
          }
-        
+
+
+#keyword-nav{
+display:none;
+font-size:2.8rem;
+position: fixed;
+background:rgba(255,255,255,100%) !important;
+padding:3.2rem 10rem;    
+left:15%;
+top:40%;       
+right:15%;
+height:auto;
+z-index:4;
+-webkit-box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
+box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.4);
+display:block;
+border-radius:10px;
+}
+#keyword-button div{
+display:none;
+margin:3rem 0rem;
+background:url('https://s3.bmp.ovh/imgs/2021/08/7e86af5c2d3af56e.jpg') no-repeat center center;
+-webkit-background-clip: text;
+background-clip: text;
+color:transparent;
+}
+#keyword-button:hover #keyword-nav{         
+/*display:block;*/
+}
+#keyword-button:hover div{         
+display:block;
+}
+
+#keyword-ul{
+padding:2.5rem 3rem;
+display:none;
+position:fixed;
+left:0;
+top:0;
+right:0;
+height:auto;
+white-space: nowrap;
+background:#444;
+overflow-x: auto; 
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+z-index:10;
+}
+#keyword-ul button{
+background:transparent;
+color:#fff;
+border:none;
+margin:0 2rem;
+font-size:2.5rem;
+}
+
 
 #editor-button{
 display:block
@@ -627,7 +723,64 @@ border-style:none none solid none;
 border-bottom:4px solid cornflowerblue;
 padding-bottom:2px;
 }
+/*书签*/
+.bookmark-button{
+font-size:2.4rem;
+color:white;
+border:none;
+width:80%;
+text-align:center;
+margin:0 100px;
+padding:1rem 3rem;
+background:#6699ff;
+box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+outline:none;
+}
 
+
+.bookmark-button-hover{
+font-size:100%;
+color:white;
+border:none;
+width:80%;
+text-align:center;
+margin:0 10%;
+padding:1rem 3rem;
+background:rgba(250, 53, 53,100%);
+box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+outline:none;
+animation:animation1 1s;
+}
+.bookmark-button-cancel{
+font-size:100%;
+color:white;
+border:none;
+width:80%;
+text-align:center;
+margin:0 10%;
+padding:1rem 3rem;
+background:#6699ff;
+box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+outline:none;
+animation:animation2 1s;
+}
+@keyframes animation1{
+from{
+background:#6699ff;
+}
+to{
+background:rgba(250, 53, 53,100%);
+}
+}
+
+@keyframes animation2{
+from{
+background:rgba(250, 53, 53,100%);
+}
+to{
+background:#6699ff;
+}
+}
 
 /*简记 */
 notebutton:after{
@@ -824,7 +977,13 @@ obj.className = obj.oldClass;
 
 <i id="listen-button" class="fa fa-headphones" aria-hidden="true" style="" >  聆听</i>
 
-<i id="keyword-button" onclick="keyword()" class="fa fa-filter" aria-hidden="true"><dfn style="color:black">   索引<note>关键词查询</note></dfn></i>
+<i id="keyword-button" onclick="keyword()" class="fa fa-filter" aria-hidden="true"><dfn style="color:black" id="keyword-dfn">   索引<note>关键词查询</note></dfn>
+<div id="keyword-nav">
+<div onclick="keyword1()">关键词选择</div>
+<div onclick="keyword2()">自定义</div>
+</div>
+</i>
+
 
 <i id="bookmark-button" class="fa fa-bookmark-o" aria-hidden="true" style="">  书签</i> 
 
@@ -862,6 +1021,7 @@ obj.className = obj.oldClass;
 <div class="bai" id="anniu4"></div>
 </div>
 </div>
+
 </div>
 
 
@@ -880,7 +1040,57 @@ obj.className = obj.oldClass;
 </div>
 
 
+<fbb onclick="searched()" id="searched-button" style="height:5rem;padding:0rem 3rem">完成
+</fbb>
+<div id="keyword-ul">
+<button id="k1" onclick="key1()">1</button>
+<button id="k2" onclick="key2()">2</button>
+<button id="k3" onclick="key3()">3</button>
 
+<button id="k4" onclick="key4()">1</button>
+<button id="k5" onclick="key5()">2</button>
+<button id="k6" onclick="key6()">3</button>
+
+<button id="k7" onclick="key7()">1</button>
+<button id="k8" onclick="key8()">2</button>
+<button id="k9" onclick="key9()">3</button>
+
+<button id="k10" onclick="key10()">1</button>
+<button id="k11" onclick="key11()">2</button>
+<button id="k12" onclick="key12()">3</button>
+</div>
+
+<script>
+function key1() {
+var main = document.getElementById("main");
+var str = main.innerHTML;
+var D = "<k>我</k>";
+main.innerHTML= str.replace(new RegExp("我", "g"), D);
+document.getElementById("searched-button").style.display="block";
+document.getElementById("searched-button").addEventListener('click',function f1() {
+main.innerHTML= str.replace(new RegExp(D, "g"), "我");
+document.getElementById("searched-button").style.display="none";
+document.getElementById("keyword-ul").style.display="none";})
+};
+
+
+function functionkey2() {
+main.innerHTML= str.replace(new RegExp("内", "g"), "2");
+document.getElementById("searched-button").style.display="block";
+document.getElementById("searched-button").addEventListener('click',function f2() {
+main.innerHTML= str.replace(new RegExp("2" , "g"), "内");
+document.getElementById("searched-button").style.display="none";})
+};
+
+function functionkey3() {
+main.innerHTML= str.replace(new RegExp("容", "g"), "3");
+document.getElementById("searched-button").style.display="block";
+
+document.getElementById("searched-button").addEventListener('click',function f3() {
+main.innerHTML= str.replace(new RegExp("3" , "g"), "容");
+document.getElementById("searched-button").style.display="none";})
+}
+</script>
 
 <a href="#header" class="Link_1">∧</a>     
 <a href="menu.html" class="menuLink">+</a>
@@ -889,16 +1099,15 @@ obj.className = obj.oldClass;
 <ul id="menu" >
 <ul> 
 <details>
-<summary>标题二san</summary>
-<li><a href="#DOORS" >DOORS3</a></li>
-<li><a href="#header" >header3</a></li>
-<li><a href="#jaja" >jsxjsxjzjjzs</a></li>
+<summary>标题一</summary>
+<li><a href="#header" >header</a></li>
+<li><a href="#p1" >part1</a></li>
 </details>
 </ul>
 
 <ul> 
 <details>
-<summary>标题二san</summary>
+<summary>标题二</summary>
 <li><a href>二级目录</a></li>
 <li><a href>二级目录</a></li>
 <li><a href>二级目录</a></li>
@@ -941,7 +1150,7 @@ obj.className = obj.oldClass;
 
 
 
-<div class="card">    
+<div class="card" id="card">    
 <p>ehbwbs<br>
 huuwhd<br>
 hshqhss<br>
@@ -955,37 +1164,32 @@ t I was<br>
 
 
     
-<div class="main">
-
-
-
+<div class="main" id="main-body">
 
 <details>
-<summary>万物选购指南：层次分析法治好了我的选择困难</summary>
+<summary>我是文章一</summary>
 
 
 <div class="tool_nav">
 
-
-<div style="margin:0;display:inline-block;" >
-
-</div>
-
 <div id="" style="display:inline-block;height:200px;text-align:center;line-height:200px;">
-<svg t="1627218555235" class="icon" viewBox="0 0 1365 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2286" width="200" height="200"><path d="M853.333333 0a512 512 0 0 0-482.759111 341.333333H341.333333a341.333333 341.333333 0 0 0 0 682.666667h512a512 512 0 0 0 0-1024z m0 910.222222H341.333333a227.555556 227.555556 0 0 1 0-455.111111h117.987556A398.222222 398.222222 0 1 1 853.333333 910.222222z" p-id="2287"></path></svg>
-讨论
+传播
+<svg t="1627218650438" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2618" width="30" height="30"><path d="M819.531888 614.442184a204.215255 204.215255 0 0 0-154.300522 70.392574L405.367582 554.902866a202.884196 202.884196 0 0 0 0-85.699759l259.863784-129.931892a204.471228 204.471228 0 1 0-46.075139-91.535943L359.292443 377.667164a204.778396 204.778396 0 1 0 0 268.771645l259.863784 129.931892A204.778396 204.778396 0 1 0 819.531888 614.442184z m0-511.945989a102.389198 102.389198 0 1 1-102.389198 102.389198 102.389198 102.389198 0 0 1 102.389198-102.389198zM205.1967 614.442184a102.389198 102.389198 0 1 1 102.389198-102.389198 102.389198 102.389198 0 0 1-102.389198 102.389198z m614.335188 307.167594a102.389198 102.389198 0 1 1 102.389197-102.389198 102.389198 102.389198 0 0 1-102.389197 102.389198z" p-id="2619" fill=""></path></svg>
+</div>
+<div id="" style="display:inline-block;height:200px;text-align:center;line-height:200px;">
+讨论<svg t="1627218555235" class="icon" viewBox="0 0 1365 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2286" width="200" height="200"><path d="M853.333333 0a512 512 0 0 0-482.759111 341.333333H341.333333a341.333333 341.333333 0 0 0 0 682.666667h512a512 512 0 0 0 0-1024z m0 910.222222H341.333333a227.555556 227.555556 0 0 1 0-455.111111h117.987556A398.222222 398.222222 0 1 1 853.333333 910.222222z" p-id="2287"></path></svg>
 </div>
 
 
 
 </div>
-<h2><article-title id="article-title">万物选购指南：层次分析法治好了我的选择困难</article-title></h2>
+<h2><article-title id="article-title">标题标题标题标题标题</article-title></h2>
 <info><info1>版权声明：本文采用 <dfn> CC BY 许可协议<note>Attribution 署名<br>
 只要保留原作者姓名，就可以基于商业目的传播、改编或者二次创作。</note> </dfn> 授权。</info1></info>
 <div class="intro">
 <author>
 <img src="https://z3.ax1x.com/2021/07/22/WDced1.jpg" class="avatar"  alt="">
-<name>梦悟 </name>
+<name>作者</name>
 </author>
 <br>
 <time>
@@ -1001,35 +1205,18 @@ t I was<br>
 
 
 
-
-
-
-
-
-
     
-<divvid class="main" id="main">
-
-
-
+<main id="main">
 <article id="article">
 
-
-
-
-xxx<abbr title>原文<note>注释</note></abbr>xx
-
 <p>
-<b>Matrix 首页推荐</b><br>
-Matrix 是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选 Matrix 最优质的文章，展示来自用户的最真实的体验和观点。
-
-<dfn>WHO<note>jwheh</note></dfn> 
-
+<b>某某某 首页推荐</b><br>
+我是正文内容<em>我是被强调内容</em>，我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。<abbr title>WHO<note>我是全称。</note></abbr>我是正文内容。我是正文内容。我是正文内容。我是正文内容。<dfn>我是被注释内容。<note>注释</note></dfn> 
+我是正文内容。我是正文内容。
 </p>
-<p>
-文章代表作者个人观点，少数派仅对标题和排版略作修改。
-</p>
-<h3>一、 选择困难及其由来</h3>
+
+
+<h3>一、 我是标题一</h3>
 
 
 <o class="markarea" onclick="mark(this)">句子1</o>
@@ -1038,28 +1225,37 @@ Matrix 是少数派的写作社区，我们主张分享真实的产品体验，�
 
 <notebutton><textarea class="note">add notes</textarea></notebutton>
 
+<p>我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。</p>
+
+<h4>（一）我是一个小标题</h4>
+<p id="p1">我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。</p>
 
 
+<button class="bookmark-button" onclick="bk1(this)">双击插入书签</button>
 
 
+<h3>二、我是标题二</h3>
 
-<p>严格来说，选择恐惧症并不适合用来形容上文中的场景，或许 「选择困难」 更为合适。但归根结蒂，两者都具有共同的特征，即「无法在一定时间内做出决策，并且因为这种情况的存在，自己或多或少陷入了焦虑状态」，而选择恐惧只是在程度上比选择困难更强。如果想解决选择困难，首先要明白选择困难的本质及其成因。因此，在第一部分，我将对 「选择恐惧」 的具体表现和成因进行分析。</p>
-
-<h4>（一） 选择恐惧 / 困难是什么？</h4>
-<p>选择恐惧，</p>
-
-
-传播
-<svg t="1627218650438" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2618" width="30" height="30"><path d="M819.531888 614.442184a204.215255 204.215255 0 0 0-154.300522 70.392574L405.367582 554.902866a202.884196 202.884196 0 0 0 0-85.699759l259.863784-129.931892a204.471228 204.471228 0 1 0-46.075139-91.535943L359.292443 377.667164a204.778396 204.778396 0 1 0 0 268.771645l259.863784 129.931892A204.778396 204.778396 0 1 0 819.531888 614.442184z m0-511.945989a102.389198 102.389198 0 1 1-102.389198 102.389198 102.389198 102.389198 0 0 1 102.389198-102.389198zM205.1967 614.442184a102.389198 102.389198 0 1 1 102.389198-102.389198 102.389198 102.389198 0 0 1-102.389198 102.389198z m614.335188 307.167594a102.389198 102.389198 0 1 1 102.389197-102.389198 102.389198 102.389198 0 0 1-102.389197 102.389198z" p-id="2619" fill="#13227a"></path></svg>
+我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。我是正文内容。
 </div>
 
 
 
 </article>
 
+
+<div class="copyright">版权版权Wssbbszbszvgcfcfcfxfxfcfcfcgc
+gcgcgcgcgfgcgcfcfcgcgcgcsfsegcwscg ijwsjwsjwsjwsjwsjsjsjsjsyfyfyffg
+gyyyugghuh版权</div>
+
+
+</main>
+
 </details>
 
-<div>
+
+</div>
+
 
 
 
@@ -1083,14 +1279,6 @@ setTimeout("document.getElementById('copy-finish').style.display=\"none\" ", 700
 
 
 
-<div class="copyright">版权版权版权</div>
-</div>
-
-
-
-</divvid>
-
-
 
 
 
@@ -1103,20 +1291,18 @@ setTimeout("document.getElementById('copy-finish').style.display=\"none\" ", 700
         var kaiguan = document.getElementById('kaiguan1');
         var temp = 1;     anniu.addEventListener('click',function(){
             if(temp==1){
-                this.className = 'hei';
                 temp=0;
-                kaiguan.style. border= '2px solid  rgb(11, 243, 81)';
+                this.className = 'hei';
+                kaiguan.style. border= '2px solid  rgba(56,90,138,100%)';
 document.getElementById('locater1-span').innerHTML="语言切换";
 document.getElementById('locater2-span').innerHTML="字号调整";
 document.getElementById('locater3-span').innerHTML="深色模式";
 document.getElementById('locater4-span').innerHTML="开启朗读";
             }else{
-                this.className = 'bai';
                 temp=1;
-                kaiguan.style. border= '2px solid black';
-                
+                this.className = 'bai';
+                kaiguan.style. border= '2px solid black';            
             }
-
         })
      
     </script>
@@ -1128,37 +1314,35 @@ document.getElementById('locater4-span').innerHTML="开启朗读";
         var kaiguan = document.getElementById('kaiguan2');
         var title =document.getElementById('article-title');
         var main = document.getElementById('main');
+var mark = document.querySelectorAll('.bookmark-button,.bookmark-button-hover,.bookmark-button-cancel');
         var temp = 1;
         anniu.addEventListener('click',function(){
             if(temp==1){
                 this.className = 'hei';
                 temp=0;
-                kaiguan.style. border= '2px solid  rgb(11, 243, 81)';                
+                kaiguan.style.border= '2px solid  rgba(56,90,138,100%)';                
 title.style.fontSize="37%";
 main.style.fontSize="37%";
 main.style.padding="0 0rem";
+var i; for (i = 0; i < mark.length; i++) {
+mark[i].style.fontSize="2.3rem";};
 var x = document.querySelectorAll("note,.note");
     var i;
     for (i = 0; i < x.length; i++) {
         x[i].style.fontSize="2.7rem";}
-
-
-
             }else{
                 this.className = 'bai';
                 temp=1;
-                kaiguan.style. border= '2px solid black';
-             
+                kaiguan.style.border= '2px solid black';             
 title.style.fontSize="100%";
 main.style.fontSize="100%";
 main.style.padding="0 0rem";
+var i; for (i = 0; i < mark.length; i++) {
+mark[i].style.fontSize="100%";};
 var x = document.querySelectorAll("note,.note");
     var i;
     for (i = 0; i < x.length; i++) {
         x[i].style.fontSize="2.7rem";}
-
-
-
         }})
      
     </script>
@@ -1166,36 +1350,120 @@ var x = document.querySelectorAll("note,.note");
 
 
 <!--深色模式-->
-
-
-
 <script type="text/javascript">  
         var anniu = document.getElementById('anniu3');
         var kaiguan = document.getElementById('kaiguan3');
         var body = document.getElementById('body');
-        var card = document.getElementById('.card');
+        var card = document.getElementById('card');
+        var article = document.getElementById('main-body');
+var a = document.querySelectorAll('a,dfn,abbr');
+var em = document.querySelectorAll('em');
+var note = document.querySelectorAll('note');
+var info = document.querySelectorAll('info1');
+var li = document.querySelectorAll('#menu a');
+var copyright = document.querySelectorAll('.copyright');
+
         var temp = 1;
         anniu.addEventListener('click',function(){
             if(temp==1){
                 this.className = 'hei';
                 temp=0;
-                kaiguan.style. border= '2px solid  rgb(11, 243, 81)';
-                body.style. backgroundColor= 'black';
+                kaiguan.style. border= '2px solid  rgba(56,90,138,100%)';
+var i; for (i = 0; i < info.length; i++) {
+info[i].style.backgroundColor = 'rgba(231,240,250,30%)'}
+var i; for (i = 0; i < copyright.length; i++) {
+copyright[i].style.backgroundColor = '#2b2c34'}
+var i; for (i = 0; i < note.length; i++) {
+note[i].style.backgroundColor = 'rgb(254, 255, 253)'}
+var i; for (i = 0;i  < a.length; i++) {
+a[i].style.color = "#629fb7"};
+var i; for (i = 0; i < em.length; i++) {
+em[i].style.color = "#a64b61"};
+
+document.getElementById('keyword-dfn').style.color="black";
                 body.style.color = 'white';
-                card.style. backgroundColor = 'black';
-            }else{
+                body.style.backgroundColor= '#2b2c34';
+                card.style.backgroundColor = '#f4f4f4';
+                article.style.color = '#bab7be';
+                article.style.backgroundColor = '#2b2c34';
+document.getElementById('menu').style.backgroundColor = 'black';
+document.getElementById('menu').style.color = 'rgba(230, 230, 235,86%)'; 
+var i; for (i = 0; i < li.length; i++) {
+li[i].style.color = 'rgba(150, 200, 200,100%)'; }
+                           }else{
                 this.className = 'bai';
                 temp=1;
                 kaiguan.style. border= '2px solid black';
-                body.style. backgroundColor= 'white';
+var i; for (i = 0; i < info.length; i++) {
+info[i].style.backgroundColor = 'rgba(231,240,250,30%)'}
+var i; for (i = 0; i < copyright.length; i++) {
+copyright[i].style.backgroundColor = 'white'}
+var i; for (i = 0; i < note.length; i++) {
+note[i].style.backgroundColor = 'white'}
+var i; for (i = 0;i  < a.length; i++) {
+a[i].style.color = ""};
+var i; for (i = 0; i < em.length; i++) {
+em[i].style.color = ""};
+document.getElementById('keyword-dfn').style.color="black";
+                body.style.backgroundColor= 'white';
                 body.style.color = 'black';
-                card.style. backgroundColor = 'white';
+                card.style.backgroundColor = 'white';
+                article.style.color = 'black';
+                article.style.backgroundColor = 'white';
+document.getElementById('menu').style.backgroundColor = 'white';
+document.getElementById('menu').style.color = 'black'; 
+var i; for (i = 0; i < li.length; i++) {
+li[i].style.color = 'black'; }
+
             }
 
         })
      
     </script>
 </div>
+
+
+
+
+<script>
+function keyword1() {
+document.getElementById("keyword-ul").style.display="block";
+};
+
+function keyword2() {
+var C = prompt("输入关键词","");
+        if(C!=null&&C!=''){
+document.getElementById("searched-button").style.display="block";
+var str = document.getElementById("main").innerHTML;
+var D = "<k>" + C + "</k>";
+document.getElementById("main").innerHTML= str.replace(new RegExp(C , "g"), D);
+
+document.getElementById("searched-button").addEventListener('click',function searched() {
+document.getElementById("main").innerHTML= str.replace(new RegExp(D , "g"), C);
+document.getElementById("searched-button").style.display="none";
+})
+}
+}
+
+
+</script>
+<script>
+var temp = 1;
+
+function bk1(obj){
+obj.addEventListener('click',function(){          
+if(temp==1){
+temp=0;
+obj.className="bookmark-button-hover";
+obj.innerHTML="双击清除";}
+else{
+temp=1;
+obj.className="bookmark-button-cancel";
+obj.innerHTML="添加书签";}
+
+})
+}
+</script>
 
 
 
