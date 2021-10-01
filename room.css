@@ -1,0 +1,109 @@
+*{
+user-select: none;   
+-webkit-user-select:none;
+-webkit-tap-highlight-color:transparent;
+outline:none;	
+}
+a{
+color:black;
+text-decoration:none;
+border-bottom:solid black 2px;
+padding-bottom:4px;
+}
+body{
+font-size:2.6rem;
+margin:0;
+padding:0;
+background-image: url("https://z3.ax1x.com/2021/07/14/WZf4PJ.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+width: 100%;
+display:flex;
+flex-direction: column
+}
+textarea{
+font-size:1.2rem !important;
+font-family:times;
+background:rgba(255,255, 255, 40%);
+margin: 2rem auto;
+padding:4rem 2rem;
+width: 88%;
+justify-content: center;
+align-items: center;
+background-position: center;
+height:18rem;
+border-radius:50px;
+}
+/*n.note 便签
+r.record 随笔
+d.diary 日记
+p.Philosophy 哲学*/
+.n,.r,.d,.p{
+border-radius:50px;
+margin: 2rem auto;
+padding:4rem 2rem;
+width: 88%;
+height:18rem;
+}
+.n{
+background:rgba(252,236,163,80%);
+outline: 0;
+word-wrap: break-word;
+overflow-y: auto;
+}
+.n:hover,.r:hover,.d:hover,.p:hover{
+height:100% !important;
+width:100%;
+border-radius:0;
+}
+
+.r{
+background:rgba(255,255,255,100%);
+outline: 0;
+word-wrap: break-word;
+overflow-y: auto; 
+}
+.d{
+background:rgba(255,255, 255, 20%);
+max-height: 1200px;
+outline: 0;
+word-wrap: break-word;
+overflow-y: auto; 
+}
+.p{
+background:rgba(255,255,255,0%);
+outline: 0;
+word-wrap: break-word;
+overflow-y: auto; 
+}
+#handwriting:hover{
+display:block !important;
+}
+#handwriting:hover span{
+display:none !important;
+}
+img{
+}
+.img1{
+object-fit: contain;
+margin:2rem 0 2rem -2rem;
+}
+.img2{
+object-fit: cover;
+margin:2rem 0 2rem -2rem;
+}
+.img3{
+width:200px; 
+height:200px;
+}
+.img4{
+margin:2rem 0 2rem -2rem;
+object-fit:contain;
+width: 1080px;
+length: 2400px
+}
+
+
+
+    
