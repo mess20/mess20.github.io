@@ -8,6 +8,11 @@
 
 
 <style type="text/css">
+*{
+user-select: none;   
+-webkit-tap-highlight-color:transparent;
+outline:none;
+}
 a{
 color:black;
 text-decoration:none;
@@ -30,15 +35,14 @@ textarea{
 font-size:1.2rem !important;
 font-family:times;
 background:rgba(255,255, 255, 40%);
-margin: 4rem auto;
+margin: 2rem auto;
 padding:4rem 2rem;
 width: 88%;
 justify-content: center;
 align-items: center;
 background-position: center;
-height:20rem;
+height:18rem;
 border-radius:50px;
-
 }
 /*n.note 便签
 r.record 随笔
@@ -46,9 +50,10 @@ d.diary 日记
 p.Philosophy 哲学*/
 .n,.r,.d,.p{
 border-radius:50px;
-margin: 4rem auto;
+margin: 2rem auto;
 padding:4rem 2rem;
 width: 88%;
+height:18rem;
 }
 .n{
 background:rgba(252,236,163,80%);
@@ -56,6 +61,12 @@ outline: 0;
 word-wrap: break-word;
 overflow-y: auto;
 }
+.n:hover,.r:hover,.d:hover,.p:hover{
+height:100% !important;
+width:100%;
+border-radius:0;
+}
+
 .r{
 background:rgba(255,255,255,100%);
 outline: 0;
@@ -70,10 +81,16 @@ word-wrap: break-word;
 overflow-y: auto; 
 }
 .p{
-background:rgba(255,255,255,40%);
+background:rgba(255,255,255,0%);
 outline: 0;
 word-wrap: break-word;
 overflow-y: auto; 
+}
+#handwriting:hover{
+display:block !important;
+}
+#handwriting:hover span{
+display:none !important;
 }
 img{
 }
@@ -110,7 +127,7 @@ length: 2400px
 
 
 
-<textarea class="n">
+<textarea class="n" style="background:white;text-align:center">
 房间门上贴的一张纸
 
 甜品：春日限定抹茶团子🍡
@@ -122,12 +139,12 @@ length: 2400px
 
 
 
-<div class="n">贴在墙上的米黄色便签纸
+<div class="n" style="background:lightyellow;height:auto;text-align:center">贴在墙上的米黄色便签纸
 </div>
 
 
-<div class="n">
-<a href="https://drrr.wiki/%E6%8C%82%E5%9C%A8%E5%A2%99%E5%A3%81%E4%B8%8A%E7%9A%84%E7%95%99%E8%A8%80%E6%9D%BF">挂在墙壁上的留言板</a>
+<div class="n" style="background:white;height:auto;text-align:center">
+<a href="https://drrr.wiki/%E6%8C%82%E5%9C%A8%E5%A2%99%E5%A3%81%E4%B8%8A%E7%9A%84%E7%95%99%E8%A8%80%E6%9D%BF;">挂在墙壁上的留言板</a>
 </div>
 
 
@@ -162,9 +179,9 @@ _(-ω-`_)⌒)_
 </textarea>
 
 
-<div class="r">
+<div id="handwriting" class="r" style="display:flex">
 <img class="img2" src="https://z3.ax1x.com/2021/07/14/WZHSk6.jpg" border="0"></a>
-my handwriting~
+<span style="display:block;margin:auto 12rem;font-size:3rem;white-space: nowrap;">my handwriting~</span>
 <img class="img2" src="https://z3.ax1x.com/2021/07/14/WZ3MbF.jpg" alt="WZ3MbF.jpg" border="0"></a>
 <img class="img2" src="https://z3.ax1x.com/2021/07/14/WZ3uuT.jpg" alt="WZ3uuT.jpg" border="0"></a>
 <img class="img2" src="https://z3.ax1x.com/2021/07/14/WZ3KDU.jpg" alt="WZ3KDU.jpg" border="0"></a>
@@ -181,7 +198,7 @@ my handwriting~
 
 
 <div class="p">
-<h2>LIFE</h2>
+<h3>LIFE</h3>
 <br>
 <img class="img4" src="https://z3.ax1x.com/2021/07/14/WZgT74.jpg" border="0"></a>
 <img class="img4" src="https://z3.ax1x.com/2021/07/14/WZgQl6.jpg" border="0"></a>
@@ -194,7 +211,7 @@ my handwriting~
 
 
 
-<div class="n">今天晚餐有秋刀鱼
+<div class="n" style="background:white">今天晚餐有秋刀鱼
 <img class="img1" src="https://z3.ax1x.com/2021/07/14/WZ7xTx.jpg" alt="WZyUf0.jpg" border="0" /></a>
 </div>
 
@@ -204,7 +221,7 @@ my handwriting~
 
 
 
-<div class="p"><h2>人类孤独</h2>
+<div class="p"><h3>人类孤独</h3>
 <img src="https://z3.ax1x.com/2021/07/14/WZ6SBQ.md.jpg" alt="WZ6SBQ.md.jpg" border="0"></a>
 <img src="https://z3.ax1x.com/2021/07/14/WZyvjS.md.jpg" alt="WZyvjS.md.jpg" border="0"></a>
 <img src="https://z3.ax1x.com/2021/07/14/WZyjc8.md.jpg" alt="WZyjc8.md.jpg" border="0"></a>
