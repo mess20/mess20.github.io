@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <title></title>
@@ -9,8 +10,7 @@
 
 <style>
 
-
-
+*{overflow-x:hidden}
 
 body{
 background:black;
@@ -19,7 +19,8 @@ background:black;
 top:;
 }
 .container{
-top:900;
+top:0;
+left:0;
 display:none;
 }
 
@@ -30,21 +31,21 @@ button1-box{
 display:flex;
 justify-content:space-around;
 flex-wrap:wrap;
-width:90vw;
-height:100vh;
-overflow:auto;
+width:100vw;
+height:40vh;
+overflow-y:auto;
 position:fixed;
 left:0;
-top:0;
+top:400;
 }
 
-
-
+#c2{display:none;}
+.flex{flex-direction:column}
 button1.a{
 display:block;
 position:;
-margin:2rem;
-width:6rem;
+margin:0rem;
+width:24rem;
 height:2rem;
 text-align:center;
 font-size:80%;
@@ -74,7 +75,7 @@ display:none;
 button1.a:active .b{
 height:100vh;
 width:100vw;
-position:absolute;
+position:fixed;
 left:0;
 top:0;
 zoom:4;
@@ -91,9 +92,9 @@ animation-delay:0s;
 }
 
 button1#a1:active #b1{
-position:absolute;
-left:0;
-top:60;
+position:fixed;
+left:150;
+top:1000;
 display:block;
 opacity:1;
 animation-name: b1;
@@ -120,8 +121,8 @@ animation-delay:0s;
 }
 
 button1#a2:active #b2{
-position:absolute;
-left:0;
+position:fixed;
+left:100;
 top:60;
 display:block;
 opacity:1;
@@ -140,8 +141,8 @@ animation-delay:0s;
 }
 button1#a3:active #b3{
 background-position:center center;
-position:absolute;
-left:0;
+position:fixed;
+left:100;
 top:60;
 display:block;
 opacity:1;
@@ -176,9 +177,9 @@ animation-delay:0s;
 
 
 button1#a4:active #b4{
-position:absolute;
-left:0;
-top:60;
+position:fixed;
+left:10;
+top:60;zoom:3;
 display:block;
 opacity:1;
 animation-name: b4;
@@ -195,9 +196,10 @@ animation-delay:0s;
 }
 
 button1#a5:active #b5{
-position:absolute;
-left:0;
+position:fixed;
+left:500;
 top:60;
+zoom:2;
 display:block;
 opacity:1;
 animation-name: b5;
@@ -227,7 +229,7 @@ display:none;
 button1#a6:active #b6{
 background-color:white;
 color: white;
-position:absolute;
+position:fixed;
 left:0;
 bottom:0;
 zoom:1;
@@ -253,10 +255,11 @@ display:none;
 button1#a7:active #b7{
 background-color:white;
 color: white;
-position:absolute;
-left:0;
-bottom:0;
-zoom:1;
+position:fixed;
+left:-400;
+top:0;
+padding-top:200;
+zoom:2;
 display:block;
 opacity:0;
 animation-name: b7;
@@ -272,9 +275,10 @@ animation-delay:0s;
 
 
 button1#a8:active #b8{
-position:absolute;
+position:fixed;
 left:0;
 top:60;
+zoom:2;
 display:block;
 opacity:1;
 animation-name: b8;
@@ -299,9 +303,9 @@ animation-delay:0s;
 
 
 button1#a9:active #b9{
-position:absolute;
-left:0;
-top:60;
+position:fixed;
+left:300;
+top:200;zoom:2;
 display:block;
 opacity:1;
 animation-name: b9;
@@ -338,7 +342,7 @@ animation-delay:0s;
 
 
 button1#a10:active #b10{
-position:absolute;
+position:fixed;
 left:0;
 top:50%;
 display:block;
@@ -368,13 +372,12 @@ display:none;
 }
 
 
-button1#a11:active #b11{
-position:absolute;
+button1#a12:active #b11{
+position:fixed;
 display:block;
-zoom:1;
-transform: scale(5); 
-left:110;
-top:9000;
+zoom:4;
+left:10;
+top:100;
 opacity:0;
 animation: b11 2s infinite alternate cubic-bezier(0.9,0.1,0.9,0.1);
 background:url('https://s1.chu0.com/src/img/png/25/25644737c8bf4683ae922325a076dafe.png?imageMogr2/auto-orient/thumbnail/!142x80r/gravity/Center/crop/142x80/quality/85/&e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:tb51n6IRMg_3xtLwU3JH84AB5sI=') no-repeat;
@@ -390,14 +393,12 @@ transform-origin: left bottom
 
 
 button1#a12:active #b12{
-position:absolute;
-left:0;
-top:60;
-display:block;
+position:fixed;
+left:200;
+top:100;
+display:block;zoom:3;
 opacity:1;
-animation-name: b12;
-animation-duration:0.8s;
-animation-delay:0s;
+animation: b12 0.8s 0s infinite ;
 }
 @keyframes b12 {
 0%{background:url(' https://s1.chu0.com/src/img/png/2d/2d86929c2245492cb3f04983cfae2e10.png?e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:wikc_h21ttrNtY5weSkeZ5i5Cmk=') no-repeat;}
@@ -422,8 +423,8 @@ animation-delay:0s;
 
 
 button1#a13:active #b13{
-position:absolute;
-left:0;
+position:fixed;
+left:100;
 top:60;
 display:block;
 opacity:1;
@@ -448,8 +449,8 @@ animation-delay:0s;
 }
 
 button1#a14:active #b14{
-position:absolute;
-left:0;
+position:fixed;
+left:160;
 top:60;
 display:block;
 opacity:1;
@@ -481,16 +482,14 @@ animation-delay:0s;
 96%{background:url('https://s1.chu0.com/src/img/png/72/72bffe13b05342118b655703e3687fee.png?imageMogr2/auto-orient/thumbnail/!142x96r/gravity/Center/crop/142x96/quality/85/&e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:IVhcKNXgbi38PwrgoBg9sSYmUjc= ') no-repeat;}
 }
 
-button1#a15:active #b15{
-position:absolute;
+button1#a12:active #b15{
+position:fixed;
 left:20;
 top:60;
 display:block;
-opacity:1;
+opacity:1;zoom:2;
 zoom:5;
-animation-name: b15;
-animation-duration:0.5s;
-animation-delay:0s;
+animation: b15 0.5s 0s  infinite;
 }
 @keyframes b15 {
 0%{background:url('https://s1.chu0.com/src/img/png/92/92d77057312043eaa3a6a1a0a17f98ac.png?imageMogr2/auto-orient/thumbnail/!117x63r/gravity/Center/crop/117x63/quality/85/&e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:XasgPbGI0GqMc8F0PTCQxdQOgjI= ') no-repeat;}
@@ -506,11 +505,11 @@ animation-delay:0s;
 }
 
 
-button1#a16:active #b16{
-position:absolute;
-left:0;
+#b16{
+position:fixed;
+left:250;
 top:60;
-display:block;
+display:none;
 opacity:1;
 animation-name: b16;
 animation-duration:10s;
@@ -533,13 +532,14 @@ animation-delay:0s;
 }
 
 button1#a17:active #b17{
-position:absolute;
-left:60;
-top:200;
+position:fixed;
+zoom:3;
+left:110;
+top:120;
 display:block;
 opacity:1;
 animation-name: b17;
-animation-duration:9s;
+animation-duration:1.6s;
 animation-delay:0s;
 }
 @keyframes b17 {
@@ -553,12 +553,13 @@ animation-delay:0s;
 94%{background:url(' https://s1.chu0.com/src/img/png/32/32f7aeb58c6f435e85839d96ee3bf8da.png?imageMogr2/auto-orient/thumbnail/!142x106r/gravity/Center/crop/142x106/quality/85/&e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:uD4KV8n1Zt2Tb7Gl04m32USt-2k=') no-repeat;}
 }
 
-button1#a18:active #b18{
-position:absolute;
-left:0;
-top:60;
+button1#a2:active #b18{
+position:fixed;
+left:300;
+top:80;
 display:block;
 opacity:1;
+zoom:0.5;
 animation-name: b18;
 animation-duration:0.5s;
 animation-delay:0s;
@@ -581,12 +582,11 @@ display:none;
 
 
 button1#a19:active #b19{
-position:absolute;
+position:fixed;
 display:block;
-zoom:1;
-transform: scale(5); 
-left:110;
-top:8000;
+zoom:3;
+top:100;
+left:140;
 opacity:0;
 animation: b19 2s cubic-bezier(0.9,0.1,0.9,0.1) ;
 background:url('https://s1.chu0.com/src/img/gif/83/830db979397942dfa42f295857e21d57.gif?e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:FaomQOHUsyMI6dhFoGNrkNVOgVg=') no-repeat;
@@ -599,12 +599,11 @@ transform-origin: left bottom
 }
 
 button1#a20:active #b20{
-position:absolute;
+position:fixed;
 display:block;
-zoom:1;
-transform: scale(5); 
-left:110;
-top:8000;
+zoom:4;
+left:0;
+top:0;
 opacity:0;
 animation: b20 2s 1s cubic-bezier(0.9,0.1,0.9,0.1);
 background:url('https://s1.chu0.com/src/img/gif/f3/f31ebea46a16492bb8d38def17b2f04f.gif?imageMogr2/auto-orient/thumbnail/!170x201r/gravity/Center/crop/170x201/quality/85/&e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:PEJAJMXlMEv1maUfHvESm7HMrvI=') no-repeat;
@@ -617,9 +616,10 @@ transform-origin: left bottom
 }
 
 button1#a21:active #b21{
-position:absolute;
-left:0;
+position:fixed;
+left:100;
 top:60;
+zoom:2;
 display:block;
 opacity:1;
 animation-name: b21;
@@ -636,9 +636,10 @@ animation-delay:0s;
 }
 
 button1#a22:active #b22{
-position:absolute;
-left:0;
-top:60;
+position:fixed;
+left:460;
+top:400;
+zoom:1;
 display:block;
 opacity:1;
 animation-name: b22;
@@ -655,12 +656,10 @@ animation-delay:0s;
 
 
 button1#a23:active #b23{
-position:absolute;
+position:fixed;
 display:block;
-zoom:1;
-transform: scale(5); 
-left:110;
-top:9000;
+zoom:3;
+top:110;left:50;
 opacity:0;
 animation: b19 2s infinite alternate cubic-bezier(0.9,0.1,0.9,0.1);
 background:url('https://s1.aigei.com/src/img/gif/36/3666c4337f4647a78a3bab80c8dd06a0.gif?e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:S62rQUzBJXUgv7UJyPz4ZHNw0LU=') no-repeat;
@@ -672,6 +671,9 @@ transform-origin: left bottom
   to {opacity:0;}
 }
 
+
+
+
 </style>
 
 
@@ -682,17 +684,16 @@ transform-origin: left bottom
 <body>
     <img src="">
 
-<button1-box>
+<button1-box id='c1'>
 
-
-
-<button1 class="a" id="fire-btn">火
-<button1 class="b" id="b"><img src=""></button1>
+<button1 class="a" id="a21">入水
+<button1 class="b" id="b21"><img src=""></button1>
 </button1>
 
 
 
-
+<button1 class="a" id="a14">火团
+<button1 class="b" id="b14"><img src=""></button1></button1>
 
 <button1 class="a" id="a1">冲击
 <button1 class="b" id="b1"><img src=""></button1>
@@ -700,36 +701,15 @@ transform-origin: left bottom
 
 </button1>
 
-
-<button1 class="a"  id="a2">剑斩
-
-
-<button1 class="b" id="b2"><img src=""></button1>
-
-
+<button1 class="a" id="a22">出招
+<button1 class="b" id="b22"><img src=""></button1>
 </button1>
 
+<button1 class="a" id="a19">化水
+<button1 class="b" id="b19"><img src=""></button1></button1>
 
 
 
-<button1  class="a" id="a3">怒气
-
-
-<button1 class="b"  id="b3"><img src=""></button1>
-
-
-</button1>
-
-
-
-
-<button1  class="a" id="a4">运气
-
-
-<button1 class="b" id="b4"><img src=""></button1>
-
-
-</button1>
 
 
 
@@ -742,31 +722,19 @@ transform-origin: left bottom
 </button1>
 
 
+</button1-box>
 
-<button1 class="a" id="a6">黑刃
 
 
-<button1 class="b" id="b6"><img src="https://s3.bmp.ovh/imgs/2021/12/9d3c658a6648ac8d.png"></button1>
 
+
+
+<button1-box id='c2'>
+
+
+<button1 class="a" id="a23">魔阵
+<button1 class="b" id="b23"><img src="https://s1.chu0.com/src/img/jpg/88/8804997efedb494ab92420a7ce3a7085.jpg?imageMogr2/auto-orient/thumbnail/!201x201r/gravity/Center/crop/201x201/quality/85/&e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:8oYJ4bzw7x8uqsDJcIkECIX_UvY="></button1>
 </button1>
-
-
-
-<button1 class="a" id="a7">红闪光
-
-
-<button1 class="b" id="b7"><img src="https://s1.chu0.com/src/img/png/8a/8a89e1a226e647abbcb4df30de503bec.png?e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:HI9E2My5x3q-K2YS_v2LkqVuyQY="></button1>
-
-</button1>
-
-
-<button1 class="a" id="a8">冰雹
-
-
-<button1 class="b" id="b8"><img src="https://s1.chu0.com/src/img/png/8a/8a89e1a226e647abbcb4df30de503bec.png?e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:HI9E2My5x3q-K2YS_v2LkqVuyQY="></button1>
-</button1>
-
-
 
 <button1 class="a" id="a9">连环击
 
@@ -775,17 +743,31 @@ transform-origin: left bottom
 </button1>
 
 
-<button1 class="a" id="a10">水
-<button1 class="b" id="b10"><img src=""></button1>
-</button1>
 
-<button1 class="a" id="a11">盾
-<button1 class="b" id="b11"><img src=""></button1>
+<button1  class="a" id="a4">运气
+
+
+<button1 class="b" id="b4"><img src=""></button1>
+
+
 </button1>
 
 
 <button1 class="a" id="a12">白刃
 <button1 class="b" id="b12"><img src=""></button1>
+<button1 class="b" id="b15"><img src=""></button1>
+<button1 class="b" id="b11"><img src=""></button1>
+</button1>
+
+
+<button1 class="a" id="a7">红闪光
+<button1 class="b" id="b7"><img src="https://s1.chu0.com/src/img/png/8a/8a89e1a226e647abbcb4df30de503bec.png?e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:HI9E2My5x3q-K2YS_v2LkqVuyQY="></button1>
+
+</button1>
+
+
+<button1 class="a" id="a17">火遁
+<button1 class="b" id="b17"><img src=""></button1>
 </button1>
 
 
@@ -794,63 +776,24 @@ transform-origin: left bottom
 </button1>
 
 
+
+<button1 class="a"  id="a2">
+剑斩击中
+<button1 class="b" id="b2"><img src=""></button1>
+<button1 class="b" id="b18"><img src=""></button1>
+
+</button1>
+
+
+
 <button1 class="a" id="a16">弓箭
 <button1 class="b" id="b16"><img src=""></button1>
 </button1>
 
-<button1 class="a" id="a14">火团
-<button1 class="b" id="b14"><img src=""></button1></button1>
-
-<button1 class="a" id="a15">血剑之气
-<button1 class="b" id="b15"><img src=""></button1></button1>
-
-<button1 class="a" id="a18">击中
-<button1 class="b" id="b18"><img src=""></button1></button1>
-
-
-<button1 class="a" id="a19">化水
-<button1 class="b" id="b19"><img src=""></button1></button1>
-
-
-<button1 class="a" id="a17">火遁
-<button1 class="b" id="b17"><img src=""></button1>
-</button1>
-
-
-<button1 class="a" id="a20">召唤
-<button1 class="b" id="b20"><img src=""></button1>
-</button1>
-
-
-<button1 class="a" id="a21">入水
-<button1 class="b" id="b21"><img src=""></button1>
-</button1>
 
 
 
-<button1 class="a" id="a22">出招
-<button1 class="b" id="b22"><img src=""></button1>
-</button1>
-
-<button1 class="a" id="a23">魔阵
-<button1 class="b" id="b23"><img src="https://s1.chu0.com/src/img/jpg/88/8804997efedb494ab92420a7ce3a7085.jpg?imageMogr2/auto-orient/thumbnail/!201x201r/gravity/Center/crop/201x201/quality/85/&e=1735488000&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:8oYJ4bzw7x8uqsDJcIkECIX_UvY="></button1>
-</button1>
-
-
-<button1 class="a" id="a24">圣光登场
-<button1 class="b" id="b24"><img src=""></button1>
-</button1>
-
-
-<button1 class="a" id="a25">
-<button1 class="b" id="b25"><img src=""></button1>
-</button1>
-
-
-
-
-
-
+                     
 
 </button1-box>
 
@@ -866,7 +809,7 @@ function bbb(){
 document.querySelector("body").style.backgroundColor="black"}
 
 document.querySelector("#a20").addEventListener("click",
-function(){document.querySelector("body").style.backgroundColor="white";setTimeout("bbb()",3600)}
+function(){document.querySelector("body").style.backgroundColor="white";setTimeout("bbb()",6000)}
 )
 </script>
 
@@ -881,11 +824,33 @@ function bbb1(){
 document.querySelector(".container").style.display="none"};
 document.querySelector("#fire-btn").addEventListener("click",
 function(){
-document.querySelector(".container").style.display="block";setTimeout("bbb1()",1000)}
+document.querySelector(".container").style.display="block";setTimeout("bbb1()",6000)}
 )
 </script>
 
 <script  src="http://v.bootstrapmb.com/2018/9/gy33i2383/js/index.js"></script>
+
+
+<script>
+document.querySelector("#a16").addEventListener("mouseover",
+function(){
+document.querySelector("#b16").style.display="block"}
+)
+</script>
+
+
+
+
+
+
+
+<script>
+document.querySelector("#a5").addEventListener("click",function(){
+document.querySelector("#c1").style.display="none";document.querySelector("#c2").style.display="flex";document.querySelector("#c2").className="flex";}
+)
+</script>
+
+
 
 
 
