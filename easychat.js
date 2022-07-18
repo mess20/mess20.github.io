@@ -65,7 +65,7 @@ $("#o1-1").css({"display":"none"});
 
 
 
-var b1= setInterval("a1();", 5000);
+var b1= setInterval("a1();", 600000);
 
 $("#o2-1").click(function(){
 
