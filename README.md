@@ -35,8 +35,8 @@ $('head')[0].appendChild(script);
 更改 font-family。
 
 已知手机端可显示字体：
-- serif
-- sans-serif
+- sans-serif（网站设置字体）
+- times
 - monospace
 
 
