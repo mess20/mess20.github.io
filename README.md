@@ -35,9 +35,18 @@ $('head')[0].appendChild(script);
 更改 font-family。
 
 已知手机端可显示字体：
-- sans-serif（网站设置字体）
+- sans-serif（网站设置发言字体）
 - times
 - monospace
+
+#### 字体大小
+更改 font-size。
+
+网站设置发言字体大小为 16px。
+
+
+
+
 
 
 
