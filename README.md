@@ -31,4 +31,19 @@ $('head')[0].appendChild(script);
 - 图片大小尽量与屏幕大小一致。
 - URL格式有误不会报错。
 
+#### 更改字体
+更改 font-family。
+
+已知手机端可显示字体：
+- serif
+- sans-serif
+- monospace
+
+
+
+
+
+
+
+
 
