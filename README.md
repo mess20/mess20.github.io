@@ -4,13 +4,17 @@
 
 ## 使用方法
 - 电脑端
+
 F12 → console 输入以下代码：
 
-`var script = document.createElement('script');
+```var script = document.createElement('script');
+
 script.src = "https://mess20.github.io/easychat.js";
-$('head')[0].appendChild(script);`
+
+$('head')[0].appendChild(script);```
 
 - 手机端
+
 部分浏览器可以使用。
 
 开发者工具 → console 输入上述代码。
