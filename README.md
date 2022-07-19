@@ -9,9 +9,7 @@ F12 → console 输入以下代码：
 
 ```
 var script = document.createElement('script');
-
 script.src = "https://mess20.github.io/easychat.js";
-
 $('head')[0].appendChild(script);
 ```
 
