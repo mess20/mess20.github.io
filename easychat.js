@@ -78,12 +78,24 @@ var url = prompt("请输入图片的URL（.jpg等结尾）","");
 $("body").css({"background":"url(' "+url+" ') no-repeat"});	
 $("body").css({"background-size":"cover"});
 $("body").css({"background-attachment":"fixed"});	
-});
+var c1=setInterval(function(){
+$(".tail-mask").css({"display":"none"});	
+$(".tail-wrap").css({"display":"none"});	
+},100);
+
+
 $("#o2-4").click(function(){
 $("#o1-4").css({"display":"block"});
 $("#o2-4").css({"display":"none"});
-$("body").css({"background":"black"});	
+$("body").css({"background":"black"});
+
+clearInterval(c1);
+$(".tail-mask").css({"display":"block"});	
+$(".tail-wrap").css({"display":"block"});	
 })
+
+});
+
 
 
 //更换字体
