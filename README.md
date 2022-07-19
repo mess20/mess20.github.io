@@ -1,5 +1,5 @@
 # mess20.github.io/easychat.js
-
+===hi===
 用于DOLLARS聊天室的简易脚本，方便小白使用。
 
 ## 使用方法
