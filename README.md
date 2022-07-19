@@ -2,10 +2,14 @@
 
 用于DOLLARS聊天室的简易脚本，方便小白使用。
 
+## 效果图
+
+![](https://s3.bmp.ovh/imgs/2022/07/19/a59112a091a0f625.jpg)
+
 ## 使用方法
 - 电脑端
 
-F12 → console 输入以下代码：
+“F12”键 → console 输入以下代码：
 
 ```
 var script = document.createElement('script');
@@ -17,7 +21,7 @@ $('head')[0].appendChild(script);
 
 部分浏览器可以使用。
 
-开发者工具 → console 输入上述代码。
+选择“开发者工具” → console 输入上述代码。
 
 ## 唤起
 按右下角绿色按钮即可。
