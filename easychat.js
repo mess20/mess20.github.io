@@ -72,7 +72,8 @@ window.alert = function(){return false;}   });
 $("#o1-4").click(function(){
 $("#o2-4").css({"display":"block"});
 $("#o1-4").css({"display":"none"});
-$("body").css({"background":"url('https://s1.328888.xyz/2022/07/17/NUpWF.jpg') no-repeat"});	
+var url = prompt("请输入图片的URL（.jpg等结尾）"," ");
+$("body").css({"background":"url(' "+url+" ') no-repeat"});	
 $("body").css({"background-size":"cover"});
 $("body").css({"background-attachment":"fixed"});	
 });
@@ -81,6 +82,18 @@ $("#o1-4").css({"display":"block"});
 $("#o2-4").css({"display":"none"});
 $("body").css({"background":"black"});	
 })
+
+//星空背景
+function star(){
+$("body").css({"background":"url('https://s1.328888.xyz/2022/07/17/NUpWF.jpg') no-repeat"});	
+$("body").css({"background-size":"cover"});
+$("body").css({"background-attachment":"fixed"});	
+};
+
+
+
+
+
 
 
 
