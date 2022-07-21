@@ -50,7 +50,7 @@ $('head')[0].appendChild(script);
 - URL格式有误不会报错。
 
 #### 更改字体
-更改 font-family。
+更改聊天界面字体（font-family）。
 
 已知手机端可显示字体：
 - sans-serif（网站所设聊天字体类型）
@@ -66,10 +66,10 @@ $('head')[0].appendChild(script);
 更改聊天字体颜色。
 
 可填颜色模式：
-- 自然语言 例：｀black｀
-- HEX 例：｀#000000｀
-- RGB、RGBA 例：`rgb(0,0,0)`，｀rgba（0,0,0,1）｀
-- HSL、HSLA 例：`hsl(0,100%,50%)`，｀hsla(0,100%,50%,1)｀
+- 自然语言 例：`black`
+- HEX 例：`#000000`
+- RGB、RGBA 例：`rgb(0,0,0)`，`rgba（0,0,0,1）`
+- HSL、HSLA 例：`hsl(0,100%,50%)`，`hsla(0,100%,50%,1)`
 
 
 
