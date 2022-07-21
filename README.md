@@ -4,7 +4,7 @@
 
 ## 效果图
 
-![](https://s3.bmp.ovh/imgs/2022/07/19/a59112a091a0f625.jpg)
+![](http://i.miaosu.bid/data/f_31711428.jpg)
 
 ## 使用方法
 - 电脑端
