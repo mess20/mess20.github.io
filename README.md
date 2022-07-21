@@ -52,6 +52,8 @@ $('head')[0].appendChild(script);
 #### 更改字体
 更改聊天界面字体（font-family）。
 
+- 可同时填多种字体类型，例：`Tahoma,Arial,sans-serif`
+
 已知手机端可显示字体：
 - sans-serif（网站所设聊天字体类型）
 - times
