@@ -13,7 +13,7 @@
 
 ```
 var script = document.createElement('script');
-script.src = "https://mess20.github.io/easychat.js";
+script.src = "https://mess20.github.io/easychat(pc).js";
 $('head')[0].appendChild(script);
 ```
 
@@ -21,7 +21,12 @@ $('head')[0].appendChild(script);
 
 部分浏览器可以使用。
 
-选择“开发者工具” → console 输入上述代码。
+选择“开发者工具” → console 输入以下代码：
+```
+var script = document.createElement('script');
+script.src = "https://mess20.github.io/easychat.js";
+$('head')[0].appendChild(script);
+```
 
 ## 唤起
 按右下角绿色按钮即可。
@@ -40,8 +45,6 @@ $('head')[0].appendChild(script);
 
 #### 进房提示
 有人进房会弹出“Someone entered room.”消息框。
-
-注意：开启该功能后，有人进房后才能关闭该功能。
 
 #### 更换背景
 更换聊天背景为指定图片。提供输入图片URL和上传本地图片两种方式。
