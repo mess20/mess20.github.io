@@ -89,11 +89,8 @@ $("#o1-3").css({"display":"none"});
 $('#talks').bind('DOMNodeInserted', function(){
 if($("div#talks>:first-child").attr("class") == "talk join system")
 {window.alert("Someone entered room.")} ;
-
 });
 });
-
-
 $("#o2-3").click(function(){
 $("#o1-3").css({"display":"block"});
 $("#o2-3").css({"display":"none"});
