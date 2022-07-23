@@ -4,8 +4,8 @@
 
 ## 效果图
 
-![](http://i.miaosu.bid/data/f_31711428.jpg)
-
+![移动端](http://i.miaosu.bid/data/f_31711428.jpg)
+![PC端](https://s3.bmp.ovh/imgs/2022/07/23/48a6442f429a54d1.jpg)
 ## 使用方法
 - 电脑端
 
