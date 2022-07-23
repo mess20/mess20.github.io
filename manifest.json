@@ -1,0 +1,236 @@
+{
+  "#login-mode": "Bot",
+  "#rgktime": "480000",
+  "#rgmode": "3",
+  "#storage-type": "fa-cloud",
+  "BanAbuse-setting": "屁顛",
+  "BlackList-setting": "otoko\n机器人|機器人\n小冰|小氷|测试姬",
+  "ENEMY": [],
+  "EventAction-setting": [
+    [
+      "msg",
+      "",
+      "^/tenor",
+      "umsg",
+      [
+        "$tenor($args)",
+        "$args"
+      ]
+    ],
+    [
+      "msg",
+      "",
+      "^/giphy",
+      "umsg",
+      [
+        "$giphy($args)",
+        "$args"
+      ]
+    ],
+    [
+      "msg",
+      "",
+      "^/play",
+      "plym",
+      [
+        "$args"
+      ]
+    ],
+    [
+      "dm",
+      "",
+      "^H",
+      "horm",
+      [
+        "$user"
+      ]
+    ],
+    [
+      "dm",
+      "",
+      "^K",
+      "kick",
+      [
+        "$args"
+      ]
+    ],
+    [
+      "dm",
+      "",
+      "^T",
+      "ban",
+      [
+        "$args"
+      ]
+    ],
+    [
+      "dm",
+      "",
+      "^out",
+      "ocdr",
+      [
+        "$args"
+      ]
+    ],
+    [
+      "dm",
+      "",
+      "^gout",
+      "gofr",
+      [
+        "$args"
+      ]
+    ],
+    [
+      "leave",
+      "",
+      "",
+      "msg",
+      [
+        "/me $user Bye! Bay!下次再來光臨哦！"
+      ]
+    ],
+    [
+      "dm",
+      "",
+      "^two",
+      "dm",
+      [
+        "$user",
+        "hello $args"
+      ]
+    ]
+  ],
+  "GAME_GUESS_NUMBER": "9453",
+  "HIDDEN_LOUNGE": "",
+  "OBSERVE": [],
+  "Timer-setting": [
+    [
+      20,
+      "msg",
+      [
+        "every 20 mins report once!"
+      ]
+    ]
+  ],
+  "Welcome-setting": [
+    [
+      ".*",
+      [
+        "/me无论是聊天还是听歌，欢迎光临哦。@$user"
+      ]
+    ]
+  ],
+  "WhiteList-setting": "白檀#dXqI1zF7K.\nHACHA#FvAUdXcngQ\n人工智障#Dmpt07t1ro",
+  "banlist": "WhiteList",
+  "bantype": "kick",
+  "bio_cookies": [],
+  "cookie": [
+    {
+      "domain": ".drrr.com",
+      "hostOnly": false,
+      "httpOnly": true,
+      "name": "drrr-session-1",
+      "path": "/",
+      "sameSite": "unspecified",
+      "secure": false,
+      "session": true,
+      "storeId": "0",
+      "value": "2s70831golbnddc85192np8nd6"
+    }
+  ],
+  "dm_username": "白檀",
+  "eager-input": "",
+  "eager-type": 2,
+  "eager_ask": false,
+  "fb-rule-type": 1,
+  "friends": [
+    ""
+  ],
+  "music_mode": "glyphicon-cd",
+  "music_source": "狗",
+  "playlist": [],
+  "pop-tab": "tab5",
+  "profile": {
+    "device": "desktop",
+    "icon": "kuromu-2x",
+    "id": "51c853112a9aef998e5e3cd9ffd9b5b0",
+    "lang": "zh-TW",
+    "loc": "バッカーノ",
+    "name": "栞",
+    "tripcode": "dXqI1zF7K.",
+    "uid": "51c853112a9aef998e5e3cd9ffd9b5b0"
+  },
+  "rule_notification_mute": false,
+  "select_game": "TRPG",
+  "select_module": "Guess The Number (NANB)",
+  "select_stickers": [
+    "stickershop/product",
+    "6996333"
+  ],
+  "stickers": [
+    [
+      "LV1.野生喵喵怪",
+      "stickershop/product",
+      "6996333"
+    ],
+    [
+      "LV2.野生喵喵怪",
+      "stickershop/product",
+      "7431735"
+    ],
+    [
+      "LV3.野生喵喵怪",
+      "stickershop/product",
+      "8233424"
+    ],
+    [
+      "LV4.野生喵喵怪",
+      "stickershop/product",
+      "9435002"
+    ],
+    [
+      "LV5.野生喵喵怪",
+      "stickershop/product",
+      "9434741"
+    ],
+    [
+      "LV6.野生喵喵怪",
+      "stickershop/product",
+      "9329100"
+    ],
+    [
+      "LV7.野生喵喵怪",
+      "stickershop/product",
+      "9786706"
+    ],
+    [
+      "LV8.野生喵喵怪",
+      "stickershop/product",
+      "10247167"
+    ],
+    [
+      "LV9.野生喵喵怪",
+      "stickershop/product",
+      "10567103"
+    ],
+    [
+      "LV10.野生喵喵怪",
+      "stickershop/product",
+      "10514415"
+    ]
+  ],
+  "switch_banabuse": true,
+  "switch_banlist": false,
+  "switch_dm": true,
+  "switch_eventaction": true,
+  "switch_keeper": true,
+  "switch_me": true,
+  "switch_notif": true,
+  "switch_tgbot": false,
+  "switch_timer": true,
+  "switch_welcome": true,
+  "tripcodes": [],
+  "trpg_is_host": true,
+  "zh_conv": "简"
+}
