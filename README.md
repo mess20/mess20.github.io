@@ -28,6 +28,10 @@ $("#form-settings-room-name").val(datetime);$("#form-settings-room-name-save").c
 },600000)
 
 
+//点触发言
+$("[name='message']").bind("change", function(){
+$("[name='post']").submit();
+})
 
 //自动小字
 $(".room-submit-btn")[0].onclick=function () {                  
