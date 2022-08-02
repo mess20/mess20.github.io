@@ -1,0 +1,658 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8" />
+
+	<link rel="stylesheet" href="http://i1.haidii.com/v/1579445414/i1/m/css/search1.min.css">
+
+
+
+
+<body>
+	<header class=st>
+
+
+			
+		<nav class="sboxc">
+		<div class="sboxcc">
+			<form id="sform" action="/msearch.php" method="get" onsubmit="return checkForm(this);">
+				<div class="sboxc-i">
+					<input type="text" autocomplete="off" id="q" name="q" value="disease" placeholder="在此输入单词或句子"/>
+				</div>
+				<div class="sboxc-search">
+					<input value="查词" type="submit" id="search-btn" class="img-search-btn" />
+                    <img src="http://i1.haidii.com/v/1579402617/i1/m/images//2020/home-search.png" width="30" height="30"
+                         onclick="sform.submit()">
+				</div>
+				<div class="cl"></div>
+			</form>
+		</div>
+	</nav>
+</header>
+
+
+
+
+	<div class="ctop">
+	<div class="ctopc">
+		<h1 class="word">disease</h1>
+		<div class="cl"></div>
+
+					<div class="level-title">
+									核心词汇												<!-- todo string(1) "4"
+ <img alt="4星级词汇"  class="img-star" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAAA4CAMAAACcwwdBAAABAlBMVEWPztn///+PztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmPztmOTb/IAAAAVXRSTlMAADPM/PYJpVrtAxLSHoctDzwG5MPhtPmZ3pbwJxVIfrdyeIFjGzAhaTZLjcDz50VCP9Wcn9jqOQx7YGYqybpRGF3biqhOdYSuvaskkMbPsVRXopNvEZJS5wAABGlJREFUeF60mFlz4kgQhBVCBwIJCXEexgPYHDbYGN/3eHyPPcfO7tb//ytrXd0h01JXPWw+EvElEdlZFa1WxNpRaKIDZ//vPwwmRHu7TwOMkxIN2KhT7PvaA81ehRkN+AYHNGBLcwjAv9Cg2f+AOg0YQJsGdGBIAG4AqhT30j6QAlLuNLB8ClAFKBD6BgBdiv0mADxTgCEA7FKANgC84/sGAKeUITOBBYRTAQBMAmBYAHBB6NuHlnj7cz0ANvDANXxoz8ADXwPgEL2iIdAx3v4yBL7ggZcQ+IMHXkPARQJdCGThA7oFUkBKqRECr2ig3AqBCg7wLQj1hLUfaxEwwQIrCKV7WOAqBLC7/QkiPWLtn2OgggWOYuASC/yMgTMU8AaRdGyHfgEpIMXoxcAACUwh1g8M4OkQq4izn0CiKg74KwG0Pg74kgD7mN2+DYmaOPsHBvyDA34zYIYD7hlwgAAWzL5VRq2UGpACUsoaA+q4izQwHWUXR4215PZwoaqZZ9ZPgG3g2lazV7WTAFsc0JbqRibwngB/c8BSVecTYAFC94VAzfblR8N0DGCHwFt7N7iXYFQIZbbPFKONAfQIOO4qzg2gNfeDme2ggdYwvOlZaGCvGE6hjgZqVUXx24BT7ynucBMJNOK1PS0ggcOgT5SMbqM19g3VisI0tdbkarIdYByhgGODzfkAA2js9uXeg1RdX+FaWnL3UWo367j6UDLaP+CA9xvlzuUU5OVMSe3I68OEmpzvdyngQqO4s8mRlJOJtUJSH3xGW58X/MEp3p1NjrScyFbolylAPjmny3XA+Yly55rcI8qpYCbn5JoDqMmpj0WA30W5c3lNSTmRrTDPOYCanEopAyi20O68FeJyiuULWqFf5d2bbtcBaxdzzcJdkauC/pcln1ZMqK+IiqA/ee9966pg7VFfEaLSuXmALYqIZH9Dspc89xiiqRxJntgQEXF7WiXeQSArZwZ2AUiVUEYiwCTZQ1FiT5maLhAjqouABskeTIk9ZWoaxIjKmhBw5fZWqhIIewtTiQmkAHlERQ5oe9Kp4Z+erYvSqMUrIbfvFY05ohJ8adU2vUdERCYDTnamCx6RxN4Ojsi1WSWk9oNxcH2sSSvBLE0viLcni6jEijA3gpFrsYjy7LUXP6RZprZkae1dRbz3JqmEA5FOv0bAOMm0ItkqnVUEuId5ETnJWTF+FWfq5NovprxTvdxKzCLgtc+AYZSpnb9V2ucss3lORDN2VkxeVJJZjr0+TL0BLvIq0YzGhQG8qE7OVqltpm79tcyIBsDPKp1pM9v+ZuMT8NzKrIShR+OSkv+QHZHLxmUt1KpwJ/Kz4hp/z3rldcNttf6znVWJP2xcUlp1siIa8XFJhyqMqMjPKq2hLq7EFtiuCPDnGZUw2bisZSqOqA6PfREwXogiMk1PEevaFlbi14ufAaxqM+Eb6jDzubonyu5uP4xfHCqP6L/254AEAAAGAdjfv7QxRNga7McJtAkICEwTEBAISHmZjMCJPlwAAAAASUVORK5CYII=" /> -->
+					<img alt="4星级词汇"  class="img-star" src="http://i1.haidii.com/v/1579402617/i1/m/images/2020/star-4.png" />
+							</div>
+		
+					<div class="phonetic">
+									<span>英 
+											<bdo>[dɪ'ziːz]</bdo>
+																<i class="sound" naudio="fbTd305l1182d1d3927b71da0262a789ef1193bb.mp3"><img title="英音" class="img-audio" alt="播放读音" src="http://i1.haidii.com/v/1579402617/i1/m/images/2020/voice.png" /></i>
+										</span>
+													<span>美 
+											<bdo>[dɪ'ziːz]</bdo>
+																<i class="sound" naudio="fuc05lca58b20bb7adb7d6084643909ba0742d.mp3"><img title="英音" class="img-audio" alt="播放读音" src="http://i1.haidii.com/v/1579402617/i1/m/images/2020/voice.png" /></i>
+										</span>
+							</div>
+		
+	</div>
+</div>
+
+
+<div class="cnav">
+	<div class="cnavc tagc5" id="cnavc">
+		<ul>
+					<li class="cur">释义</li>
+														<li onclick=" function () { location.href='http://haidii.com/d/3/'} ">词组</li>
+											</ul>
+	</div>
+</div>
+
+<div class="content cmcy">
+	<ul class="sctlist" id="sctlist">
+
+					<li class="sct" style="display:block;">
+
+									<div class="mbox">
+						<div class="mboxc">
+							<div class="layout basic">
+								<ul class="dict-basic">
+																											<li>
+										<span>											n.										</span>
+										<strong>疾病</strong>
+										</li>
+																			<li>
+										<span>											v.										</span>
+										<strong>使…生病，感染</strong>
+										</li>
+																									</ul>
+																	</div>
+						</div>
+					</div>
+				
+									<div class="mbox">
+						<div class="mboxc pd5">
+							<div class="mboxc-t">
+								<div class="mboxc-tl">双解释义</div>
+							</div>
+							<div class="mboxcc">
+								<div class="layout dual">
+																			<strong>
+																							<span style="font-style: italic">n.</span>
+																									<bdo>(名词)</bdo>
+																																	</strong>
+										<ol slider="3">
+																					<li style="list-style: decimal"><strong>[U][C]疾病,病患,(植物的)病害</strong> <p>case of illness of the body, of the mind or of plants, caused by infection or internal disorder</p></li>
+																				</ol>
+																	</div>
+							</div>
+						</div>
+					</div>
+				
+									<div class="mbox">
+						<div class="mboxc pd5">
+							<div class="mboxc-t">
+								<div class="mboxc-tl">详尽释义</div>
+							</div>
+							<div class="mboxcc">
+								<div class="layout detail">
+																			<span><strong style="font-style: italic">n.</strong>
+																					<bdo>名词</bdo>
+										</span>
+										<ol>
+																					<li style="list-style: decimal">疾病，病，不适</li>
+																					<li style="list-style: decimal">弊病，弊端</li>
+																					<li style="list-style: decimal">【植】病害</li>
+																					<li style="list-style: decimal">不健全</li>
+																					<li style="list-style: decimal"><废>不安；烦恼</li>
+																					<li style="list-style: decimal">病态</li>
+																					<li style="list-style: decimal">变质，腐败</li>
+																					<li style="list-style: decimal">身体失调；一般病痛</li>
+																				</ol>
+																			<span><strong style="font-style: italic">v.</strong>
+																					<bdo>动词</bdo>
+										</span>
+										<ol>
+																					<li style="list-style: decimal">使生病</li>
+																					<li style="list-style: decimal">使不健全</li>
+																					<li style="list-style: decimal">患病，感染，传染，（受病菌）侵染</li>
+																				</ol>
+																	</div>
+							</div>
+						</div>
+					</div>
+				
+									<div class="mbox">
+						<div class="mboxc pd5">
+							<div class="mboxc-t">
+								<div class="mboxc-tl">英英释义</div>
+							</div>
+							<div class="mboxcc">
+								<div class="layout en">
+																	<span style="font-style: italic">Noun:</span>
+									<ol slider="3">
+																				<li>
+										an impairment of health or a condition of abnormal functioning										<p style="margin-top: 10px">
+																				</p>
+										</li>
+																			</ol>
+																</div>
+							</div>
+						</div>
+					</div>
+				
+			</li>
+		
+				<li class="sct">
+		
+							<div class="mbox">
+					<div class="mboxc pd5">
+						<div class="mboxc-t smorec">
+							<div class="mboxc-tl">例句</div>
+						</div>
+						<div class="mboxcc">
+							<div class="layout sort">
+																											<div class="sort-b">
+											<span>
+																							用作名词																						<em>(n.)</em>
+											</span>
+										</div>
+										<ol slider="2">
+																							<li>
+												The disease is still in its primary stage.												<br/><span>这疾病仍然在初发阶段。</span>
+												</li>
+																							<li>
+												The entire population was wiped out by the terrible disease.												<br/><span>所有的居民都被可怕的疾病夺去了生命。</span>
+												</li>
+																							<li>
+												The rapid spread of the disease is alarming the medical authorities.												<br/><span>这种疾病的迅速蔓延使医疗当局感到忧虑不安。</span>
+												</li>
+																							<li>
+												The treatment arrested the growth of the disease.												<br/><span>治疗抑制了病情的发展。</span>
+												</li>
+																							<li>
+												He postulated that a cure for the disease will have been found by the year 2000.												<br/><span>他推断到2000年能研究出治愈该病的方法。</span>
+												</li>
+																					</ol>
+																													                <div class="dict-chart" style="width:280px;margin-left:0px;"><div id="dict-chart-examples" data="%7B%221%22%3A%7B%22percent%22%3A99%2C%22pos%22%3A%22%5Cu540d%5Cu8bcd%22%7D%2C%222%22%3A%7B%22percent%22%3A1%2C%22pos%22%3A%22%5Cu52a8%5Cu8bcd%22%7D%7D"></div></div>
+				            							</div>
+						</div>
+					</div>
+				</div>
+						
+							<div class="mbox">
+					<div class="mboxc pd5">
+						<div class="mboxc-t">
+							<div class="mboxc-tl">常见句型</div>
+						</div>
+						<div class="mboxcc">
+							<div class="layout patt">
+																								<div class="patt-b">
+										<span>
+																					用作名词																				<em>(n.)</em>
+										</span>
+									</div>
+																																																																																<ol slider="3">
+																																																																							<li>
+															Disease is usually caused by germs.															<br><span>疾病通常是由病菌引起的。</span>
+															</li>
+																													<li>
+															He fought against the disease for a long time.															<br><span>他同疾病做了很长时间的斗争。</span>
+															</li>
+																													<li>
+															His health degenerated with disease and old age.															<br><span>他年老了,健康状况每况愈下。</span>
+															</li>
+																													<li>
+															The business of doctors is to prevent and cure disease.															<br><span>医生的职责是防病治病。</span>
+															</li>
+																													<li>
+															The doctor examined him but could find no sign of heart disease.															<br><span>医生给他做了检查,没有发现有心脏病的症状。</span>
+															</li>
+																													<li>
+															The disease may leave blemishes on his face.															<br><span>这种疾病可能会在他脸上留下疤痕。</span>
+															</li>
+																													<li>
+															He has done much research on the cause of this disease.															<br><span>他对这一疾病的起因做了很多研究。</span>
+															</li>
+																													<li>
+															The disease typically manifests itself in a high fever and chest pains.															<br><span>这种疾病的典型症状是发高烧和胸痛。</span>
+															</li>
+																													<li>
+															It is an adequate remedy for the disease.															<br><span>这是适宜诊疗此病的药方。</span>
+															</li>
+																													<li>
+															Measles, mumps and influenza are common diseases.															<br><span>麻疹、腮腺炎和流感是常见病。</span>
+															</li>
+																													<li>
+															Prejudice is a social disease.															<br><span>偏见是一种社会弊病。</span>
+															</li>
+																							 																														</ol>
+																																																				</div>
+						</div>
+					</div>
+				</div>
+			
+						<div class="mbox">
+				<div class="mboxc pd5">
+					<div class="mboxc-t">
+						<div class="mboxc-tl">经典引文</div>
+					</div>
+					<div class="mboxcc">
+						<div class="layout auth">
+							<ul slider="3">
+															<li>
+									<p>The legions of Augustus melted away in disease and lassitude.</p>
+									<p class="auth-cz">出自：																		Gibbon									</p>
+								</li>
+															<li>
+									<p>Trichinosis..is obviously a common infection but a rare disease.</p>
+									<p class="auth-cz">出自：Scientific American																											</p>
+								</li>
+															<li>
+									<p>He wold not disease hymself to heare a sermon.</p>
+									<p class="auth-cz">出自：																		J. Knox									</p>
+								</li>
+														</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</li>
+		
+					<li class="sct">
+
+				
+							<div class="mbox">
+					<div class="mboxc pd5">
+						<div class="mboxc-t">
+							<div class="mboxc-tl">词汇搭配</div>
+						</div>
+						<div class="mboxcc">
+															<div class="layout coll">
+																														<div class="coll-b"><span>
+												用作名词												<em>(n.)</em>
+																							</span></div>
+																																																		<b>动词+～</b>
+																																																																														<ul>
+																													<li>
+															<a href="http://m.dict.cn/breed%20disease">
+															breed disease															</a>
+															酿成疾病															</li>
+																													<li>
+															<a href="http://m.dict.cn/bring%20a%20disease%20under%20control">
+															bring a disease under control															</a>
+															控制疾病															</li>
+																													<li>
+															<a href="http://m.dict.cn/carry%20disease">
+															carry disease															</a>
+															传染疾病															</li>
+																													<li>
+															<a href="http://m.dict.cn/catch%20a%20disease">
+															catch a disease															</a>
+															得病															</li>
+																													<li>
+															<a href="http://m.dict.cn/cause%20disease">
+															cause disease															</a>
+															产生疾病															</li>
+																													<li>
+															<a href="http://m.dict.cn/come%20down%20with%20a%20disease">
+															come down with a disease															</a>
+															患病															</li>
+																													<li>
+															<a href="http://m.dict.cn/cure%20a%20disease">
+															cure a disease															</a>
+															治愈疾病															</li>
+																													<li>
+															<a href="http://m.dict.cn/develop%20disease">
+															develop disease															</a>
+															得病															</li>
+																													<li>
+															<a href="http://m.dict.cn/prevent%20a%20disease">
+															prevent a disease															</a>
+															预防疾病															</li>
+																													<li>
+															<a href="http://m.dict.cn/produce%20disease%20of">
+															produce disease of															</a>
+															产生…病															</li>
+																													<li>
+															<a href="http://m.dict.cn/spread%20disease">
+															spread disease															</a>
+															传播疾病															</li>
+																													<li>
+															<a href="http://m.dict.cn/stamp%20out%20disease">
+															stamp out disease															</a>
+															消灭疾病															</li>
+																													<li>
+															<a href="http://m.dict.cn/suffer%20from%20a%20disease">
+															suffer from a disease															</a>
+															患病															</li>
+																													<li>
+															<a href="http://m.dict.cn/treat%20disease">
+															treat disease															</a>
+															治病															</li>
+																													<li>
+															<a href="http://m.dict.cn/wipe%20out%20disease">
+															wipe out disease															</a>
+															消灭疾病															</li>
+																												</ul>
+																																																																											<b>形容词+～</b>
+																																																																														<ul>
+																													<li>
+															<a href="http://m.dict.cn/common%20disease">
+															common disease															</a>
+															常见病															</li>
+																													<li>
+															<a href="http://m.dict.cn/cruel%20disease">
+															cruel disease															</a>
+															痛苦的疾病															</li>
+																													<li>
+															<a href="http://m.dict.cn/dangerous%20disease">
+															dangerous disease															</a>
+															危险的病症															</li>
+																													<li>
+															<a href="http://m.dict.cn/mental%20disease">
+															mental disease															</a>
+															精神病															</li>
+																													<li>
+															<a href="http://m.dict.cn/nervous%20disease">
+															nervous disease															</a>
+															神经病															</li>
+																													<li>
+															<a href="http://m.dict.cn/serious%20disease">
+															serious disease															</a>
+															重病															</li>
+																													<li>
+															<a href="http://m.dict.cn/terrible%20disease">
+															terrible disease															</a>
+															可怕的病															</li>
+																												</ul>
+																																																																											<b>名词+～</b>
+																																																																														<ul>
+																													<li>
+															<a href="http://m.dict.cn/foot-and-mouth%20disease">
+															foot-and-mouth disease															</a>
+															(牛羊等的)口蹄疫															</li>
+																													<li>
+															<a href="http://m.dict.cn/heart%20disease">
+															heart disease															</a>
+															心脏病															</li>
+																													<li>
+															<a href="http://m.dict.cn/skin%20disease">
+															skin disease															</a>
+															皮肤病															</li>
+																												</ul>
+																																																																											<b>介词+～</b>
+																																																																														<ul>
+																													<li>
+															<a href="http://m.dict.cn/danger%20of%20a%20disease">
+															danger of a disease															</a>
+															疾病的危险															</li>
+																													<li>
+															<a href="http://m.dict.cn/progress%20of%20a%20disease">
+															progress of a disease															</a>
+															病情的发展															</li>
+																												</ul>
+																																																																											<b>～+介词</b>
+																																																																														<ul>
+																													<li>
+															<a href="http://m.dict.cn/disease%20in%20the%20chest">
+															disease in the chest															</a>
+															胸腔疾病															</li>
+																													<li>
+															<a href="http://m.dict.cn/disease%20of%20the%20liver">
+															disease of the liver															</a>
+															肝病															</li>
+																												</ul>
+																																																															</div>
+													</div>
+					</div>
+				</div>
+			
+			</li>
+		
+					<li class="sct">
+
+							<div class="mbox">
+					<div class="mboxc pd5">
+						<div class="mboxc-t smorec">
+							<div class="mboxc-tl">词语用法</div>
+						</div>
+						<div class="mboxcc">
+							<div class="layout ess">
+																																						<span>
+									n.																			<bdo>(名词)</bdo>
+																		</span>
+									<ol slider="3">
+																			<li>
+										<em>disease</em>用作不可数名词时,是“疾病”的通称。<em>disease</em>用作可数名词时,指某种具体的疾病。																				</li>
+																			<li>
+										<em>disease</em>引申可指对社会、心理方面有害的,有破坏性的或不健康的状态。																				</li>
+																		</ol>
+																						</div>
+						</div>
+					</div>
+				</div>
+			
+							<div class="mbox">
+					<div class="mboxc pd5">
+						<div class="mboxc-t">
+							<div class="mboxc-tl">词义辨析</div>
+						</div>
+						<div class="mboxcc">
+							<div class="layout discrim">
+																										<span>
+									n.																			<bdo>(名词)</bdo>
+																		</span>
+																												<dl>
+											<dt class="on"><b>disease, illness, sickness</b></dt>
+											<dd>
+																							<ul>
+																									<li>这组词都有“病”“疾病”的意思。其区别是：</li>
+																									<li>1.disease泛指各种疾病,尤指传染病,遗传病和诸如心脏病、癌症等严重疾病; sickness多指晕船、恶心、胃病等方面的疾病或有关饮食方面的疾病; illness多指患病的状态及持续的时间,很可能是某种disease引起的,如不及时治疗,会导致严重的后果; sickness指各种身体上和感觉上一时的不适,病期最短,而disease病期最长。</li>
+																									<li>2.disease多指具体的疾病, illness和sickness则通常表示抽象的疾病或生病状态。例如:</li>
+																									<li>This disease affects millions in the world every year.这种病每年都使世界上上百万人受到感染。</li>
+																									<li>The doctors broke through in their fight against heart disease.医生们在与心脏病作斗争方面有了新的突破。</li>
+																									<li>There has been a lot of illness in the family recently.最近以来这家人常生病。</li>
+																									<li>He was internally disturbed to hear of her illness.听说她病了,他内心很不安。</li>
+																									<li>Her savings have been eaten up by illness.她的积蓄因为生病全给用光了。</li>
+																									<li>The worker was absent owing to sickness.那个工人因病没来上班。</li>
+																								</ul>
+																						</dd>
+										</dl>
+																																													<dl>
+											<dt class="on"><b>decease，disease</b></dt>
+											<dd>
+																							<ul>
+																									<li>这两个单词的拼写仅有一个字母不同。</li>
+																									<li>decease／di'si: s／是“死亡”、“去世”；与death相比，decease是正式用语，常见于法律条文中。</li>
+																									<li>disease／di'zi:z／是“患病”、“疾病”。acute disease是“急性病”；chronic disease是“慢性病”； family disease是“遗传病”。</li>
+																								</ul>
+																						</dd>
+										</dl>
+																			<dl>
+											<dt class="on"><b>illness，sickness，disease，complaint</b></dt>
+											<dd>
+																							<ul>
+																									<li>这些名词均有“疾病”之意。</li>
+																									<li>illness不具体指，而是泛指一切疾病，强调生病的时间或状态，语体较sickness正式一些。</li>
+																									<li>sickness较口语化，可与illness换用，但还可表示“恶心”。</li>
+																									<li>disease指具体的疾病，且通常较严重，发病时间也较长。</li>
+																									<li>complaint现代英语中，既可指症状，也可指疾病。</li>
+																								</ul>
+																						</dd>
+										</dl>
+																								</div>
+						</div>
+					</div>
+				</div>
+			
+							<div class="mbox">
+					<div class="mboxc pd5">
+						<div class="mboxc-t">
+							<div class="mboxc-tl">常见错误</div>
+						</div>
+						<div class="mboxcc">
+							<div class="layout comn">
+																																						<span>
+											n.																							<bdo>(名词)</bdo>
+																						</span>
+																																																												<ol slider="3">
+																																				<li>
+													你得了什么病?																																									<p><b>误</b> What is your disease?</p>
+																																																							<p><b>误</b> What is your illness〔sickness〕?</p>
+																																																							<p><b>正</b> What is your trouble?</p>
+																																																							<p><b>正</b> What is your complaint?</p>
+																																																							<p><b>析</b> 医生问病人时,用What is your trouble〔complaint〕?较委婉,病人容易接受。</p>
+																																								</li>
+																																		</ol>
+																																		</div>
+						</div>
+					</div>
+				</div>
+			
+							<div class="mbox">
+					<div class="mboxc pd5">
+						<div class="mboxc-t">
+							<div class="mboxc-tl">词源解说</div>
+						</div>
+						<div class="mboxcc">
+							<div class="layout etm">
+								<ul><li>☆ 14世纪初期进入英语，直接源自中古英语的disease；最初源自古法语的desaise，意为身体不适。</li></ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</li>
+		
+					<li class="sct">
+
+							<div class="mbox">
+					<div class="mboxc pd5">
+						<div class="mboxc-t smorec">
+							<div class="mboxc-tl">近反义词</div>
+						</div>
+						<div class="mboxcc">
+							<div class="layout nfo">
+																	<div class="nfo-b">【近义词】</div>
+									<ul slider="12">
+																																																											<li>
+														<a href="http://m.dict.cn/affliction">affliction</a>
+																											</li>
+																										<li>
+														<a href="http://m.dict.cn/complaint">complaint</a>
+																											</li>
+																										<li>
+														<a href="http://m.dict.cn/disorder">disorder</a>
+																											</li>
+																										<li>
+														<a href="http://m.dict.cn/illness">illness</a>
+																											</li>
+																										<li>
+														<a href="http://m.dict.cn/infirmity">infirmity</a>
+																											</li>
+																										<li>
+														<a href="http://m.dict.cn/malady">malady</a>
+																											</li>
+																										<li>
+														<a href="http://m.dict.cn/sickness">sickness</a>
+																											</li>
+																																																							</ul>
+																									<div class="nfo-b">【反义词】</div>
+									<ul slider="12">
+																																																											<li>
+														<a href="http://m.dict.cn/health">health</a>
+																													健康																											</li>
+																																																							</ul>
+															</div>
+						</div>
+					</div>
+				</div>
+			
+			
+							<div class="mbox">
+					<div class="mboxc pd5">
+						<div class="mboxc-t">
+							<div class="mboxc-tl">临近单词</div>
+						</div>
+						<div class="mboxcc">
+							<div class="layout nwd">
+																	<a href="http://m.dict.cn/diseased" target="_blank">
+									diseased									</a>
+																	<a href="http://m.dict.cn/disdainful" target="_blank">
+									disdainful									</a>
+																	<a href="http://m.dict.cn/diseases" target="_blank">
+									diseases									</a>
+																	<a href="http://m.dict.cn/diseaseful" target="_blank">
+									diseaseful									</a>
+																	<a href="http://m.dict.cn/disease%20dam" target="_blank">
+									disease dam									</a>
+																	<a href="http://m.dict.cn/disease%20code" target="_blank">
+									disease code									</a>
+																	<a href="http://m.dict.cn/disease%20form" target="_blank">
+									disease form									</a>
+																	<a href="http://m.dict.cn/disease%20gene" target="_blank">
+									disease gene									</a>
+																	<a href="http://m.dict.cn/disease%20time" target="_blank">
+									disease time									</a>
+																	<a href="http://m.dict.cn/Disease%20View" target="_blank">
+									Disease View									</a>
+																	<a href="http://m.dict.cn/disease%20germ" target="_blank">
+									disease germ									</a>
+																	<a href="http://m.dict.cn/disease%20name" target="_blank">
+									disease name									</a>
+															</div>
+						</div>
+					</div>
+				</div>
+			
+			</li>
+		
+	</ul>
+	<div style="margin-bottom:15px;">
+				</div>
+
+
+<div style="text-align:center;color:#ccc;padding-top: 20px">
+	<p style="margin-bottom:5px;">以上内容独家创作，受著作权保护，侵权必究</p>
+	<p style="font-size:16px;">海词词典，十七年品牌</p>
+</div>
+</div><div id="foot" class="ac" style="margin-bottom:70px;">
+    <p class="d1"><a href="http://haidii.com/d/3/">把海词放在桌面上，查词最方便</a></p>
+	<p>
+	触屏版<span class="sp">|</span>
+			<a href="http://dict.cn/disease">电脑版</a>
+		</p>
+	<p>©2003 - 2021 海词词典(Dict.cn)</p>
+</div>
+
+
+
+
+</body>
+
+</html>
