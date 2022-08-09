@@ -1,5 +1,3 @@
-
-
 var script = document.createElement('script');
 script.src = "https://mess20.github.io/DOLLARS-Extension/jquery.js";
 document.getElementsByTagName('head')[0].appendChild(script);
@@ -7,9 +5,9 @@ link = document.createElement('link');
 link.setAttribute('rel', 'stylesheet');
 link.setAttribute('href', 'https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css'); document.body.appendChild(link);
 setTimeout(function(){
-//baidu
+//baidu(https://byokpg.smartapps.baidu.com/pages/*)
 $(".swan-web-suspend-button").remove();
-//360
+//360(https://tieba.baidu.com/*)
 $(".nav-bar-bottom").remove();
 $(".more-btn-desc").remove();
 $(".more-image-desc-text").remove();
