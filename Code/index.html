@@ -3,14 +3,7 @@
 <head>
 <title>Code</title>
 <style>
-html{
-display:flex;
-flex-direction:culumn;
-}
 *{
-font-family:sans-serif;
-font-size:36px !important;
-line-height:64px;
 outline: none;
 tap-highlight-color:transparent;
 -webkit-tap-highlight-color:transparent;
@@ -19,8 +12,6 @@ user-select:none;
 -ms-user-select: none;
 }
 body{
-zoom:0.4;
-margin:0 auto;
 color:lightyellow;
 background:#222522;
 display:flex;
@@ -82,12 +73,12 @@ line-height:3.8rem;
 padding-left:1rem;
 }
 div:hover{
-color:#111;
-background:rgba(73,87,71,0.6);
+color:#000;
+background:rgba(255,99,71,0.5);
 opacity:1;
 }
 div:hover span{
-color:#ccc !important;
+color:#eee;
 }
 menu-btn{
 display:block;
@@ -108,7 +99,7 @@ menu{
 display:block;
 background:rgba(100,100,0,0.95);
 color:rgba(0,0,0,0);
-height:auto;
+height:100vh;
 position:fixed;
 width:28vw;
 left:-38vw;
@@ -117,7 +108,6 @@ margin:0;
 padding:5rem 3rem;
 transition:0.2s;	
 -webkit-transition:0.2s; 
-border-radius:25px;
 }
 menu details{
 text-align:left;
@@ -126,6 +116,7 @@ menu a{
 color:#fff;
 display:block;
 text-decoration:none;
+line-height:6rem;
 padding-left:2rem;
 transition:0.5s;	
 -webkit-transition:0.5s; 
@@ -135,10 +126,9 @@ color:gold;
 border-bottom:solid gold 2px;
 }
 menu-btn:hover menu{
-left:20px;
-top:20px;
+left:0;
 color:#fff;
-box-shadow:5000px 0 5000px 5000px rgba(0,0,0,0.5);
+box-shadow:500px 0 500px 500px rgba(0,0,0,0.5);
 }
 </style>
 </head>
@@ -537,8 +527,8 @@ background:white;
 <body></body>
 
 <script>
-let d = new Date();    
-let time =d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();   
+let d = new Date();    
+let time =d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();   
 if(time=="0:0:0"){
 document.body.style.animation="lightChanging 86500s infinite";
 }
