@@ -1,5 +1,5 @@
-//a 自适应/c 自定义/m 字体/R 字号/i 隐藏/b 显示
-console.log('a 自适应/c 自定义/m 字体/V 字号/i 隐藏/b 显示');
+//a 自适应/c 自定义/m 字体/v 字号/i 隐藏/b 显示
+console.log('a 自适应/c 自定义/m 字体/v 字号/i 隐藏/b 显示');
 var script = document.createElement('script'); 
 script.src = "https://mess20.github.io/DOLLARS-Extension/jquery.js"; document.getElementsByTagName('head')[0].appendChild(script);
 setTimeout(function(){
