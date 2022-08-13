@@ -1,0 +1,911 @@
+
+<!DOCTYPE>
+<html>
+<head>
+<title>Code</title>
+<style>
+html{
+display:flex;
+flex-direction:culumn;
+}
+*{
+font-family:sans-serif;
+font-size:36px !important;
+line-height:64px;
+outline: none;
+tap-highlight-color:transparent;
+-webkit-tap-highlight-color:transparent;
+user-select:none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+body{
+zoom:0.4;
+margin:0 auto;
+color:lightyellow;
+background:#222522;
+display:flex;
+flex-direction:column;
+}
+div{
+display:flex;
+flex-direction:column;
+overflow:auto;
+margin:1rem auto;
+width:36%;
+padding:1rem 2rem;
+background:#222;
+border-radius:50px;
+opacity:0.75;
+transition:0.2s;	
+-webkit-transition:0.2s; 
+}
+textarea{
+color:#fff;
+font-size:1.4rem;
+display:block;
+width:75vw;
+margin:1rem auto;
+padding:1rem 2rem;
+background:#222;
+border:none;
+border-radius:20px;
+}
+textarea:hover{
+height:50vh;
+transition:0.2s;	
+-webkit-transition:0.2s; 
+}
+session{
+background:#000;
+box-shadow:0 -20px 15px #222;
+padding-bottom:4rem;
+margin-bottom:4rem;
+display:flex;
+flex-direction:column;
+font-size:2.5rem;
+border-radius:20px;
+}
+tag{
+display:flex;
+margin-left:4rem;
+margin-top:6rem;
+margin-right:auto;
+padding:1rem 2rem;
+border-radius:50px;
+opacity:0.75
+}
+span{
+color:#F0F8FF;
+font-size:2.2rem;
+line-height:3.8rem;
+padding-left:1rem;
+}
+div:hover{
+color:#aaa;
+background:rgba(73,87,71,0.6);
+opacity:1;
+}
+div:hover span{
+color:#aaa;
+}
+div:hover textarea{
+color:#ccc;
+}
+menu-btn{
+display:block;
+font-size:2.5rem;
+position:fixed;
+bottom:10rem;
+right:3rem;
+width:8rem;
+height:8rem;
+background:#444;
+border-radius:100%;
+text-align:center;
+align-items:center;
+line-height:8rem;
+z-index:1
+}
+menu{
+display:block;
+background:rgba(100,100,0,0.95);
+color:rgba(0,0,0,0);
+height:auto;
+position:fixed;
+width:28vw;
+left:-38vw;
+top:0;
+margin:0;
+padding:5rem 3rem;
+transition:0.2s;	
+-webkit-transition:0.2s; 
+border-radius:25px;
+}
+menu details{
+text-align:left;
+}
+menu a{
+color:#fff;
+display:block;
+text-decoration:none;
+padding-left:2rem;
+transition:0.5s;	
+-webkit-transition:0.5s; 
+}
+a:hover{
+color:gold;
+border-bottom:solid gold 2px;
+}
+menu-btn:hover menu{
+left:20px;
+top:20px;
+color:#fff;
+box-shadow:5000px 0 5000px 5000px rgba(0,0,0,0.5);
+}
+</style>
+</head>
+<body>
+
+<menu-btn>目录
+<menu>
+
+<details>
+<summary> Areas</summary>
+<a href=''></a>
+</details>
+
+
+
+</menu>
+</menu-btn>
+
+
+
+
+<session>
+
+
+<tag style="background:#8FBC8F">Basic methods</tag>
+
+<div>获取 value 值<br>
+<span>javascript</span>
+<textarea>document.getElementById("id").value</textarea>
+<span>jquery</span>
+<textarea>$("#id").val()</textarea> 
+<textarea>$("#id")[0].value</textarea> 
+</div>
+
+<div>this <span></span> <textarea>
+<p onclick="f(this)">对象</p>
+<script type="text/javascript">
+function f(obj){
+…
+}
+</script>
+</textarea></div>
+<div> <span>9</span> <span></span></div>
+
+
+<div>大 <span></span> <span></span></div>
+
+<div>遍历 <textarea>
+var a = document.getElementsByTagName("a");
+for(var i=0;i<a.length;i++){
+var a = a[i]
+}
+</textarea></div>
+
+<div>上传文件 <span></span> 
+<textarea>
+ <!--accept只能与file配合使用。它可以限制上传的文件类型
+    当然你也可以写成 accept="image/*"-->
+ <div>
+     <input type="file" id="myimg"
+            onchange="imgChange(this)"
+            accept="image/png,image/gif,image/jpeg"/>
+     <img src="" alt="">
+ </div>
+
+<script>
+function imgChange(img) {
+    // 生成一个文件读取的对象
+    const reader = new FileReader();
+    reader.onload = function (ev) {
+        // base64码
+        var imgFile =ev.target.result;//或e.target都是一样的      document.querySelector("img").src= ev.target.result;
+    }
+    //发起异步读取文件请求，读取结果为data:url的字符串形式，
+  reader.readAsDataURL(img.files[0]);
+}
+</script>
+</textarea></div>
+
+
+
+
+<tag style="background:green">Aid summary</tag>
+<div>base64 --> url<span></span> <span></span> <span>
+    1.window.atob(base64) 转blob
+    2.URL.createObjectURL为blob对象创建临时的URL
+</span>
+</div>
+
+
+<tag style="background:#CDB7B5">Flex methods</tag>
+<tag id="纪录片" style="background:#E8FFC4;color:#333;">CSS</tag>
+
+<div>:before <span>
+<tagname>:before {
+	content: "";
+}
+</span></div>
+
+<div>animation
+<textarea>
+animation:name xs;
+@keyframes name{
+from{}
+to{}
+}
+</textarea>
+</div>
+
+<div>事件
+<span>
+touch-action: none;
+</span> 
+<span>
+pointer-event:none;
+</span></div>
+
+<tag style="background:#C75872">JavaScript</tag>
+<div>引入jquery
+ <span>
+var script = document.createElement('script');
+script.src = "https://mess20.github.io/DOLLARS-Extension/jquery.js";
+document.getElementsByTagName('head')[0].appendChild(script);
+</span></div>
+
+<tag id="" style="background:#B0C4DE;">自适应</tag>
+<div> <textarea>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</textarea></div>
+<div>大 <span></span></div>
+<div> <span></span> <span></span></div>
+<div></div>
+
+
+<tag style="background:#848484">Some tags</tag>
+
+<div>iframe <span></span> <textarea>
+<iframe src="路径" width height iframeborder="0" allowfullscreen="allowfullscreen"></iframe>
+</textarea> <span></span> <span></span></div>
+<div>武林 <span>G</span> <span></span></div>
+
+</session>
+
+<session>
+<tag style="background:#FA8072;">Application</tag>
+<div>输入密码下载文件
+<textarea>
+<script>
+function check(){
+var pwd=document.getElementById("pwd");
+if(pwd=="pwd"){   
+document.getElementById("download").style.display='block';}
+else{   
+alert('密码错误');}
+}
+</script>
+
+密码：
+<input type="password" id="pwd">
+<input type="button" onclick="check()">
+<div id="download" style="display:none">下载地址</div>
+</textarea>
+</div>
+</session>
+
+<session>
+
+<tag style="background:#B07B61">Component</tag>
+<tag style="background:#FFD499"></tag>
+
+<div>链接 <span>
+a{
+color:black;
+text-decoration:none;
+}
+</span>
+<span>border-bottom: 3px  dashed  black;</span>
+<span>border-bottom: 3px  solid  cornflowerblue;</span>
+</div>
+<div></div>
+
+
+
+<div>表格
+
+<style type="text/css">
+table.tftable {
+font-size:12px;
+color:#333333;
+width:100%;
+border-width: 1px;
+border-color: rgba(84,89,93,10%);
+border-collapse: collapse;}
+table.tftable th {
+font-size:12px;
+background-color:#F6F6F6;
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: rgba(84,89,93,10%);
+text-align:left;}
+table.tftable tr {
+background-color:#ffffff;}
+table.tftable td {
+font-size:12px;
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: rgba(84,89,93,10%);}
+</style>
+
+<table id="tfhover" class="tftable" border="1">
+<tr><th>Header 1</th><th>Header 2</th></tr>
+<tr><td> </td><td> </td></tr>
+</table>
+
+
+<textarea>
+table.tftable {
+font-size:12px;
+color:#333333;
+width:100%;
+border-width: 1px;
+border-color: rgba(84,89,93,10%);
+border-collapse: collapse;}
+table.tftable th {
+font-size:12px;
+background-color:#F6F6F6;
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: rgba(84,89,93,10%);
+text-align:left;}
+table.tftable tr {
+background-color:#ffffff;}
+table.tftable td {
+font-size:12px;
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: rgba(84,89,93,10%);}
+</textarea>
+
+<textarea>
+<table id="tfhover" class="tftable" border="1">
+<tr><th>Header 1</th><th>Header 2</th></tr>
+<tr><td> </td><td> </td></tr>
+</table>
+</textarea>
+
+
+ </div>
+
+<div>开关 <span>
+var anniu =document.getElementById('anniu');   var kaiguan = document.getElementById('kaiguan');   
+var  x= document.getElementById('x');              
+var temp = 1; anniu.addEventListener('click',function(){            
+if(temp==1){            
+this.className = 'hei';              
+temp=0;             
+kaiguan.style. border= '2px solid  rgb(11, 243, 81)';                 
+
+}else{             
+this.className = 'bai';             
+temp=1;              
+kaiguan.style. border= '2px solid black';           
+
+}})  
+</span></div>
+
+
+
+
+
+
+<tag style="background:skyblue">Toolcards</tag>
+<div>标签页<span></span>
+<textarea>
+.tabs {
+  display: block;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  overflow: hidden; }
+  .tabs [class^="tab"] label,
+  .tabs [class*=" tab"] label {
+color: white; 
+    cursor: pointer;
+    display: block;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1em;
+    padding: 2rem 0;
+    text-align: center; }
+  .tabs [class^="tab"] [type="radio"],
+  .tabs [class*=" tab"] [type="radio"] {
+/*     border-bottom: 1px solid rgba(239, 237, 239, 0.5); */
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out; }
+    .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
+    .tabs [class*=" tab"] [type="radio"]:hover,
+    .tabs [class*=" tab"] [type="radio"]:focus {
+/*    tab标签选中的颜色标志      */
+      border-bottom: 1px solid #40a9ff;
+}
+    .tabs [class^="tab"] [type="radio"]:checked,
+    .tabs [class*=" tab"] [type="radio"]:checked {
+      border-bottom: 2px solid #40a9ff; 
+}
+    .tabs [class^="tab"] [type="radio"]:checked + div,
+    .tabs [class*=" tab"] [type="radio"]:checked + div {
+      opacity: 1; }
+    .tabs [class^="tab"] [type="radio"] + div,
+    .tabs [class*=" tab"] [type="radio"] + div {
+      display: block;
+      opacity: 0;
+      padding: 2rem 0;
+      width: 90%;
+      -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+      -o-transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out; }
+  .tabs .tab-2 {
+    width: 50%; }
+    .tabs .tab-2 [type="radio"] + div {
+      width: 200%;
+      margin-left: 100%; }
+    .tabs .tab-2 [type="radio"]:checked + div {
+      margin-left: 0%; }
+    .tabs .tab-2:last-child [type="radio"] + div {
+      margin-left: 100%; }
+    .tabs .tab-2:last-child [type="radio"]:checked + div {
+      margin-left: -100%; }
+
+
+<div class="tabs">
+<div class="tab-2">
+<label for="tab2-1"></label>
+<input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+<div id="tab2-1">  
+
+</div>
+</div>
+
+<div class="tab-2">
+<label for="tab2-2"></label>
+<input id="tab2-2" name="tabs-two" type="radio"> 
+<div id="tab2-2">
+</div>
+</div>
+
+
+</div>
+</textarea>
+</div>
+
+<div>背景光线随时间变化
+<textarea>
+<style>
+body{
+background:white;
+}
+@keyframes lightChanging
+{
+	0% {background:black;}
+	50% {background:white;}
+	100% {background:black;}
+}
+</style>
+<body></body>
+
+<script>
+let d = new Date();    
+let time =d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();   
+if(time=="0:0:0"){
+document.body.style.animation="lightChanging 86500s infinite";
+}
+</script>
+</textarea>
+
+<textarea>
+<script type="text/javascript">
+        window.onload = function changeColor(){
+        var t=new Date();  
+        var h=t.getHours();
+        var m=t.getMinutes();
+        var r=255-255*(h*60+m)/(24*60);
+        var rgb=r.toString(16)+r.toString(16)+r.toString(16);
+document.body.bgColor="#"+rgb;}
+</script>
+</textarea>
+ </div>
+
+
+
+
+
+
+
+
+
+
+<tag style="background:#66A9BF">Icon / svg</tag>
+<div>个人主页 <span>
+<svg t="1628840766826" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5502" width="200" height="200"><path d="M512 512c140.8 0 256-115.2 256-256S652.8 0 512 0 256 115.2 256 256s115.2 256 256 256z m0 128C339.2 640 0 723.2 0 896v128h1024v-128c0-172.8-339.2-256-512-256z" p-id="5503" fill="#54595D"></path></svg>
+</span> <span></span> <span></span>
+</div>
+
+<div>导航 <span></span> <span></span>
+<svg t="1627218483551" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1962" width="200" height="200"><path d="M850.688 173.312l-279.338667 609.408-76.16-253.909333-253.909333-76.202667 609.408-279.296M1024 0L0 469.333333l426.666667 128 128 426.666667L1024 0z" p-id="1963"></path></svg></div>
+<div>徽章<span></span>
+<svg t="1627218110476" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3158" width="200" height="200"><path d="M515.789 950.426c-242.586 0-439.91-197.325-439.91-439.91S273.253 70.604 515.788 70.604s439.91 197.376 439.91 439.91-197.325 439.91-439.91 439.91z m0-818.432c-208.691 0-378.47 169.779-378.47 378.47 0 208.691 169.779 378.47 378.47 378.47s378.47-169.779 378.47-378.47c0-208.691-169.779-378.47-378.47-378.47z" fill="#2c2c2c" p-id="3159"></path><path d="M414.925 684.954c-8.755 0-17.408-2.714-24.832-8.141a42.127 42.127 0 0 1-16.845-41.37l15.514-90.317-65.588-63.948a42.02 42.02 0 0 1-10.7-43.367c5.017-15.411 18.073-26.47 34.15-28.774l90.726-13.159 40.55-82.176c7.169-14.54 21.71-23.552 37.94-23.552s30.72 9.012 37.94 23.552l40.55 82.176 90.675 13.159c16.077 2.355 29.133 13.363 34.15 28.774 5.018 15.411 0.922 32.051-10.7 43.367l-65.639 63.948 15.514 90.317a41.933 41.933 0 0 1-16.845 41.37 42.102 42.102 0 0 1-44.544 3.225l-81.101-42.65-81.1 42.65c-6.35 3.277-13.108 4.916-19.815 4.916zM393.83 464.23l45.056 43.93a42.266 42.266 0 0 1 12.135 37.427l-10.65 62.003 55.706-29.286a42.47 42.47 0 0 1 39.373 0l55.705 29.286-10.65-62.003c-2.355-13.721 2.202-27.699 12.135-37.427l45.056-43.93-62.208-9.062a42.245 42.245 0 0 1-31.846-23.142l-27.853-56.423-27.853 56.474a42.25 42.25 0 0 1-31.795 23.142l-62.31 9.011z m204.903-59.34h0.051-0.051z" fill="#2c2c2c" p-id="3160"></path></svg></div>
+<div>讨论 <span></span>
+<img src="https://i.loli.net/2021/07/30/ceM12a5dYq9JjBF.jpg" class="ico">
+
+<svg t="1627218555235" class="icon" viewBox="0 0 1365 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2286" width="200" height="200"><path d="M853.333333 0a512 512 0 0 0-482.759111 341.333333H341.333333a341.333333 341.333333 0 0 0 0 682.666667h512a512 512 0 0 0 0-1024z m0 910.222222H341.333333a227.555556 227.555556 0 0 1 0-455.111111h117.987556A398.222222 398.222222 0 1 1 853.333333 910.222222z" p-id="2287"></path></svg>
+</div>
+<div>纠错 <span></span>
+<svg t="1627220039866" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3049" width="200" height="200"><path d="M298.666667 321.28l123.733333 124.586667a53.76 53.76 0 0 0-76.373333 0l100.266666 99.84-179.2 179.2a500.48 500.48 0 0 0-42.666666 73.813333 529.493333 529.493333 0 0 0 73.386666-42.666667l180.906667-181.333333 100.266667 99.84a54.186667 54.186667 0 0 0 0-75.093333l118.186666 118.186666 27.306667-27.306666-396.8-396.8z m308.906666-98.133333l-18.346666 18.773333a27.733333 27.733333 0 0 0 0 39.68l18.773333 18.346667-122.88 98.133333 140.8 140.8L725.333333 415.146667l18.773334 18.346666a27.733333 27.733333 0 0 0 39.68 0l18.346666-18.773333z" p-id="3050" fill="#cdcdcd"></path></svg></div>
+
+<div>标签<span>前</span>
+<svg t="1627220966742" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1273" width="200" height="200"><path d="M223.87067007 892.79240868c-160.26625296-160.26625296-160.26625296-420.13723325 0-580.40348626L514.08739129 22.17220114l290.21672129 290.21672128c160.26625296 160.26625296 160.26625296 420.13723325 0 580.40348626-160.29620928 160.26625296-420.16718954 160.26625296-580.43344251 0z" fill="#e6e6e6" p-id="1274"></path><path d="M760.32825103 722.28109802m-86.87329597 0a86.873296 86.873296 0 1 0 173.74659196 0 86.873296 86.873296 0 1 0-173.74659196 0Z" fill="#e6e6e6" p-id="1275"></path></svg>
+<span>后</span>
+<svg t="1627220966742" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1273" width="200" height="200"><path d="M223.87067007 892.79240868c-160.26625296-160.26625296-160.26625296-420.13723325 0-580.40348626L514.08739129 22.17220114l290.21672129 290.21672128c160.26625296 160.26625296 160.26625296 420.13723325 0 580.40348626-160.29620928 160.26625296-420.16718954 160.26625296-580.43344251 0z" fill="#34A0EE" p-id="1274"></path><path d="M760.32825103 722.28109802m-86.87329597 0a86.873296 86.873296 0 1 0 173.74659196 0 86.873296 86.873296 0 1 0-173.74659196 0Z" fill="#34A0EE" p-id="1275"></path></svg>
+
+<span>前</span>
+<svg t="1627221968833" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7961" data-spm-anchor-id="a313x.7781069.0.i23" width="200" height="200"><path d="M796.444444 0H227.555556C164.977778 0 113.777778 51.2 113.777778 113.777778v910.222222l398.222222-170.666667L910.222222 1024V113.777778c0-62.577778-51.2-113.777778-113.777778-113.777778z m0 853.333333l-284.444444-125.155555L227.555556 853.333333V113.777778h568.888888v739.555555z" p-id="7962" data-spm-anchor-id="a313x.7781069.0.i21" fill="#bfbfbf" class="selected"></path></svg>
+<span>后</span> 
+<svg t="1627222085508" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9009" data-spm-anchor-id="a313x.7781069.0.i44" width="200" height="200"><path d="M796.444444 0H227.555556C164.977778 0 113.777778 51.2 113.777778 113.777778v910.222222l398.222222-170.666667L910.222222 1024V113.777778c0-62.577778-51.2-113.777778-113.777778-113.777778z" p-id="9010" fill="#e98f36"></path></svg>
+
+<svg t="1627222085508" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9009" data-spm-anchor-id="a313x.7781069.0.i44" width="200" height="200"><path d="M796.444444 0H227.555556C164.977778 0 113.777778 51.2 113.777778 113.777778v910.222222l398.222222-170.666667L910.222222 1024V113.777778c0-62.577778-51.2-113.777778-113.777778-113.777778z" p-id="9010" fill="#34A0EE"></path></svg>
+</div>
+
+<div>置顶
+<svg t="1627221307292" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6234" width="200" height="200"><path d="M716.8 512V102.4h51.2V0h-512v102.4H307.2v409.6l-102.4 102.4v102.4h266.24v307.2h81.92V716.8H819.2v-102.4l-102.4-102.4z" p-id="6235" fill="#bfbfbf"></path></svg>
+</div>
+
+<div>
+<svg t="1627219599100" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1530" width="200" height="200"><path d="M239.625 511.188v-2.459H132.264l170.805-170.472 171.139 170.472H366.305l0.07 2.459c0 170.221 129.722 310.68 295.487 327.75a329.283 329.283 0 0 0 33.458 1.681c4.473 0 8.917-0.168 13.348-0.334 1.333-0.041 2.708-0.055 4.042-0.125 4.611-0.25 9.195-0.61 13.763-1.041 1.25-0.125 2.514-0.222 3.765-0.361 4.806-0.513 9.611-1.098 14.362-1.819 0.61-0.098 1.236-0.181 1.846-0.292C903.694 812.076 1024 676.09 1024 511.952c0-181.5-147.153-328.639-328.681-328.639-16.347 0-32.388 1.249-48.111 3.527 84.597 82.833 137.166 198.251 137.166 325.972l0.028 2.459h107.334L720.93 685.729 549.805 515.271h107.888l-0.055-2.459c0-170.221-129.737-310.666-295.514-327.75a328.619 328.619 0 0 0-33.445-1.681c-4.486 0-8.916 0.154-13.348 0.348a190.44 190.44 0 0 0-4.041 0.111c-4.612 0.249-9.195 0.61-13.778 1.055-1.25 0.111-2.5 0.208-3.736 0.347-4.818 0.513-9.624 1.097-14.374 1.819-0.612 0.098-1.223 0.195-1.833 0.279C120.306 211.924 0 347.924 0 512.063c0 181.486 147.153 328.624 328.68 328.624 16.361 0 32.39-1.25 48.111-3.541-84.597-82.819-137.166-198.25-137.166-325.958" p-id="1531"></path></svg>
+</div>
+<div> <span>隐藏（待显示）</span>
+<svg t="1627219317500" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1869" width="200" height="200"><path d="M512.059863 128.200824c-247.02407 0-447.455985 286.674115-447.455985 297.422923 0 10.06524 200.430892 296.739355 447.455985 296.739355 247.661589 0 444.930465-299.42758 448.089411-296.739355C963.431018 427.620217 759.722476 128.200824 512.059863 128.200824L512.059863 128.200824zM887.121028 425.600211c-2.670829-2.490727-165.422564 233.341443-375.040698 233.341443-239.940744 0-374.508579-233.341443-374.508579-233.341443s165.434843-233.979986 374.508579-233.979986C721.697441 191.620225 889.898281 427.438069 887.121028 425.600211L887.121028 425.600211zM510.116605 309.400722c-59.101049 0-106.875123 49.619094-106.875123 111.343901 0 61.363579 47.775096 111.347994 106.875123 111.347994 59.448974 0 107.225093-49.984415 107.225093-111.347994C617.341698 359.019817 569.565579 309.400722 510.116605 309.400722L510.116605 309.400722zM510.116605 309.400722" p-id="1870" fill="#e6e6e6"></path></svg>
+<span>显示（待隐藏）</span>
+<svg t="1627219086181" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1128" width="200" height="200"><path d="M512.059863 128.200824c-247.02407 0-447.455985 286.674115-447.455985 297.422923 0 10.06524 200.430892 296.739355 447.455985 296.739355 247.661589 0 444.930465-299.42758 448.089411-296.739355C963.431018 427.620217 759.722476 128.200824 512.059863 128.200824zM510.116605 532.092617c-59.101049 0-106.875123-49.984415-106.875123-111.347994 0-61.724807 47.775096-111.343901 106.875123-111.343901 59.448974 0 107.225093 49.619094 107.225093 111.343901C617.341698 482.108203 569.565579 532.092617 510.116605 532.092617z" p-id="1129" fill="#1296db"></path></svg>
+<span>隐藏（待显示）</span>
+<svg t="1627217901312" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2837" width="200" height="200"><path d="M512.256 888.78c-129.587 0-241.715-45.311-333.312-134.604-74.342-72.5-115.66-156.467-133.683-200.09-11.418-27.648-10.906-59.084 1.433-86.272 18.996-41.779 53.197-104.09 108.39-163.635 11.52-12.441 30.977-13.158 43.418-1.638a30.69 30.69 0 0 1 1.639 43.417c-52.224 56.32-83.507 116.43-97.485 147.252a47.304 47.304 0 0 0-0.614 37.427c36.864 89.19 150.63 296.704 410.163 296.704 60.416 0 117.043-11.418 168.345-33.946a30.771 30.771 0 0 1 40.5 15.77 30.771 30.771 0 0 1-15.77 40.499c-59.136 26.01-124.058 39.117-193.024 39.117z m345.19-161.689a30.746 30.746 0 0 1-23.45-50.585c47.72-56.423 75.777-115.303 88.218-145.357 5.07-12.186 4.762-26.01-0.87-37.888-40.243-85.504-160.973-284.416-411.7-284.416-53.554 0-104.447 9.216-151.295 27.392-15.821 6.144-33.639-1.69-39.731-17.51-6.144-15.821 1.69-33.639 17.51-39.732 53.965-20.94 112.333-31.539 173.517-31.539 124.877 0 235.161 43.11 327.833 128.102 75.52 69.274 119.808 149.76 139.47 191.59 12.953 27.546 13.72 59.444 2.047 87.604-16.896 40.755-47.616 101.837-98.099 161.485a30.787 30.787 0 0 1-23.45 10.854z" fill="#2c2c2c" p-id="2838"></path><path d="M857.446 868.864c-7.68 0-15.36-2.867-21.35-8.602L165.53 213.197a30.72 30.72 0 0 1-0.768-43.418 30.72 30.72 0 0 1 43.417-0.768l670.618 647.066a30.72 30.72 0 0 1 0.768 43.417 30.669 30.669 0 0 1-22.119 9.37zM672.973 568.166c-1.69 0-3.38-0.153-5.12-0.41a30.761 30.761 0 0 1-25.242-35.378 123.436 123.436 0 0 0 1.69-20.378c0-67.38-54.835-122.163-122.163-122.163-7.578 0-15.156 0.717-22.528 2.048a30.72 30.72 0 0 1-35.84-24.576 30.72 30.72 0 0 1 24.576-35.84 186.055 186.055 0 0 1 33.792-3.123c101.222 0 183.603 82.38 183.603 183.603 0 10.24-0.87 20.48-2.509 30.515a30.725 30.725 0 0 1-30.26 25.702zM522.138 695.603c-101.223 0-183.604-82.38-183.604-183.603 0-9.523 0.717-19.098 2.202-28.416 2.611-16.742 18.33-28.262 35.072-25.651 16.742 2.611 28.262 18.33 25.651 35.072A123.935 123.935 0 0 0 399.974 512c0 67.38 54.784 122.163 122.164 122.163 7.833 0 15.718-0.768 23.347-2.201 16.64-3.226 32.768 7.68 35.993 24.32 3.226 16.64-7.68 32.768-24.32 35.993a186.978 186.978 0 0 1-35.02 3.328z" fill="#2c2c2c" p-id="2839"></path></svg>
+<span>显示（待隐藏）</span>
+<svg t="1627218187652" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3342" width="200" height="200"><path d="M517.12 888.934c-129.587 0-241.715-45.312-333.312-134.604-74.342-72.5-115.66-156.468-133.683-200.09-11.418-27.648-10.906-59.136 1.433-86.272 18.996-41.882 62.055-122.42 136.5-191.846 91.494-85.3 201.318-128.564 326.4-128.564 124.876 0 235.161 43.11 327.833 128.103 75.52 69.273 119.808 149.76 139.469 191.59 12.954 27.495 13.67 59.443 2.048 87.603-18.074 43.623-59.494 127.59-133.888 199.988-91.443 88.934-203.418 134.092-332.8 134.092zM106.957 530.74c36.864 89.19 150.63 296.704 410.163 296.704 259.226 0 373.043-207.155 409.958-296.192 5.07-12.185 4.762-26.01-0.87-37.888-40.243-85.504-160.973-284.416-411.7-284.416S146.382 407.808 107.52 493.312a47.304 47.304 0 0 0-0.563 37.427z" fill="#2c2c2c" p-id="3343"></path><path d="M517.12 699.955c-100.25 0-181.76-81.51-181.76-181.76 0-100.198 81.51-181.76 181.76-181.76s181.76 81.562 181.76 181.76c0 100.25-81.562 181.76-181.76 181.76z m0-302.08c-66.355 0-120.32 53.965-120.32 120.32s53.965 120.32 120.32 120.32 120.32-53.965 120.32-120.32-53.965-120.32-120.32-120.32z" fill="#2c2c2c" p-id="3344"></path></svg></div>
+
+<div> <span></span>
+<svg t="1627218403230" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1041" width="200" height="200"><path d="M517.8 724.9H69c-38 0-69 31.1-69 69V955c0 38 31.1 69 69 69h448.7c38 0 69-31.1 69-69V793.9c0.1-38-31-69-68.9-69zM494.7 932H92V816.9h402.7V932zM0 330.8C0 456.3 101.7 558 227.2 558h348v-92H225.8c-74.7 0-135.2-60.5-135.2-135.2 0-74.7 60.5-135.2 135.2-135.2H361v-92H227.2C101.7 103.6 0 205.3 0 330.8z" p-id="1042"></path><path d="M1024 693.2C1024 567.7 922.3 466 796.8 466h-348v92h349.5c74.7 0 135.2 60.5 135.2 135.2 0 74.7-60.5 135.2-135.2 135.2H553.7v92h243.1c125.5 0 227.2-101.7 227.2-227.2z" p-id="1043"></path><path d="M487.6 466h34.5v92h-34.5zM804 0H355.2c-38 0-69 31.1-69 69v161.1c0 38 31.1 69 69 69H804c38 0 69-31.1 69-69V69c0-37.9-31.1-69-69-69z m-23.1 207.1H378.2V92h402.7v115.1z" p-id="1044"></path></svg></div>
+<div>链接 <span></span>
+<svg t="1629119675420" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2026" width="40" height="40"><path d="M349.501742 1023.999555a293.49371 293.49371 0 0 1-114.72936-23.257153 302.387459 302.387459 0 0 1-100.89958-69.682522A316.661926 316.661926 0 0 1 66.769468 826.069176a330.269362 330.269362 0 0 1 0-238.797155 316.617457 316.617457 0 0 1 66.969928-104.990705l401.775102-416.138506A215.540002 215.540002 0 0 1 607.375988 16.515692a209.759065 209.759065 0 0 1 163.378166 0 215.495533 215.495533 0 0 1 71.86149 49.627118 225.634407 225.634407 0 0 1 47.714962 74.751958 235.239656 235.239656 0 0 1 0 170.004009 225.634407 225.634407 0 0 1-47.714962 74.751958l-400.885727 417.205756a129.759795 129.759795 0 0 1-43.268088 29.882996 126.246764 126.246764 0 0 1-98.320393 0 129.804264 129.804264 0 0 1-43.268088-29.882996 135.674138 135.674138 0 0 1-28.68234-45.002368 141.499543 141.499543 0 0 1 0-102.278112 135.807544 135.807544 0 0 1 28.68234-45.046837l369.6242-384.654636a42.378713 42.378713 0 0 1 61.589211 0 46.647712 46.647712 0 0 1 0 64.123929l-369.6242 384.654636a46.647712 46.647712 0 0 0 0 64.123928 42.334244 42.334244 0 0 0 61.58921 0l400.930196-417.205756a139.187169 139.187169 0 0 0 0-191.215599 126.424639 126.424639 0 0 0-183.833788 0l-401.81957 416.138506a226.168032 226.168032 0 0 0-47.848369 74.929834 236.217968 236.217968 0 0 0 0 170.626571A226.034626 226.034626 0 0 0 195.728825 866.935952a216.029158 216.029158 0 0 0 72.039365 49.804993 210.737378 210.737378 0 0 0 163.95626 0 216.029158 216.029158 0 0 0 72.039365-49.804993l400.218696-416.7166a42.378713 42.378713 0 0 1 61.58921 0 46.647712 46.647712 0 0 1 0 64.123928l-400.218696 416.7166a302.609803 302.609803 0 0 1-100.89958 69.682522 293.49371 293.49371 0 0 1-114.951703 23.257153z" p-id="2027" fill="#54595D"></path></svg></div>
+<div>分享<span></span>
+<svg t="1627217686029" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1156" width="200" height="200"><path d="M512 939.804444c-57.612929 0-113.570909-11.274343-166.322424-33.616161-50.889697-21.514343-96.504242-52.337778-135.809293-91.539394C170.666667 775.447273 139.843232 729.729293 118.328889 678.839596 96.193939 626.191515 84.816162 570.233535 84.816162 512.620606s11.274343-113.570909 33.616161-166.322424c21.514343-50.889697 52.337778-96.504242 91.539394-135.809293 39.201616-39.201616 84.919596-70.025051 135.809293-91.539394 52.648081-22.238384 108.606061-33.616162 166.322424-33.616162h1.034344l-0.103435 57.923233h-0.930909c-98.676364 0-191.353535 38.374141-261.068282 108.192323-69.818182 69.818182-108.295758 162.495354-108.295758 261.171717s38.374141 191.353535 108.192323 261.068283c69.714747 69.818182 162.495354 108.192323 261.068283 108.192323 98.572929 0 191.250101-38.374141 261.068283-108.088889C842.78303 704.077576 881.260606 611.400404 881.260606 512.827475h57.923232c0 57.612929-11.377778 113.570909-33.616161 166.21899-21.514343 50.889697-52.337778 96.504242-91.539394 135.705858s-84.919596 69.921616-135.705859 91.43596c-52.751515 22.341818-108.606061 33.616162-166.322424 33.616161zM938.149495 352.711111h-57.923232V145.73899H672.530101v-57.923232H938.149495V352.711111z m0 0" p-id="1157"></path><path d="M888.371717 96.012929l40.96 40.96L560.484848 505.806869l-40.96-40.96L888.371717 96.012929z m0 0" p-id="1158"></path></svg></div>
+
+<div>主页 <span>
+<svg t="1627217632117" class="icon" viewBox="0 0 1033 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="972" width="200" height="200"><path d="M1002.599861 500.663121l-17.112402 17.112402c-4.889258 4.889258-12.223144 4.889258-17.124938 0l-36.669433-34.224803v339.891165c0 110.033371-90.47634 200.509711-200.509711 200.509711H278.814212c-112.478 2.444629-202.95434-88.031712-202.954341-198.065082V483.55072l-34.23734 34.224803c-4.889258 4.889258-12.223144 4.889258-17.112402 0l-17.112402-17.112402c-4.889258-4.889258-4.889258-12.223144 0-17.112401L489.102438 1.833472c2.444629-2.444629 9.778515-2.444629 14.667774 0 4.889258-2.444629 12.223144-2.444629 17.124938 0l481.704711 481.717248c4.889258 4.889258 4.889258 12.223144 0 17.112401zM403.515356 950.587658c0 9.778515 2.444629 17.124938 2.444629 24.458825H626.039263c2.444629-7.333887 2.444629-17.124938 2.444629-24.458825v-276.305742c0-56.239-44.015856-100.254856-100.254855-100.254856h-24.458825c-56.239 0-100.254856 44.015856-100.254856 100.254856v276.305742zM880.343346 434.645606L503.770212 58.085008 127.209614 434.645606v391.240908c0 83.142454 68.462144 151.604598 151.604598 151.604598h78.240659c-2.444629-7.333887-2.444629-17.112402-2.444629-24.446289V674.269379c0-83.142454 68.462144-151.604598 151.604598-151.604598h24.446289c83.142454 0 151.604598 68.462144 151.604598 151.604598v276.305742c0 9.778515 0 17.124938-2.444629 24.458825h53.794371c83.142454 0 151.604598-68.462144 151.604598-151.604598V434.645606h-4.876721z m0 0" p-id="973"></path></svg></span>
+</div>
+
+<div><span>说实话还是fontawesome用得香</span></div>
+
+
+<tag style="background:#ACE1AF">Toys</tag>
+<div>回到顶部
+<textarea><a href="#" >按钮</a></textarea>
+<span>
+点击链接，页面默认上滚到页的顶部</span>
+</div>
+
+
+
+
+<tag style="background:#5F9EA0;opacity:1;">CSS</tag>
+<div>按钮 <span></span> <textarea>
+/*红色镶边空心按钮*/
+width: 100px; 
+height: 100px; 
+border-radius: 50%;
+border:#be002f 4px solid;
+background-color: #fff;
+position: fixed;
+right:5rem;
+bottom:30rem;
+color: #be002f;
+font-size: 4rem;
+text-align:center;
+line-height:100px;
+text-decoration:none;
+z-index:2;
+</textarea></div>
+
+<div>高亮 <span></span> <span>
+color:#000000; 
+background: #fcc546
+</span></div>
+
+<div>
+<span style="display:inline;color:#d3b17d;box-shadow:0px -100px #f2ecde inset;border-radius:10px">内容</span>
+<span style="color:rgba(52,160,238,100%) ;box-shadow:0px -100px rgb(231,240,255) inset;border-radius:10px">内容</span>
+
+<textarea>突出
+<span style="color:#d3b17d;box-shadow:0px -100px #f2ecde inset;border-radius:10px">内容</p>
+<p style="color:rgba(52,160,238,100%) ;box-shadow:0px -100px rgb(231,240,255) inset;border-radius:10px">内容</span>
+</textarea>
+
+</div>
+<tag style="background:#9AA6C1">Layout</tag>
+
+
+<tag style="background:lightblue;">排版</tag>
+
+<div>对齐 <span>
+//水平对齐              
+text-align: center;              
+//竖直对齐              
+align-items: center;
+line-height: 5rem;
+</span></div>
+<div>排版 <span>
+//平均分配
+display: flex;  
+justify-content: space-around;
+</span> <span></span></div>
+<div> <span></span> <span></span></div>
+
+
+<div> <span></span> <span></span></div>
+<div></div>
+<div>
+ <span></span></div>
+<div> <span>
+</span> <span></span></div>
+<div> <span></span> <span></span></div>
+<div> 
+<span>
+</span> 
+<span>
+</span></div>
+<div>和 <span>
+</span> <span></span></div>
+<br>
+<div>
+
+</div>
+<tag id="" style="background:#F08080">Deformity</tag>
+
+
+
+<div> <span></span></div>
+<div>基本画板<span>
+<textarea>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="js/jquery.js"></script>
+	<style type="text/css">
+		input[type=button]{
+			margin-left: 30px;
+			margin-top: 10px;
+			font-size: 40px;
+			width: 200px;
+			height: 50px;
+		}
+		input[type=text]{
+			font-size: 40px;
+			height: 35px;
+		}
+		input[type=color]{
+			font-size: 40px;
+			width: 448px;
+			height: 35px;
+		}
+		label{
+			margin-left: 30px;
+		}
+		.cover-box{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.2);
+			display: none;
+		}
+		.buttons-box{
+			background-color:white;
+			width: 900px;
+			height: 400px;
+			position: fixed;left: 5%; top: 40%;
+			border:1px #000000 solid;
+			display:block;
+		}
+	</style>
+	<body>
+		<div class="cover-box">
+			<div class = "buttons-box">
+				<input style="margin-top: 20px;margin-bottom: 20px;" type="button" value="X" onclick="jQuery('.cover-box').hide()"></input>
+				<hr/></br></br>
+				<label style="font-size: 40px;">画笔粗细：&nbsp;&nbsp;</label>
+				<input type="text" id="size" onchange="sizeChange()" value="1"></input></br></br></br>
+				<label style="font-size: 40px;">画笔颜色：&nbsp;&nbsp;</label>
+				<input id="color" type="color" />
+				<hr/>
+				<input style="margin-top: 30px;" type="button" value="确认" onclick="jQuery('.cover-box').hide()"></input>
+			</div>
+		</div>
+		<canvas id="painboard"></canvas>
+		<div>
+			<input type="button" value="设置画笔" onclick="jQuery('.cover-box').show()"></input>
+			<input type="button" value="默认画笔" onclick="init()"></input>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("painboard"),
+			body = document.getElementsByTagName("body"),
+			ctx = canvas.getContext("2d"),
+			mouseDownSign = "down";
+
+		canvas.width = innerWidth - 10;
+		canvas.height = innerHeight - 100;
+		
+		window.onresize =initsize; 
+		window.onload = initsize;
+		
+		function initsize(){
+			canvas.width = innerWidth - 10;
+			canvas.height = innerHeight - 100;
+		}
+		
+		ctx.lineWidth = 1;
+		ctx.strokeStyle = "black";
+		
+		//初始化
+		function init() {
+			ctx.strokeStyle = "black";
+			ctx.lineWidth = 1;
+			document.getElementById("size").value = 1;
+		}
+
+		//画笔大小
+		function sizeChange() {
+			ctx.lineWidth = parseInt(document.getElementById("size").value);
+		}
+
+		//颜色
+		document.getElementById("color").onchange = function() {
+			ctx.strokeStyle = this.value;
+		}
+
+		//画轨迹
+		function draw(eventSign, event) {
+			if (eventSign == mouseDownSign) {
+				ctx.moveTo(event.changedTouches[0].pageX, event.changedTouches[0].pageY)
+			} else {
+				ctx.lineTo(event.changedTouches[0].pageX, event.changedTouches[0].pageY)
+				ctx.stroke();
+			}
+		}
+
+		canvas.addEventListener("touchstart", function(event) {
+			ctx.beginPath();
+			draw(mouseDownSign, event);
+		});
+		canvas.addEventListener("touchmove", function(event) {
+			draw("move", event);
+		})
+		canvas.addEventListener("touchend", function(event) {
+			draw("up", event);
+		});
+	</script>
+</html>
+</textarea>
+</span></div>
+
+
+
+<hr>
+<hr>
+<hr>
+
+<tag id="" style="background:#556B2F;color:black;">动画片</tag>
+
+<tag style="background:gold">欧</tag>
+<div> <span>9</span> <span>G</span> <span>美国</span></div>
+<hr>
+<hr>
+<hr>
+<tag id="ACG" style="background:#F5DA81;color:black;">ACG</tag>
+<tag style="background:#622a1d">时间轴</tag>
+
+</session>
+
+
+
+
+<session>
+
+<tag style="background:#6483B0">s</tag>
+<tag style="background:#819FF7">s</tag>
+<hr>
+<hr>
+<hr>
+
+<tag style="background:hsla(105,40%,80%,100%)">s</tag>
+<tag style="background:#622a1d">a</tag>
+
+
+<hr>
+<hr>
+<hr>
+
+
+
+<tag style="background:olive">农村扶贫</tag>
+<div>山海情 <span>9</span> <span>2021</span></div>
+
+<tag style="background:#BDB76B">S</tag>
+<div><span>
+</span></div>
+<div>你好，旧时光 <span>G</span> <span>网剧</span></div>
+
+<tag style="background:pink">奇幻爱情</tag>
+<div> <span></span></div>
+
+
+
+
+
+<tag style="background:#5B7099">悬疑谍战</tag>
+<tag style="background:#D7B29E">权力斗争</tag>
+<tag style="background:#EB5E7C">政治喜剧</tag>
+<tag style="background:darkgrey">人性犯罪</tag>
+<tag style="background:violet">情景喜剧</tag>
+<tag style="background:darkred;">古装史</tag>
+<tag style="background:#A7D6F1">s</tag>
+<tag style="background:#D495EC">。</tag>
+<tag style="background:#66A9BF;>s</tag>
+<tag style="background:#000;color:#FFD499">心愿清单</tag>
+<tag style="background:hsla(200,39%,49%,40%)">Classic</tag>
+<tag style="background:purple;">都市爱情</tag>
+<tag style="background:#58ACFA">jjj</tag>
+<tag style="background:#d3b17d">s</tag>
+</session>
+
+</body>
+</html>
+
+
+<script src = "https://mess20.github.io/DOLLARS-Extension/jquery.js"></script>
+<script>
+$("div").attr("contenteditable","true");
+</script>
+
