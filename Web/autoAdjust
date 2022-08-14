@@ -1,3 +1,7 @@
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+
+
+
 <mask id="load-tip" style="display:block;position:fixed;width:100vw;height:100vh;left:0;top:0;padding:36vh 35vw;margin:0;background:#000;z-index:2;zoom:2.5">
 <i class="fa fa-spinner fa-spin" style="display:inline-block;font-size:4rem"></i>
 <p id='load-tip-span' style="display:inline-block;font-family:Arial;font-size:4rem;margin:0 2rem">Loading …</p>
