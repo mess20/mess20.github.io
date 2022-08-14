@@ -61,10 +61,8 @@ function f(obj){
 }
 </script>
 </textarea></div>
-<div> <span>9</span> <span></span></div>
 
 
-<div>大 <span></span> <span></span></div>
 
 <div>遍历 <textarea>
 var a = document.getElementsByTagName("a");
@@ -98,7 +96,32 @@ function imgChange(img) {
 </script>
 </textarea></div>
 
+<div>快捷键
+<textarea>
+//页面初始化函数
+$(function() {
+    //设置快捷键
+    $('body').keyup(function() {
+        // 先判断焦点是不是在文本框中或者下拉框
+        if (document.activeElement.localName != "input" && document.activeElement.localName != "select" ) {
+            var value = event.keyCode;
+            //判断按键是不是R
+            if (value == 82) {
 
+                console.log("按下R键...");
+            }
+        }
+    });
+});
+</textarea> <span></span></div>
+
+<div>网址JS/书签JS
+<span>
+javascript: (function() {
+//执行逻辑
+})()
+javascript: //执行逻辑
+</span> <span></span></div>
 
 
 <tag style="background:green">Aid summary</tag>
@@ -148,7 +171,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 <div> <textarea>
 <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </textarea></div>
-<div>大 <span></span></div>
+
 <div> <span></span> <span></span></div>
 <div></div>
 
@@ -160,6 +183,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 </textarea> <span></span> <span></span></div>
 <div>武林 <span>G</span> <span></span></div>
 
+<div>select <textarea>var <opt> = <select>.options[<str>.selectedIndex].text;</textarea></div>
 </session>
 
 <session>
@@ -290,7 +314,8 @@ kaiguan.style. border= '2px solid black';
 </span></div>
 
 
-
+<tag style="background:#58ACFA">快捷键</tag>
+<div>访问剪贴板: Windows 徽标键 + V。</div>
 
 
 
@@ -773,9 +798,28 @@ justify-content: space-around;
 <tag style="background:#000;color:#FFD499">心愿清单</tag>
 <tag style="background:hsla(200,39%,49%,40%)">Classic</tag>
 <tag style="background:purple;">都市爱情</tag>
-<tag style="background:#58ACFA">jjj</tag>
+
 <tag style="background:#d3b17d">s</tag>
 </session>
+
+
+<mask id="load-tip" style="display:block;position:fixed;width:100vw;height:100vh;left:0;top:0;padding:36vh 35vw;margin:0;background:#000;z-index:2;zoom:2.5">
+<i class="fa fa-spinner fa-spin" style="display:inline-block;font-size:4rem"></i>
+<p style="display:inline-block;font-family:Arial;font-size:4rem;margin:0 2rem">Loading …</p>
+</mask>
+
+
+<script>
+window.onload = function () {
+setTimeout(function () {
+$('#load-tip').css({"-webkit-transition":"3s"});
+$('#load-tip').css({"transition":'0.3s'});
+$('#load-tip').css({"z-index":'-1'});
+$('#load-tip').css({"opacity":'0'});
+}, 1000)
+}
+</script>
+
 
 </body>
 </html>
