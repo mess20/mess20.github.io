@@ -1,0 +1,139 @@
+html{
+display:flex;
+flex-direction:culumn;
+}
+*{
+font-family:sans-serif;
+font-size:36px !important;
+line-height:64px;
+outline: none;
+tap-highlight-color:transparent;
+-webkit-tap-highlight-color:transparent;
+user-select:none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+body{
+zoom:0.4;
+margin:0 auto;
+color:lightyellow;
+background:#222522;
+display:flex;
+flex-direction:column;
+}
+div{
+display:flex;
+flex-direction:column;
+overflow:auto;
+margin:1rem auto;
+width:36%;
+padding:1rem 2rem;
+background:#222;
+border-radius:50px;
+opacity:0.75;
+transition:0.2s;	
+-webkit-transition:0.2s; 
+}
+textarea{
+color:#fff;
+font-size:1.4rem;
+display:block;
+width:75vw;
+margin:1rem auto;
+padding:1rem 2rem;
+background:#222;
+border:none;
+border-radius:20px;
+}
+textarea:hover{
+height:50vh;
+transition:0.2s;	
+-webkit-transition:0.2s; 
+}
+session{
+background:#000;
+box-shadow:0 -20px 15px #222;
+padding-bottom:4rem;
+margin-bottom:4rem;
+display:flex;
+flex-direction:column;
+font-size:2.5rem;
+border-radius:20px;
+}
+tag{
+display:flex;
+margin-left:4rem;
+margin-top:6rem;
+margin-right:auto;
+padding:1rem 2rem;
+border-radius:50px;
+opacity:0.75
+}
+span{
+color:#F0F8FF;
+font-size:2.2rem;
+line-height:3.8rem;
+padding-left:1rem;
+}
+div:hover{
+color:#aaa;
+background:rgba(73,87,71,0.6);
+opacity:1;
+}
+div:hover span{
+color:#aaa;
+}
+div:hover textarea{
+color:#ccc;
+}
+menu-btn{
+display:block;
+font-size:2.5rem;
+position:fixed;
+bottom:10rem;
+right:3rem;
+width:8rem;
+height:8rem;
+background:#444;
+border-radius:100%;
+text-align:center;
+align-items:center;
+line-height:8rem;
+z-index:1
+}
+menu{
+display:block;
+background:rgba(100,100,0,0.95);
+color:rgba(0,0,0,0);
+height:auto;
+position:fixed;
+width:28vw;
+left:-38vw;
+top:0;
+margin:0;
+padding:5rem 3rem;
+transition:0.2s;	
+-webkit-transition:0.2s; 
+border-radius:25px;
+}
+menu details{
+text-align:left;
+}
+menu a{
+color:#fff;
+display:block;
+text-decoration:none;
+padding-left:2rem;
+transition:0.5s;	
+-webkit-transition:0.5s; 
+}
+a:hover{
+color:gold;
+border-bottom:solid gold 2px;
+}
+menu-btn:hover menu{
+left:20px;
+top:20px;
+color:#fff;
+box-shadow:5000px 0 5000px 5000px rgba(0,0,0,0.5);
+}
