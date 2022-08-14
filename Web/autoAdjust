@@ -1,0 +1,65 @@
+<mask id="load-tip" style="display:block;position:fixed;width:100vw;height:100vh;left:0;top:0;padding:36vh 35vw;margin:0;background:#000;z-index:2;zoom:2.5">
+<i class="fa fa-spinner fa-spin" style="display:inline-block;font-size:4rem"></i>
+<p id='load-tip-span' style="display:inline-block;font-family:Arial;font-size:4rem;margin:0 2rem">Loading …</p>
+</mask>
+
+<script>
+//过渡画面
+window.onload = function () {
+setTimeout(function () {
+$('#load-tip').css({"-webkit-transition":"3s"});
+$('#load-tip').css({"transition":'3s'});
+$('#load-tip').css({"z-index":'-1'});
+$('#load-tip').css({"opacity":'0'});
+}, 1000)
+}
+</script>
+
+
+<script>
+function isMobile() {
+   var userAgentInfo = navigator.userAgent;
+   var mobileAgents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+   var mobile_flag = false;
+ 	//根据userAgent判断是否是手机
+    for (var v = 0; v < mobileAgents.length; v++) {
+       if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
+             mobile_flag = true;
+             break;
+       }
+    }
+    var screen_width = window.screen.width;
+    var screen_height = window.screen.height;
+   //根据屏幕分辨率判断是否是手机
+   if (screen_width > 325 && screen_height < 750) {
+       mobile_flag = true;
+   }
+   return mobile_flag;
+}
+
+var mobile_flag = isMobile();
+if (mobile_flag) {
+var link = document.createElement('link');
+link.rel='stylesheet';
+link.href = "mobile.css";
+$('head')[0].appendChild(link);
+}else{
+autoAdjust();
+var link = document.createElement('link');
+link.rel='stylesheet';
+link.href = "pc.css";
+$('head')[0].appendChild(link);
+}
+
+//pc端自适应
+function autoAdjust(){
+$("*").css({"font-family":"times","font-size":"48px"});
+$('#load-tip-span').css({"font-family":"Arial"});
+$("*").css({"line-height":"81px"});
+$("html").css({"display":"flex","flex-direction":"column"});
+$("body").css({"zoom":"0.4","margin":"0 auto",'width':'40vw'});
+}
+</script>
+
+
+
