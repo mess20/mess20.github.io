@@ -1,0 +1,352 @@
+
+<style>
+.note-card-button{
+}
+.note-card{
+display:none;
+
+}
+.note-card-button:hover .note-card{
+display:block;
+left:0;
+top:0;
+margin: auto;
+width:100%;
+height:1100;
+position:fixed;
+}
+
+#mycanvas{
+right:0;
+left:0;
+top:0;
+bottom:0;
+position:fixed;
+margin: auto;
+display:block;
+letter-spacing:0.1rem;
+word-spacing:0rem;
+border-radius: 5%;
+z-index:-1;
+}
+
+#mycanvas-pre{
+right:0;
+left:0;
+top:0;
+bottom:0;
+position:fixed;
+padding:1rem;
+margin: auto;
+display:block;
+box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.3);
+border-radius: 5%;
+background:rgba(255,255,245,100%);
+}
+
+#card-picture-nav{
+right:0;
+left:0;
+bottom:10%;
+width:100%;
+position:fixed;
+margin:0 auto;
+z-index:1;
+}
+
+#imagefile{
+position:absolute;
+display:inline-block;
+top:5%;
+left:5%;
+text-align:center;
+font-size:1.8rem;
+ -webkit-transition-duration:0.4s;
+ transition-duration:0.4s;
+ padding: 20px 32px;
+ text-align:center;
+ background-color: white;
+ color:black;
+text-decoration:none;
+ border:2px solid black;
+ border-radius: 45px;
+}
+#imagefile:hover{
+ background-color:rgba(1,102,255,66%);
+border:3px solid rgba(1,102,255,66%);
+ color: white;
+}
+
+
+#readimagefile{
+position:absolute;
+display:inline-block;
+top:3%;
+right:6%;
+text-align:center;
+font-size:1.8rem;
+width:14rem;
+ -webkit-transition-duration:0.4s;
+ transition-duration:0.4s;
+ padding: 20px 32px;
+ text-align:center;
+ background-color: white;
+ color:black;
+text-decoration:none;
+ border:3px solid rgba(1,102,255,100%);
+ border-radius: 45px;
+}
+#readimagefile:hover{
+ background-color:rgba(1,102,255,100%);
+ color: white;
+}
+#btn{
+position:fixed;
+display:inline-block;
+top:5%;
+left:10%;
+text-align:center;
+font-size:1.8rem;
+width:13rem;
+ -webkit-transition-duration:0.4s;
+ transition-duration:0.4s;
+ padding: 20px 32px;
+ text-align:center;
+ background-color: white;
+ color:black;
+ border:3px solid #4CAF50;
+ border-radius: 45px;
+}
+#btn:hover{
+ background-color:#4CAF50;
+ color: white;
+}
+#download{
+position:fixed;
+display:inline-block;
+top:5%;
+right:10%;
+text-align:center;
+font-size:1.8rem;
+width:8rem;
+ -webkit-transition-duration:0.4s;
+ transition-duration:0.4s;
+ padding: 20px 32px;
+ text-align:center;
+ background-color: white;
+ color:black;
+text-decoration:none;
+ border:3px solid #4CAF50;
+ border-radius: 45px;
+}
+#download:hover{
+ background-color:#4CAF50;
+ color: white;
+}
+
+#card-title{
+right:0;
+left:0;
+top:30%;
+position:fixed;
+margin:0 auto;
+text-align:center;
+width:900;
+display:block;
+color:#333;
+font-size:3rem;
+font-family: "Cursive","Arial";
+letter-spacing:0.1rem;
+word-spacing:0rem;
+border:none;
+background:transparent;
+z-index:1;
+}
+
+
+#card-content{
+left:12%;
+top:40%;
+position:fixed;
+padding:0 1rem;
+width:56%;
+height:40%;
+display:block;
+color:#333;
+font-size: 2.7rem;
+font-family: "Cursive","Arial";
+line-height:6rem;
+letter-spacing:0.1rem;
+word-spacing:0rem;
+border:none;
+background:transparent;
+z-index:1;
+}
+
+#card-picture{
+right:0;
+left:0;
+top:82%;
+width:85%;
+position:fixed;
+margin:0 auto;
+padding:1rem;
+display:block;
+color:#black;
+font-size:2.4rem;
+font-family:"Arial";
+border:none;
+background:transparent;
+z-index:1;
+}
+
+</style>
+
+
+    <script type="text/javascript">
+        function readAsDataURL()
+        {
+            if(typeof FileReader=='undifined')          //判断浏览器是否支持filereader
+            {
+                result.innerHTML="<p>抱歉，你的浏览器不支持 FileReader</p>";
+                return false;
+            }
+            var file=document.getElementById("imagefile").files[0];
+            if(!/image\/\w+/.test(file.type))           //判断获取的是否为图片文件
+            {
+                alert("请确保文件为图像文件");
+                return false;
+            }
+            var reader=new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload=function(e)
+            {
+                var result=document.getElementById("card-picture");
+                result.innerHTML= this.result
+            }
+
+        }
+    </script>
+
+
+
+
+
+
+
+<body>
+
+
+
+
+
+<div class="note-card-button">click
+
+
+<div class="note-card">
+<!--假-->
+
+<textarea type="text"  id="card-title" value="" maxlength="14" rows="1" placeholder="title（限14个字）"></textarea>
+
+<textarea type="text"  id="card-content" value="" maxlength="81" placeholder="content（注意：不支持分段！）"></textarea>
+
+<textarea type="text"  id="card-picture" value="" placeholder="picture（请输入base64编码！您也可以选择上传图片，但请尽量选择长宽比为 5：3 的图片）"></textarea>
+
+
+
+<div id="card-picture-nav">
+    <input type="file" id="imagefile" />
+    <input type="button"  id="readimagefile" value="读取图像" onClick="readAsDataURL();" />
+</div>
+
+
+
+<canvas id="mycanvas-pre" width="900" height="1100"></canvas>
+
+<!--真-->
+
+<canvas id="mycanvas" width="900" height="1100">
+</canvas>
+
+<input id="btn" type="button" value="定制卡片" />
+<a id="download"  href=" " download=" ">收入囊中</a>
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+var title = document.getElementById("card-title");
+var content = document.getElementById("card-content");
+var picture = document.getElementById("card-picture");
+var btn = document.getElementById("btn");
+var file = document.getElementById("download");
+
+
+btn.onclick = function(){
+if(content.value.length != 0&&title.value.length != 0){
+var cvs = document.getElementById('mycanvas'),
+ctx = cvs.getContext('2d');
+
+
+ctx.fillStyle = "rgba(255,255,245,100%)";
+ctx.fillRect(50, 0, 800, 1100);
+ctx.fillStyle = "rgba(255,255,245,100%)";
+ctx.fillRect(0,50, 900, 1000);
+
+ctx.arc(50,50,50,0*Math.PI/180,360*Math.PI/180);
+ctx.arc(850,50,50,0*Math.PI/180,360*Math.PI/180);
+ctx.arc(50,1050,50,0*Math.PI/180,360*Math.PI/180);
+ctx.arc(850,1050,50,0*Math.PI/180,360*Math.PI/180);ctx.fill();
+
+
+
+
+
+
+
+var img = new Image();
+var base64 =  picture.value;
+img.src = base64 ;
+img.setAttribute("crossOrigin",'Anonymous');
+img.onload = function(){
+ctx.drawImage(img,620,360,240,400); 
+
+ctx.font= '2.6rem KaiTi_GB2312,Cursive'; 
+ctx.fillStyle = '#333'; 
+var vl = title.value.length;
+var pl = ( 900 - (vl*49.6 - 1.6 ) ) / 2;
+ctx.fillText(title.value, pl,220); 
+
+
+ctx.lineWidth=500; 
+var str = content.value;
+var lineWidth = 0;
+var canvasWidth = "470";
+var initWidth=78;
+var initHeight=400;
+var lastSubStrIndex= 0; //每次开始截取的字符串的索引
+for(let i=0;i<str.length;i++){ 
+    lineWidth+=ctx.measureText(str[i]).width; 
+    if(lineWidth>canvasWidth){ ctx.fillText(str.substring(lastSubStrIndex,i),initWidth,initHeight);
+        initHeight+=90;//字体高度
+        lineWidth=0;
+        lastSubStrIndex=i;
+    } 
+    if(i==str.length-1){
+ctx.fillText(str.substring(lastSubStrIndex,i+1),initWidth,initHeight);
+    }
+};
+var imgDataSrc = cvs.toDataURL('image/png');
+file.download = imgDataSrc;
+file.href = imgDataSrc;
+}
+}
+
+}
+</script>
+
+</body>
+ 
+</html>
+
