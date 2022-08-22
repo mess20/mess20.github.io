@@ -115,6 +115,24 @@ $(function() {
 });
 </textarea> <span></span></div>
 
+
+<div>引入jquery
+<textarea>
+var script = document.createElement('script'); 
+script.src = "<script.js>";
+$('head')[0].appendChild(script);
+</textarea>
+
+<textarea>
+
+link = document.createElement('link');
+link.setAttribute('rel', 'stylesheet');
+link.setAttribute('href', '<stylesheet.css>'); document.body.appendChild(link);
+
+</textarea>
+</div>
+
+
 <div>网址JS/书签JS
 <span>
 javascript: (function() {
@@ -171,23 +189,89 @@ pointer-event:none;
 </span></div>
 
 <tag style="background:#C75872">JavaScript</tag>
-<div>引入jquery
- <span>
-var script = document.createElement('script');
-script.src = "https://mess20.github.io/DOLLARS-Extension/jquery.js";
-document.getElementsByTagName('head')[0].appendChild(script);
-</span></div>
+
 
 <tag id="" style="background:#B0C4DE;">自适应</tag>
 <div> <textarea>
 <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </textarea></div>
 
-<div> <span></span> <span></span></div>
 <div></div>
 
 
 <tag style="background:#848484">Some tags</tag>
+
+<div>canvas <textarea>
+<style>
+canvas{
+margin:0;
+right:0;
+left:0;
+position:absolute;
+z-index:1;
+display:none;
+}
+#download{
+display:block;
+z-index:2;
+position:fixed;
+right:10%;
+top:10;
+}
+</style>
+
+<body>
+<canvas id="canvas" width="1080"></canvas>
+<input type="button" value='开启画板' onclick="addCanvas()">
+<a id="download" onclick="DownloadFile()" >点击下载</a>
+</body>
+
+
+<script>
+function addCanvas(){
+ <!--添加画布-->
+document.getElementById('canvas').style.display="block";
+      
+<!--确保置地-->
+var h= document.body.scrollHeight;
+document.getElementById('canvas').height = h;
+  
+                var canvas = document.getElementById('canvas');
+                var ctx = canvas.getContext("2d");
+                ctx.lineWidth = 2.0;
+                ctx.strokeStyle = 'CornflowerBlue';
+canvas.addEventListener('touchstart',function(event){//触摸点按下事件
+                    if (event.targetTouches.length == 1) {
+                        var touch = event.targetTouches[0];
+                        ctx.beginPath();
+                        ctx.moveTo(touch.pageX-canvas.offsetLeft,touch.pageY-canvas.offsetTop);
+                        canvas.addEventListener('touchmove',function (event) {//手机拖动触摸点事件
+                            var touche = event.targetTouches[0];
+                            ctx.lineTo(touche.pageX - canvas.offsetLeft, touche.pageY - canvas.offsetTop);
+                            ctx.stroke();
+                        },false)
+                        canvas.addEventListener('touchend',function (event) {//手机离开屏幕的事件
+                            ctx.closePath();
+                        },false)
+ 
+                    }
+                },false)
+   
+}
+
+<!--转图-->
+function DownloadFile(){
+var file = document.getElementById("download");
+var canvas = document.getElementById("canvas");
+var imgDataSrc = canvas.toDataURL('image/png');
+file.download = imgDataSrc;
+file.href = imgDataSrc;
+canvas.id = canvas.name;
+};
+</script>
+</textarea> <span></span></div>
+
+
 
 <div>iframe <span></span> <textarea>
 <iframe src="路径" width height iframeborder="0" allowfullscreen="allowfullscreen"></iframe>
@@ -546,6 +630,19 @@ document.body.bgColor="#"+rgb;}
 
 
 <tag style="background:#5F9EA0;opacity:1;">CSS</tag>
+
+<div>标题
+<span>9</span> 
+<span>G</span> 
+<span>▎标题</span></div>
+
+
+
+
+
+
+
+
 <div>按钮 <span></span> <textarea>
 /*红色镶边空心按钮*/
 width: 100px; 
