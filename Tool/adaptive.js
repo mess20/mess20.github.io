@@ -28,7 +28,10 @@ $(function() {
         }
     });
 });
-
+    
+    
+$("html").css({"display":"flex","flex-direction":"column"});
+$("body").css({"margin":"0 auto"});
 function autofix(){
 $("*").css({"font-family":"times","font-size":"48px"});
 $("html").css({"display":"flex","flex-direction":"column"});
