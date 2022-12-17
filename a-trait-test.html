@@ -3,7 +3,13 @@ body{
 font-size:2.5rem;
 display:flex;
 }
-
+opt{
+animation: show 1s;
+}
+@keyframes show{
+from{opacity:0;}
+to{opacity:1;}
+}
 selection{
 display:flex;
 flex-direction:column;
@@ -493,7 +499,7 @@ end()}
 //C-no
 
 document.getElementById('a3').onclick=function(){
-document.getElementById('a1').innerHTML = "请问你有什么想说的话吗？如有，请通过<u>反馈收集表</u>反馈给文件发布者。";    
+document.getElementById('a1').innerHTML = "请问你有什么想说的话吗？如有，请反馈给文件发布者。<br><br>反馈方式：<br><br>•  <a style=\"text-decoration:none;color:#516AC3;border-bottom:solid #516AC3 3px;\" href=\"https://docs.qq.com/form/page/DZXpyRUp5akttRmhU\"> 反馈收集表 </a> (限腾讯文档) </br><br>• 现场反馈";    
 document.getElementById('a2').innerHTML = "";
 document.getElementById('a3').innerHTML = "";
 document.getElementById('a4').innerHTML = "";
@@ -895,7 +901,7 @@ document.getElementById('a1').innerHTML = "为何你讨厌别人不经允许就�
 //C-no
 
 document.getElementById('a3').onclick=function(){
-document.getElementById('a1').innerHTML = "请问有什么想说的话吗？如有，请通过<u>反馈收集表</u>反馈给文件发布者。";    
+document.getElementById('a1').innerHTML = "请问你有什么想说的话吗？如有，请反馈给文件发布者。<br><br>反馈方式：<br><br>•  <a style=\"text-decoration:none;color:#516AC3;border-bottom:solid #516AC3 3px;\" href=\"https://docs.qq.com/form/page/DZXpyRUp5akttRmhU\"> 反馈收集表 </a> (限腾讯文档) </br><br>• 现场反馈";    
 document.getElementById('a2').innerHTML = "";
 document.getElementById('a3').innerHTML = "";
 document.getElementById('a4').innerHTML = "";
