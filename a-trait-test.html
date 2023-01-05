@@ -1,10 +1,7 @@
-﻿<style>
+<style>
 body{
 font-size:2.5rem;
 display:flex;
-}
-opt{
-animation: show 1s;
 }
 @keyframes show{
 from{opacity:0;}
@@ -59,6 +56,7 @@ color:green;
 
 <script type="text/javascript"> 
 document.getElementById('a2').onclick=function(){
+
 
 
 document.getElementById('a1').innerHTML = "你的作业是你认真写的吗";       
@@ -1183,10 +1181,24 @@ return false() }
 document.getElementById('a6').innerHTML="各属性的数值：1.0-5.0<br><br>注：<b>本测试缺乏科学依据。</b>每项测试结果相比真实情况的误差约为0.67，偏差度约在38%以内。";
 }
 
-           
+     
+ 
 
+var i;
+var opt = document.getElementsByTagName('opt');
+for (i = 0; i < 6; i++) {
+opt[i].onmouseover = function(){
+
+var a;for (a = 0; a < 6; a++){
+opt[a].style.animation='show 3s infinite';
+myVar = setTimeout(function(){
+var b;for (b = 0; b < 6; b++){opt[b].style.animation='none'}} ,2000)
+}
+
+    
+
+}}   
     </script>
-
 
 
 
