@@ -24,10 +24,9 @@ flex-direction:column;
 div{
 display:flex;
 flex-direction:column;
-margin-left:4rem;
-margin-top:2rem;
-margin-right:auto;
-max-width:80vw;
+overflow:auto;
+margin:1rem auto;
+width:36%;
 padding:1rem 2rem;
 background:#222;
 border-radius:50px;
