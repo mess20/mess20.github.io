@@ -87,7 +87,7 @@ div:hover textarea{
 color:#ccc;
 }
 menu-btn{
-display:block;
+display:none;
 font-size:2.5rem;
 position:fixed;
 bottom:10rem;
