@@ -82,4 +82,90 @@
 <!--两种样式可选-->
 
 
+<!-- 将图片转化为图片卡片-->
+
+<style>
+    .link-card-pro.top{
+        display:block;
+        text-decoration:none;
+        border-radius:10px;
+        box-shadow:rgba(0,0,0,0.3) 5px 5px 8px 2px;
+        margin:50px;
+        height:280px;
+        overflow:hidden;
+    }
+    .link-card-pro.top img{
+        border-radius:10px 10px 0 0;
+        width:100%;
+        height:80%;
+        object-fit:cover;
+        margin:0;
+    }
+    .link-card-pro.top div.link-content{
+        display:flex;
+        border-radius:10px;
+        height:20%;
+        margin-bottom:0;
+        background:rgba(255,255,255,0.9);
+        font-weight:600;
+        overflow:hidden;
+    }
+    .link-card-pro.top div.link-content p{
+        color:#333;
+        margin:auto auto auto 1rem;
+}
+
+
+
+
+
+     .link-card-pro.left{
+        display:flex;
+        text-decoration:none;
+        border-radius:10px;
+        box-shadow:rgba(0,0,0,0.3) 5px 5px 8px 2px;
+        margin:50px;
+        height:280px;
+        overflow:hidden;
+    }
+    .link-card-pro.left img{
+        border-radius:10px 0 0 10px;
+        width:36%;
+        height:100%;
+        object-fit:cover;
+        margin:0;
+    }
+    .link-card-pro.left div.link-content{
+        display:flex;
+        border-radius:10px;
+        height:100%;
+        margin:0;
+        padding:1rem;
+        background:rgba(255,255,255,1);
+        font-weight:600;
+        overflow:hidden;
+    }
+    .link-card-pro.left div.link-content p{
+        color:#333;
+        margin:0rem auto auto auto;
+        word-break:break-all;
+    }
+    </style>
+
+<a class='link-card-pro top' href='https://s1.ax1x.com/2023/02/01/pSB4XT0.jpg' src='https://s1.ax1x.com/2023/02/01/pSB4XT0.jpg'>contentcontentcontentcontentcontentcontent</a>
+<a class='link-card-pro left' href='https://s1.ax1x.com/2023/02/01/pSB4XT0.jpg' src='https://s1.ax1x.com/2023/02/01/pSB4XT0.jpg'>contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent</a>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+<script>
+    $('.link-card-pro').each(function(){
+    var alt = $(this).html();
+    var src = $(this).attr('src');
+    var html = "<img src=\'"+src+"\' alt=\'"+alt+"\'><div class=\'link-content\'><p>"+alt+"</p></div>";
+    $(this).html(html);
+})
+    </script>
+
+
+
+
 
