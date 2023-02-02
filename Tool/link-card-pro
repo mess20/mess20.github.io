@@ -1,0 +1,41 @@
+<style>
+    .link-card-pro{
+        border-radius:10px;
+        box-shadow:rgba(0,0,0,0.3) 5px 5px 8px 2px;
+        margin:50px;
+        height:280px;
+        overflow:hidden;
+    }
+    .link-card-pro img{
+        border-radius:10px 10px 0 0;
+        width:100%;
+        height:80%;
+        object-fit:cover;
+        margin:0;
+    }
+    .link-card-pro div.link-content{
+        border-radius:10px;
+        height:20%;
+        margin-bottom:0;
+        background:rgba(255,255,255,0.9);
+        padding:0.5rem 1rem;
+        font-weight:600;
+        overflow:hidden;
+    }
+    .link-card-pro .caption{
+        display:none
+    }
+    </style>
+<div class='link-card-pro'>
+<img src='https://s1.ax1x.com/2023/02/01/pSB4XT0.jpg' alt='contentcontentcontentcontentcontentcontent'>
+</div>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+<script>
+    $('.link-card-pro img').each(function(){
+    var alt = $(this).attr('alt');
+    var html = '<div class=\'link-content\'>'+alt+'</div>'
+    $(this).after(html);
+})
+    </script>
+
