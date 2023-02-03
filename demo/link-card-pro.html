@@ -3,8 +3,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"></script>
 
+
+<h1>link-card-pro</h1>
 <style>
-    .link-card-pro.top{
+    .link-card-pro{
         display:block;
         text-decoration:none;
         border-radius:10px;
@@ -13,14 +15,14 @@
         height:280px;
         overflow:hidden;
     }
-    .link-card-pro.top img{
+    .link-card-pro img{
         border-radius:10px 10px 0 0;
         width:100%;
         height:80%;
         object-fit:cover;
         margin:0;
     }
-    .link-card-pro.top div.link-content{
+    .link-card-pro div.link-content{
         display:flex;
         border-radius:10px;
         height:20%;
@@ -29,43 +31,51 @@
         font-weight:600;
         overflow:hidden;
     }
-    .link-card-pro.top div.link-content p{
+    .link-card-pro div.link-content p{
         color:#333;
         margin:auto auto auto 1rem;
     }
+    .link-card-pro.top{
+        display:block;
+    }
+    .link-card-pro.top img{
+        border-radius:10px 10px 0 0;
+        width:100%;
+        height:80%;
+    }
+    .link-card-pro.top div.link-content{
+        height:20%;
+        margin-bottom:0;
+        background:rgba(255,255,255,0.9);
+    }
+    .link-card-pro.top div.link-content p{
+        margin:auto auto auto 1rem;
+}
     .link-card-pro.left{
         display:flex;
-        text-decoration:none;
-        border-radius:10px;
-        box-shadow:rgba(0,0,0,0.3) 5px 5px 8px 2px;
-        margin:50px;
-        height:280px;
-        overflow:hidden;
     }
     .link-card-pro.left img{
         border-radius:10px 0 0 10px;
         width:36%;
         height:100%;
-        object-fit:cover;
-        margin:0;
     }
     .link-card-pro.left div.link-content{
-        display:flex;
-        border-radius:10px;
         height:100%;
         margin:0;
         padding:1rem;
         background:rgba(255,255,255,1);
-        font-weight:600;
-        overflow:hidden;
     }
     .link-card-pro.left div.link-content p{
-        color:#333;
         margin:0rem auto auto auto;
         word-break:break-all;
     }
 </style>
 </head>
+
+<pre><code class='language-css'>
+&lt;a class=&#x27;link-card-pro&#x27; href=&#x27;https://mess20.github.io&#x27; pre=&#x27;https://s1.ax1x.com/2023/02/03/pSsgeBt.jpg&#x27;&gt;content&lt;/a&gt;
+</code></pre>
+<a class='link-card-pro' href='https://mess20.github.io' pre='https://s1.ax1x.com/2023/02/03/pSsgeBt.jpg'>content</a>
 
 <pre><code class='language-css'>
 &lt;a class=&#x27;link-card-pro top&#x27; href=&#x27;https://mess20.github.io&#x27; pre=&#x27;https://s1.ax1x.com/2023/02/03/pSsgeBt.jpg&#x27;&gt;content&lt;/a&gt;
