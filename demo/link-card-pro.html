@@ -1,11 +1,82 @@
-
+<html>
+<head>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"></script>
 
-
-<h1>link-card-pro</h1>
 <style>
+    /*link-card-plain*/
+    a{
+        text-decoration:none;
+    }
+    .link-card-plain{
+        border-radius:15px;
+        background:rgba(0,0,0,0.05);
+        padding:1.5rem;
+        margin:50px;
+    }
+    .link-card-plain>a{
+        color:#6C7B8B;
+    }
+    .link-card-plain:hover a{
+        color:#333 !important;
+        transition:0.3s;
+        border-bottom:2px #333 solid;
+    }
+    /*img-card*/
+    .img-card{
+        border-radius:10px;
+        box-shadow:rgba(0,0,0,0.3) 5px 5px 8px 2px;
+        margin:50px;
+        height:280px;
+        overflow:hidden;
+    }
+    .img-card img{
+        border-radius:10px 10px 0 0;
+        width:100%;
+        height:80%;
+        object-fit:cover;
+        margin:0;
+    }
+    .img-card div.link-content{
+        border-radius:10px;
+        height:20%;
+        margin-bottom:0;
+        background:rgba(255,255,255,0.9);
+        padding:0.5rem 1rem;
+        font-weight:600;
+        overflow:hidden;
+    }
+    
+    /*link-card*/
+    .link-card{
+        display:block;
+        color:#333;
+        text-decoration:none;
+        border-radius:10px;
+        box-shadow:rgba(0,0,0,0.3) 5px 5px 8px 2px;
+        margin:50px;
+        height:280px;
+        overflow:hidden;
+    }
+    .link-card img{
+        border-radius:10px 10px 0 0;
+        width:100%;
+        height:80%;
+        object-fit:cover;
+        margin:0;
+    }
+    .link-card div.link-content{
+        border-radius:10px;
+        height:20%;
+        margin-bottom:0;
+        background:rgba(255,255,255,0.9);
+        padding:0.5rem 1rem;
+        font-weight:600;
+        overflow:hidden;
+    }
+    
+    /*link-card-pro*/
     .link-card-pro{
         display:block;
         text-decoration:none;
@@ -50,7 +121,7 @@
     }
     .link-card-pro.top div.link-content p{
         margin:auto auto auto 1rem;
-}
+    }
     .link-card-pro.left{
         display:flex;
     }
@@ -71,6 +142,67 @@
     }
 </style>
 </head>
+
+
+<h2>link-card-plain</h2>
+<pre><code class='language-css'>
+    &lt;div class=&#x27;link-card-plain&#x27;&gt;
+        &lt;a href=&#x27;https://www.zhihu.com/question/63624675/answer/1424881756&#x27;&gt;
+        为什么知乎上通常用「」来代表引号，而不是规范的“”？ - 刘延的回答 - 知乎
+        &lt;/a&gt;
+    &lt;/div&gt;
+</code></pre>    
+<div class='link-card-plain'>
+    <a href='https://www.zhihu.com/question/63624675/answer/1424881756'>
+    为什么知乎上通常用「」来代表引号，而不是规范的“”？ - 刘延的回答 - 知乎
+    </a>
+</div>
+
+<h2>img-card</h2>
+
+<pre><code class='language-css'>
+&lt;div class=&#x27;img-card&#x27;&gt;
+    &lt;img src=&#x27;https://s1.ax1x.com/2023/02/03/pSsgeBt.jpg&#x27; alt=&#x27;content&#x27;&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class='img-card'>
+    <img src='https://s1.ax1x.com/2023/02/03/pSsgeBt.jpg' alt='content'>
+</div>
+
+<script>
+    $('.img-card img').attr('ready','false');
+    $('.img-card img').each(function(){
+    var ready = $(this).attr('ready');
+    if(ready=='false'){
+    var alt = $(this).attr('alt');
+    var html = '<div class=\'link-content\'>'+alt+'</div>'
+    $(this).after(html);
+    $(this).attr('ready','true');
+    }
+})
+</script>
+
+<h2>link-card</h2>
+<pre><code class='language-css'>
+&lt;a class=&#x27;link-card&#x27; href=&#x27;https://mess20.github.io&#x27; src=&#x27;ttps://s1.ax1x.com/2023/02/03/pSsgeBt.jpg&#x27;&gt; 任意内容 &lt;/a&gt;
+</code></pre>
+<a class='link-card' href='https://mess20.github.io' src='https://s1.ax1x.com/2023/02/03/pSsgeBt.jpg'> 任意内容 </a>
+<script>
+    $('.link-card').attr('ready','false');
+    $('.link-card').each(function(){
+        var ready = $(this).attr('ready');
+        if(ready=='false'){
+        var alt = $(this).html();
+        var src = $(this).attr('src');
+        var html = "<img src=\'"+src+"\' alt=\'"+alt+"\'><div class=\'link-content\'>"+alt+"</div>";
+        $(this).html(html);
+        $(this).attr('ready','true');
+        }
+    })
+</script>
+
+<h2>link-card-pro</h2>
 
 <pre><code class='language-css'>
 &lt;a class=&#x27;link-card-pro&#x27; href=&#x27;https://mess20.github.io&#x27; pre=&#x27;https://s1.ax1x.com/2023/02/03/pSsgeBt.jpg&#x27;&gt;content&lt;/a&gt;
@@ -101,3 +233,4 @@
 })
 </script>
 
+</html>
