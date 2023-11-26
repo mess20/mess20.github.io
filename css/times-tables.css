@@ -1,24 +1,24 @@
 table {
-font-size:100%;
+font-size:1rem;
 color:#333333;
 width:100%;
 border-width: 1px;
 border-color: rgba(84,100,93,18%);
-border-collapse: collapse;}
-table.tftable th {
-font-size:100%;
+border-collapse: collapse;
+}
+table th {
 background-color:rgb(245,247,246);
 border-width: 1px;
 padding: 8px;
 border-style: solid;
 border-color: rgba(84,100,93,18%);
-text-align:left;
+text-align:center;
 }
 table tr {
 background-color:#ffffff;
 }
 table td {
-font-size:100%;
+font-size:1rem;
 border-width: 1px;
 padding: 8px;
 border-style: solid;
