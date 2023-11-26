@@ -1,0 +1,36 @@
+table {
+font-size:100%;
+color:#333333;
+width:100%;
+border-width: 1px;
+border-color: rgba(84,100,93,18%);
+border-collapse: collapse;}
+table.tftable th {
+font-size:100%;
+background-color:rgb(245,247,246);
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: rgba(84,100,93,18%);
+text-align:left;
+}
+table tr {
+background-color:#ffffff;
+}
+table td {
+font-size:100%;
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: rgba(84,100,93,18%);
+}
+tbody{
+    tr:nth-child(2n){
+      background-color: #FAFAFA;
+    }
+​
+    tr:nth-child(2n+1){
+      background-color: #FFFFFF;
+    }
+}
+
